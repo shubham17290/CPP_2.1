@@ -1,12 +1,12 @@
 <div align="center">
 
-# 🚀 DSA in C++ — Apna College Course
+# 🚀 DSA in C++ — My Personal Learning Journey
 
 ### *From "Hello, World!" to Data Structures & Algorithms — one commit at a time.*
 
 [![Language](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
 [![Standard](https://img.shields.io/badge/Standard-C%2B%2B17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://en.cppreference.com/)
-[![Course](https://img.shields.io/badge/Course-Apna%20College-FF6B35?style=for-the-badge&logo=youtube&logoColor=white)](https://www.apnacollege.in/)
+
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
@@ -16,7 +16,7 @@
 <br/>
 
 > **A clean, well-organized, beginner-friendly repository of C++ programs and practice problems**
-> following the **[Apna College DSA course](https://www.apnacollege.in/)**. Every chapter is a folder,
+> built as part of my personal DSA journey. Every chapter is a folder,
 > every file is a concept, every commit is progress. 📈
 
 <br/>
@@ -29,7 +29,7 @@
 
 ## 📖 About
 
-This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built while following the **[Apna College DSA course](https://www.apnacollege.in/)**. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, and beyond, all the way toward full DSA mastery.
+This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built by following a structured DSA syllabus. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, and beyond, all the way toward full DSA mastery.
 
 The goal is simple:
 
@@ -58,7 +58,7 @@ The goal is simple:
 ## 🗂️ Repository Structure
 
 ```
-DSA Apna College Course/
+DSA in C++/
 │
 ├── 📁 CH 01 Var and DT/
 │   ├── 01 First code/                  # Hello World & first program
@@ -367,7 +367,7 @@ Contributions, suggestions, and improvements are welcome!
 
 ## 📚 Recommended Resources
 
-- 🎓 [Apna College DSA Course](https://www.apnacollege.in/)
+
 - 📘 [C++ Reference (cppreference)](https://en.cppreference.com/)
 - 🧠 [LeetCode](https://leetcode.com/) · [Codeforces](https://codeforces.com/) · [GeeksforGeeks](https://www.geeksforgeeks.org/)
 - 🛠️ [Compiler Explorer (Godbolt)](https://godbolt.org/) — see what your C++ compiles to
