@@ -10,14 +10,14 @@
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-66-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-71-blueviolet?style=for-the-badge)](#-complete-file-index)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 
 <br/>
 
 > **A clean, well-organized, beginner-friendly repository of C++ programs and practice problems**
-> following the **Apna College DSA course**. Every folder is a chapter, every file is a concept,
-> every commit is progress. 📈
+> following the **[Apna College DSA course](https://www.apnacollege.in/)**. Every chapter is a folder,
+> every file is a concept, every commit is progress. 📈
 
 <br/>
 
@@ -29,13 +29,13 @@
 
 ## 📖 About
 
-This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built while following the **[Apna College DSA course](https://www.apnacollege.in/)**. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, and beyond, all the way toward full DSA mastery.
+This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built while following the **[Apna College DSA course](https://www.apnacollege.in/)**. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, and beyond, all the way toward full DSA mastery.
 
 The goal is simple:
 
 - ✅ **Learn by doing** — every concept is backed by runnable C++ code.
-- ✅ **Practice relentlessly** — multiple practice questions per topic.
-- ✅ **Stay organized** — numbered folders mirror the course syllabus.
+- ✅ **Practice relentlessly** — multiple practice questions and assignment solutions per topic.
+- ✅ **Stay organized** — numbered `CH xx` folders mirror the course syllabus.
 - ✅ **Track progress** — git history tells the story of the journey.
 
 > Whether you're a beginner picking up C++ for the first time or revising fundamentals before
@@ -45,9 +45,9 @@ The goal is simple:
 
 ## ✨ Highlights
 
-- 🧩 **66+ self-contained C++ programs** — each file compiles and runs independently.
-- 📁 **Syllabus-aligned folders** — numbered topics in the exact order you should learn them.
-- 🧪 **Practice + Assignment questions** included alongside theory.
+- 🧩 **71+ self-contained C++ programs** — each file compiles and runs independently.
+- 📁 **Syllabus-aligned folders** — `CH 01 … CH 06` in the exact order you should learn them.
+- 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, …).
 - 🛠️ **VS Code ready** — `.vscode` config with g++, gdb, and strict warning flags.
 - 📝 **Commented code** — intent and logic explained inline.
 - 🔁 **Git history** — every milestone committed, so you can replay the learning path.
@@ -60,21 +60,23 @@ The goal is simple:
 ```
 DSA Apna College Course/
 │
-├── 📁 01 Variables And Data Types/
+├── 📁 CH 01 Var and DT/
 │   ├── 01 First code/                  # Hello World & first program
 │   ├── 02 Variables and Data Types/     # vars, preprocessor, patterns
 │   ├── 03 Data Types/                  # int, float, comments
-│   ├── 04 input and output/             # cin/cout, arithmetic
+│   ├── 04 input and output/            # cin/cout, arithmetic
 │   └── 05 assignment Questions/        # 4 practice problems
 │
-├── 📁 02 Operators/
+├── 📁 CH 02 Operators/
 │   ├── 1 Constants/
 │   ├── 2 Type Casting/                 # implicit & explicit
 │   ├── 3 Predict the output/
 │   ├── 4 Operators/                    # binary, unary, logical, relational
-│   └── 5 Assignment HW/                # 3 homework problems
+│   ├── 5 Assignment HW/                # 3 homework problems
+│   └── 6 Assignment Questions/
+│       └── 01 Solutions/               # factorial, table, Armstrong, prime, Fibonacci
 │
-├── 📁 03 Conditional Statements/
+├── 📁 CH 03 Conditionals/
 │   ├── 01 if else statement/
 │   ├── 02 else if statement/
 │   ├── 03 Ternary operator/
@@ -82,22 +84,32 @@ DSA Apna College Course/
 │   ├── 05 Project/                     # 🧮 Calculator project
 │   └── 06 Assignment Questions/        # 2 practice sessions
 │
-├── 📁 04 Loops/
+├── 📁 CH 04 Loops/
 │   ├── 01 for loops/                   # basics + practice
 │   ├── 02 While Loops/
 │   ├── 03 practice questions/          # patterns, reverse, digit sums
-│   └── 04 Do while loop/
+│   ├── 04 Do while loop/
+│   └── 05 problems/
+│       └── 01 Prime number/            # primality checks
 │
-├── 📁 05 Statements/
+├── 📁 CH 05 Statements/
 │   ├── 01 Break/
 │   └── 02 Continue/
 │
-├── 📁 06 Prime number/
-│   └── primality checks & practice
+├── 📁 CH 06 Patterns/                  # 🔄 in progress
 │
 ├── 📁 .vscode/                         # editor & debugger config
 └── 📄 README.md
 ```
+
+---
+
+## 🆕 What's New
+
+- 🏷️ Folders renamed to a consistent `CH xx` convention.
+- ➕ Added operator assignment solutions: **factorial, multiplication table, Armstrong number, prime number, Fibonacci**.
+- 🔁 Moved prime-number problems under `CH 04 Loops / 05 problems`.
+- 🌱 Started `CH 06 Patterns`.
 
 ---
 
@@ -114,9 +126,10 @@ Marked as completed based on the actual content of this repository.
 - [x] **Prime Numbers** — primality checks
 
 ### 🔄 In Progress
-- [ ] **Functions** — parameters, return types, recursion basics
+- [ ] **Patterns** — `CH 06` (star/number patterns)
 
 ### 🗺️ Roadmap (Coming Soon)
+- [ ] Functions — parameters, return types, recursion basics
 - [ ] Arrays & Strings
 - [ ] Pointers & References
 - [ ] Object-Oriented Programming (classes, inheritance, polymorphism)
@@ -130,7 +143,7 @@ Marked as completed based on the actual content of this repository.
 - [ ] Dynamic Programming
 - [ ] Greedy Algorithms
 
-> 💡 **Want this to be a template for *your* DSA repo?** Fork it, keep the structure,
+> 💡 **Want this to be a template for *your* DSA repo?** Fork it, keep the `CH xx` structure,
 > and tick boxes as you go. The folder numbering + per-topic practice pattern scales to any
 > DSA syllabus.
 
@@ -168,14 +181,14 @@ Each `.cpp` file is **independent**. Compile and run any file like this:
 ### Linux / macOS
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "04 Loops/03 practice questions/_03_sum_of_digits.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops/03 practice questions/_03_sum_of_digits.cpp" -o out
 ./out
 ```
 
 ### Windows (PowerShell / CMD)
 
 ```powershell
-g++ -std=c++17 -O2 -Wall -Wextra "04 Loops\03 practice questions\_03_sum_of_digits.cpp" -o out.exe
+g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_digits.cpp" -o out.exe
 .\out.exe
 ```
 
@@ -205,12 +218,12 @@ g++ -std=c++17 -O2 -Wall -Wextra "04 Loops\03 practice questions\_03_sum_of_digi
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand — all 66 C++ source files</b></summary>
+<summary><b>Click to expand — all 71 C++ source files</b></summary>
 
 <br/>
 
 ```
-01 Variables And Data Types/
+CH 01 Var and DT/
 ├── 01 First code/
 │   └── code.cpp
 ├── 02 Variables and Data Types/
@@ -233,7 +246,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "04 Loops\03 practice questions\_03_sum_of_digi
     ├── _question_03.cpp
     └── _question_04.cpp
 
-02 Operators/
+CH 02 Operators/
 ├── 1 Constants/
 │   └── constant.cpp
 ├── 2 Type Casting/
@@ -250,12 +263,19 @@ g++ -std=c++17 -O2 -Wall -Wextra "04 Loops\03 practice questions\_03_sum_of_digi
 │       ├── _logical_operators.cpp
 │       ├── assignment.cpp
 │       └── relational.cpp
-└── 5 Assignment HW/
-    ├── _A_.cpp
-    ├── _B_.cpp
-    └── _C_.cpp
+├── 5 Assignment HW/
+│   ├── _A_.cpp
+│   ├── _B_.cpp
+│   └── _C_.cpp
+└── 6 Assignment Questions/
+    └── 01 Solutions/
+        ├── _01_factorial.cpp
+        ├── _02_multiplication_table.cpp
+        ├── _03_armstrong_number.cpp
+        ├── _04_prime_number.cpp
+        └── _05_fibonacci.cpp
 
-03 Conditional Statements/
+CH 03 Conditionals/
 ├── 01 if else statement/
 │   ├── _if_else_c.cpp
 │   ├── _practice_q_01_.cpp
@@ -273,13 +293,17 @@ g++ -std=c++17 -O2 -Wall -Wextra "04 Loops\03 practice questions\_03_sum_of_digi
 │   └── _calculator.cpp
 └── 06 Assignment Questions/
     ├── Practice session 1/
-    │   ├── _question_01.cpp ... _question_05.cpp
+    │   ├── _question_01.cpp
+    │   ├── _question_02.cpp
+    │   ├── _question_03.cpp
+    │   ├── _question_04.cpp
+    │   └── _question_05.cpp
     └── Practice session 2/
         ├── _01_question_.cpp
         ├── _02_question_.cpp
         └── _05_question_.cpp
 
-04 Loops/
+CH 04 Loops/
 ├── 01 for loops/
 │   ├── 00 bsics/
 │   │   └── basic.cpp
@@ -296,11 +320,15 @@ g++ -std=c++17 -O2 -Wall -Wextra "04 Loops\03 practice questions\_03_sum_of_digi
 │   ├── _04_sum_of_odd_digits.cpp
 │   ├── _05_reverse_of_a_digit.cpp
 │   └── _06_reverse.cpp
-└── 04 Do while loop/
-    ├── _01_do_while_loop.cpp
-    └── _02_basics.cpp
+├── 04 Do while loop/
+│   ├── _01_do_while_loop.cpp
+│   └── _02_basics.cpp
+└── 05 problems/
+    └── 01 Prime number/
+        ├── _01_practice.cpp
+        └── _02_prime_number_02.cpp
 
-05 Statements/
+CH 05 Statements/
 ├── 01 Break/
 │   ├── _01_break.cpp
 │   └── _02_practice.cpp
@@ -308,9 +336,8 @@ g++ -std=c++17 -O2 -Wall -Wextra "04 Loops\03 practice questions\_03_sum_of_digi
     ├── _01_continue.cpp
     └── _02_problem.cpp
 
-06 Prime number/
-    ├── _01_practice.cpp
-    └── _02_prime_number_02.cpp
+CH 06 Patterns/
+    └── (in progress)
 ```
 
 </details>
@@ -328,7 +355,7 @@ Contributions, suggestions, and improvements are welcome!
 5. **Open** a Pull Request.
 
 ### Contribution Ideas
-- 📌 Add a new DSA topic folder following the numbering convention.
+- 📌 Add a new DSA topic folder following the `CH xx` numbering convention.
 - 🧪 Add more practice problems with edge cases.
 - 🐛 Fix bugs or improve existing solutions.
 - 📝 Improve comments, naming, or documentation.
