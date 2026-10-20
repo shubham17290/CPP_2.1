@@ -1,0 +1,37 @@
+# Compiled binaries / build artifacts (do not commit)
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.pdb
+*.ilk
+*.exp
+*.class
+*.jar
+
+# Build directories
+build/
+bin/
+dist/
+out/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Editor / IDE swap files
+*~
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log
+">
