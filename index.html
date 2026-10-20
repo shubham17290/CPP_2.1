@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSA in C++ — Code Browser</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--accent:#58a6ff;--hover:#1f242c}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);display:flex;height:100vh;overflow:hidden}
+#sidebar{width:320px;min-width:240px;background:var(--panel);border-right:1px solid var(--border);display:flex;flex-direction:column}
+#sidebar header{padding:14px 16px;border-bottom:1px solid var(--border)}
+#sidebar h1{margin:0;font-size:16px}
+#sidebar input{width:100%;margin-top:10px;padding:8px 10px;border-radius:6px;border:1px solid var(--border);background:var(--bg);color:var(--text)}
+#tree{flex:1;overflow:auto;padding:8px}
+.folder{margin:4px 0}
+.folder>summary{cursor:pointer;padding:4px 6px;border-radius:6px;color:var(--muted);font-weight:600}
+.folder>summary:hover{background:var(--hover);color:var(--text)}
+.file{display:block;padding:4px 6px 4px 22px;border-radius:6px;cursor:pointer;color:var(--text);text-decoration:none;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.file:hover{background:var(--hover)}
+.file.active{background:#1f6feb33;color:var(--accent)}
+#main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+#toolbar{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;background:var(--panel)}
+#toolbar .title{font-weight:600;font-size:14px}
+#toolbar a{color:var(--accent);text-decoration:none;font-size:13px}
+#content{flex:1;overflow:auto;padding:16px}
+#readme{max-width:900px;margin:0 auto;line-height:1.6}
+#readme h1,#readme h2,#readme h3{border-bottom:1px solid var(--border);padding-bottom:6px}
+pre{background:#0d1117;border:1px solid var(--border);border-radius:8px;padding:14px;overflow:auto}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
+.empty{color:var(--muted);padding:40px;text-align:center}
+@media(max-width:720px){#sidebar{width:100%;height:40%;}body{flex-direction:column}}
+</style>
+</head>
+<body>
+<div id="sidebar">
+  <header>
+    <h1>DSA in C++</h1>
+    <input id="search" placeholder="Search files...">
+  </header>
+  <div id="tree"></div>
+</div>
+<div id="main">
+  <div id="toolbar">
+    <span class="title" id="title">README</span>
+    <a id="rawlink" href="#" target="_blank" rel="noopener">Open raw</a>
+  </div>
+  <div id="content">
+    <div id="readme" class="empty">Loading...</div>
+  </div>
+</div>
+<script>
+const FILES_URL='file-list.json';
+let files=[];
+const treeEl=document.getElementById('tree');
+const contentEl=document.getElementById('content');
+const titleEl=document.getElementById('title');
+const rawLink=document.getElementById('rawlink');
+const searchEl=document.getElementById('search');
+
+function encPath(p){return p.split('/').map(encodeURIComponent).join('/');}
+
+async function loadManifest(){
+  const res=await fetch(FILES_URL);
+  files=await res.json();
+  renderTree(files);
+}
+
+function groupFiles(list){
+  const root={};
+  for(const f of list){
+    const parts=f.split('/');
+    let cur=root;
+    for(let i=0;i<parts.length-1;i++){
+      cur[parts[i]]=cur[parts[i]]||{};
+      cur=cur[parts[i]];
+    }
+    (cur.__files=cur.__files||[]).push(f);
+  }
+  return root;
+}
+
+function renderTree(list){
+  const q=searchEl.value.trim().toLowerCase();
+  const filtered=q?list.filter(f=>f.toLowerCase().includes(q)):list;
+  treeEl.innerHTML='';
+  const root=groupFiles(filtered);
+  // sort folder keys
+  function build(node,prefix){
+    const frag=document.createDocumentFragment();
+    const folders=Object.keys(node).filter(k=>k!=='__files').sort();
+    for(const folder of folders){
+      const det=document.createElement('details');
+      det.className='folder';
+      det.open=true;
+      const sum=document.createElement('summary');
+      sum.textContent=folder;
+      det.appendChild(sum);
+      det.appendChild(build(node[folder],prefix+'/'+folder));
+      frag.appendChild(det);
+    }
+    for(const f of (node.__files||[]).sort()){
+      const a=document.createElement('a');
+      a.className='file';
+      a.textContent=f.split('/').pop();
+      a.title=f;
+      a.dataset.path=f;
+      a.addEventListener('click',e=>{e.preventDefault();openFile(f);});
+      frag.appendChild(a);
+    }
+    return frag;
+  }
+  treeEl.appendChild(build(root,''));
+}
+
+searchEl.addEventListener('input',()=>renderTree(files));
+
+async function openFile(path){
+  document.querySelectorAll('.file').forEach(e=>e.classList.toggle('active',e.dataset.path===path));
+  titleEl.textContent=path;
+  rawLink.href=encPath(path);
+  contentEl.innerHTML='<div class="empty">Loading...</div>';
+  try{
+    const res=await fetch(encPath(path));
+    const text=await res.text();
+    const pre=document.createElement('pre');
+    const code=document.createElement('code');
+    code.className='language-cpp';
+    code.textContent=text;
+    pre.appendChild(code);
+    contentEl.innerHTML='';
+    contentEl.appendChild(pre);
+    hljs.highlightElement(code);
+  }catch(err){
+    contentEl.innerHTML='<div class="empty">Failed to load file.</div>';
+  }
+}
+
+async function loadReadme(){
+  try{
+    const res=await fetch('README.md');
+    const md=await res.text();
+    contentEl.innerHTML='<div id="readme"></div>';
+    document.getElementById('readme').innerHTML=marked.parse(md);
+  }catch(err){
+    contentEl.innerHTML='<div class="empty">README not found.</div>';
+  }
+}
+
+// initial
+loadManifest();
+loadReadme();
+// clicking title-ish: default readme. Add a pseudo file entry at top
+const readmeLink=document.createElement('a');
+readmeLink.className='file';
+readmeLink.textContent='README.md';
+readmeLink.style.fontWeight='600';
+readmeLink.addEventListener('click',e=>{e.preventDefault();document.querySelectorAll('.file').forEach(e=>e.classList.remove('active'));titleEl.textContent='README.md';rawLink.href='README.md';loadReadme();});
+treeEl.prepend(readmeLink);
+</script>
+</body>
+</html>
