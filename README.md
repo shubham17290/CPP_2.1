@@ -56,7 +56,17 @@ The goal is simple:
 
 ---
 
-## 🗂️ Repository Structure
+## 🗂️ ## Web Code Browser
+
+Browse the entire codebase online with syntax highlighting:
+
+**https://shubham17290.github.io/CPP_2.1/**
+
+The browser is fully self-contained, works offline, and updates automatically on every push.
+
+---
+
+## 📂 Repository Structure
 
 ```
 DSA in C++/
