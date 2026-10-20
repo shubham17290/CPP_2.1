@@ -12,6 +12,7 @@
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
 [![Files](https://img.shields.io/badge/C%2B%2B%20Files-71-blueviolet?style=for-the-badge)](#-complete-file-index)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
+[![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
 
 <br/>
 
