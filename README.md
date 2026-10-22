@@ -10,7 +10,7 @@
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-71-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-101-blueviolet?style=for-the-badge)](#-complete-file-index)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
 
@@ -46,8 +46,8 @@ The goal is simple:
 
 ## ✨ Highlights
 
-- 🧩 **71+ self-contained C++ programs** — each file compiles and runs independently.
-- 📁 **Syllabus-aligned folders** — `CH 01 … CH 06` in the exact order you should learn them.
+- 🧩 **101+ self-contained C++ programs** — each file compiles and runs independently.
+- 📁 **Syllabus-aligned folders** — `CH 01 … CH 07` in the exact order you should learn them.
 - 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, …).
 - 🛠️ **VS Code ready** — `.vscode` config with g++, gdb, and strict warning flags.
 - 📝 **Commented code** — intent and logic explained inline.
@@ -107,7 +107,9 @@ DSA in C++/
 │   ├── 01 Break/
 │   └── 02 Continue/
 │
-├── 📁 CH 06 Patterns/                  # 🔄 in progress
+├── 📁 CH 06 Patterns/                  # 🔄 star/number patterns
+│
+├── CH 07 Function/                 # functions, scope, overloading
 │
 ├── 📁 .vscode/                         # editor & debugger config
 └── 📄 README.md
@@ -135,12 +137,12 @@ Marked as completed based on the actual content of this repository.
 - [x] **Loops** — `for`, `while`, `do-while`
 - [x] **Jump Statements** — `break`, `continue`
 - [x] **Prime Numbers** — primality checks
+- [x] **Patterns** — star/number patterns (`CH 06`)
 
 ### 🔄 In Progress
-- [ ] **Patterns** — `CH 06` (star/number patterns)
+- [ ] **Functions** - parameters, return types, scope, overloading (CH 07)
 
 ### 🗺️ Roadmap (Coming Soon)
-- [ ] Functions — parameters, return types, recursion basics
 - [ ] Arrays & Strings
 - [ ] Pointers & References
 - [ ] Object-Oriented Programming (classes, inheritance, polymorphism)
@@ -229,7 +231,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand — all 71 C++ source files</b></summary>
+<summary><b>Click to expand — all 101 C++ source files</b></summary>
 
 <br/>
 
@@ -348,7 +350,45 @@ CH 05 Statements/
     └── _02_problem.cpp
 
 CH 06 Patterns/
-    └── (in progress)
+    ├── 01 Problems/
+        ├── _01_problem_01.cpp
+        ├── _01_problem_genral_approacj.cpp
+        ├── _02_star_Pattern.cpp
+        ├── _03_inverted_star_pattern.cpp
+        ├── _04_half_pyramid_pattern.cpp
+        ├── _05_print_character_pyramid_pattern.cpp
+        ├── _06_hollow_rectangle_pattern.cpp
+        ├── _07_inverted_and_roated_half_pyramid.cpp
+        ├── _08_floyds_triangle.cpp
+        ├── _09_diamond_pattern.cpp
+        ├── _10_buttet_fly_pattern.cpp
+    ├── 03 Assignment Solution/
+        ├── _01_0_1_triangle.cpp
+        ├── _02_Rhombus_pattern.cpp
+        ├── _03_palindrome_pattern_with_numbers.cpp
+
+CH 07 Function/
+    ├── 01 Function intro/01 Basic things/
+        ├── _01_function_basic.cpp
+        ├── _02_function_basic.cpp
+        ├── _03_declaration.cpp
+        ├── _04_function_definition.cpp
+        ├── _05_forward_declaration.cpp
+        ├── _06_function_declaration_and_parameters.cpp
+        ├── _07_default_argument.cpp
+    ├── 01 Function intro/02 Practice Problems/
+        ├── _01_problem_01.cpp
+        ├── _02_odd_or_even.cpp
+        ├── _03_factorial.cpp
+    ├── 01 Function intro/03 scope/
+        ├── _01_local_scope.cpp
+        ├── _02_global_variable.cpp
+    ├── 01 Function intro/04 Practice problem/
+        ├── _01_prime_number.cpp
+        ├── _02_print_prime.cpp
+        ├── _03_binomial_coefficient.cpp
+    ├── 02 Function Overloading/
+        ├── _01_function_overloading.cpp
 ```
 
 </details>
