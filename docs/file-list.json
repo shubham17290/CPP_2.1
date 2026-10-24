@@ -1,4 +1,4 @@
-﻿[
+[
     "CH 01 Var and DT/01 First code/code.cpp",
     "CH 01 Var and DT/02 Variables and Data Types/code.cpp",
     "CH 01 Var and DT/02 Variables and Data Types/output.cpp",
@@ -99,5 +99,8 @@
     "CH 07 Function/01 Function intro/04 Practice problem/_01_prime_number.cpp",
     "CH 07 Function/01 Function intro/04 Practice problem/_02_print_prime.cpp",
     "CH 07 Function/01 Function intro/04 Practice problem/_03_binomial_coefficient.cpp",
-    "CH 07 Function/02 Function Overloading/_01_function_overloading.cpp"
+    "CH 07 Function/02 Function Overloading/_01_function_overloading.cpp",
+    "CH 08 Binary Number System/01 Basics/_01_data_type_modifiers.cpp",
+    "CH 08 Binary Number System/01 Basics/_02_number_to_binary.cpp",
+    "CH 08 Binary Number System/01 Basics/_03_decimal_to_binary.cpp"
 ]

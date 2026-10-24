@@ -10,7 +10,7 @@
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-101-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-104-blueviolet?style=for-the-badge)](#-complete-file-index)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
 
@@ -46,7 +46,7 @@ The goal is simple:
 
 ## ✨ Highlights
 
-- 🧩 **101+ self-contained C++ programs** — each file compiles and runs independently.
+- 🧩 **104+ self-contained C++ programs** — each file compiles and runs independently.
 - 📁 **Syllabus-aligned folders** — `CH 01 … CH 07` in the exact order you should learn them.
 - 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, …).
 - 🛠️ **VS Code ready** — `.vscode` config with g++, gdb, and strict warning flags.
@@ -110,6 +110,7 @@ DSA in C++/
 ├── 📁 CH 06 Patterns/                  # 🔄 star/number patterns
 │
 ├── CH 07 Function/                 # functions, scope, overloading
+├── CH 08 Binary Number System/     # data types, bin-to-dec, dec-to-bin
 │
 ├── 📁 .vscode/                         # editor & debugger config
 └── 📄 README.md
@@ -123,6 +124,7 @@ DSA in C++/
 - ➕ Added operator assignment solutions: **factorial, multiplication table, Armstrong number, prime number, Fibonacci**.
 - 🔁 Moved prime-number problems under `CH 04 Loops / 05 problems`.
 - 🌱 Started `CH 06 Patterns`.
+- 🆕 Added `CH 08 Binary Number System` (data type modifiers, decimal↔binary conversion).
 
 ---
 
@@ -138,9 +140,11 @@ Marked as completed based on the actual content of this repository.
 - [x] **Jump Statements** — `break`, `continue`
 - [x] **Prime Numbers** — primality checks
 - [x] **Patterns** — star/number patterns (`CH 06`)
+- [x] **Functions** — parameters, return types, scope, overloading (CH 07)
+- [x] **Binary Number System** — data types, bin-to-dec, dec-to-bin (CH 08)
 
 ### 🔄 In Progress
-- [ ] **Functions** - parameters, return types, scope, overloading (CH 07)
+- [ ] (none currently)
 
 ### 🗺️ Roadmap (Coming Soon)
 - [ ] Arrays & Strings
@@ -231,7 +235,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand — all 101 C++ source files</b></summary>
+<summary><b>Click to expand — all 104 C++ source files</b></summary>
 
 <br/>
 
@@ -389,6 +393,12 @@ CH 07 Function/
         ├── _03_binomial_coefficient.cpp
     ├── 02 Function Overloading/
         ├── _01_function_overloading.cpp
+
+CH 08 Binary Number System/
+    ├── 01 Basics/
+    │   ├── _01_data_type_modifiers.cpp
+    │   ├── _02_number_to_binary.cpp
+    │   └── _03_decimal_to_binary.cpp
 ```
 
 </details>

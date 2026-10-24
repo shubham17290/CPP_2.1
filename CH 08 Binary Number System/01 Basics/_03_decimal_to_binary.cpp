@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 //  convert binary to decimal
@@ -15,23 +16,21 @@ void binToDec(int binNum) {
     }
     cout << decNum << endl;
 }
-//  convert decimal to binary
-void decToBin(int decNum) {
-    int n = decNum;
-    int binNum = 0;
-    int pow = 1; // 10^0 , 10^1 , 10^2...
-
-    while (n > 0) {
-        int rem = n % 2;
-        binNum += rem * pow;
-        pow = pow * 10;
-
-        n = n / 2;
+    void decToBin(int decNum){
+        int n = decNum;
+        int pow = 1;
+        int binNum = 0;
+        while (n > 0) {
+            int rem = n % 2;
+            binNum += rem * pow;
+            n = n / 2;
+            pow = pow * 10;
+        }
+        cout << "Binary of" << decNum << " = " << binNum << endl;
     }
-    cout << binNum << endl;
-}
+
 int main() {
-    decToBin(10);
+    binToDec(1010);
 
     return 0;
 }
