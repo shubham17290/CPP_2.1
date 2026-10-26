@@ -8,4 +8,7 @@ int main()
 {
 
     int a = 10;
-    changeA
+    changeA(a);
+    cout<<
+    return 0;
+}
