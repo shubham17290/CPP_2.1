@@ -1,4 +1,7 @@
 [
+    "CH 00 Practice/01 function/_01_pass_by_reference.cpp",
+    "CH 00 Practice/01 function/_02_pass_by_reference.cpp",
+    "CH 00 Practice/02 operators precedence/_01_opr_precednece.cpp",
     "CH 01 Var and DT/01 First code/code.cpp",
     "CH 01 Var and DT/02 Variables and Data Types/code.cpp",
     "CH 01 Var and DT/02 Variables and Data Types/output.cpp",
@@ -111,5 +114,23 @@
     "CH 07 Function/04 Extra about function/_04_practice.cpp",
     "CH 08 Binary Number System/01 Basics/_01_data_type_modifiers.cpp",
     "CH 08 Binary Number System/01 Basics/_02_number_to_binary.cpp",
-    "CH 08 Binary Number System/01 Basics/_03_decimal_to_binary.cpp"
+    "CH 08 Binary Number System/01 Basics/_03_decimal_to_binary.cpp",
+    "CH 09 Pointers/01 Basics/_01_intro.cpp",
+    "CH 09 Pointers/01 Basics/_02_dereference.cpp",
+    "CH 09 Pointers/01 Basics/_03_practice.cpp",
+    "CH 09 Pointers/02 Passing arguments/_01_pass_by_value.cpp",
+    "CH 09 Pointers/02 Passing arguments/_02_pass_by_ref.cpp",
+    "CH 09 Pointers/02 Passing arguments/_03_practice.cpp",
+    "CH 09 Pointers/02 Passing arguments/_04_pratice_q_01.cpp",
+    "CH 09 Pointers/02 Passing arguments/_05_pq_02.cpp",
+    "CH 09 Pointers/02 Passing arguments/_06_ref.cpp",
+    "CH 10 Array/01 Basic and extra/_01_array.cpp",
+    "CH 10 Array/01 Basic and extra/_02_array_loop.cpp",
+    "CH 10 Array/01 Basic and extra/_03_taking_input.cpp",
+    "CH 10 Array/01 Basic and extra/_04_smallest_in_array.cpp",
+    "CH 10 Array/01 Basic and extra/_05_find_largest_number.cpp",
+    "CH 10 Array/01 Basic and extra/_06_pass_by_reference.cpp",
+    "CH 10 Array/01 Basic and extra/_07_linear_search.cpp",
+    "CH 10 Array/01 Basic and extra/_08_reverse_an_array.cpp",
+    "CH 10 Array/01 Basic and extra/_09_general_appraoch.cpp"
 ]
