@@ -132,5 +132,11 @@
     "CH 10 Array/01 Basic and extra/_06_pass_by_reference.cpp",
     "CH 10 Array/01 Basic and extra/_07_linear_search.cpp",
     "CH 10 Array/01 Basic and extra/_08_reverse_an_array.cpp",
-    "CH 10 Array/01 Basic and extra/_09_general_appraoch.cpp"
+    "CH 10 Array/01 Basic and extra/_09_general_appraoch.cpp",
+    "CH 10 Array/02 Array  01/01 basic/_01_array.cpp",
+    "CH 10 Array/02 Array  01/01 basic/_02_creationg_of_array_01.cpp",
+    "CH 10 Array/02 Array  01/01 basic/_03_creationg_of_array_02.cpp",
+    "CH 10 Array/02 Array  01/01 basic/_04_creationg_of_array_03.cpp",
+    "CH 10 Array/02 Array  01/02 input and output/_01_output.cpp",
+    "CH 10 Array/02 Array  01/02 input and output/_02_input_array_value.cpp"
 ]

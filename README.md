@@ -10,7 +10,7 @@
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-113-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-140-blueviolet?style=for-the-badge)](#-complete-file-index)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
 
@@ -46,8 +46,8 @@ The goal is simple:
 
 ## ✨ Highlights
 
-- 🧩 **113+ self-contained C++ programs** — each file compiles and runs independently.
-- 📁 **Syllabus-aligned folders** — `CH 01 … CH 07` in the exact order you should learn them.
+- 🧩 **140 self-contained C++ programs** — each file compiles and runs independently.
+- 📁 **Syllabus-aligned folders** — `CH 01 … CH 10` in the exact order you should learn them.
 - 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, …).
 - 🛠️ **VS Code ready** — `.vscode` config with g++, gdb, and strict warning flags.
 - 📝 **Commented code** — intent and logic explained inline.
@@ -56,7 +56,7 @@ The goal is simple:
 
 ---
 
-## 🗂️ ## Web Code Browser
+## 🗂️ Web Code Browser
 
 Browse the entire codebase online with syntax highlighting:
 
@@ -70,6 +70,10 @@ The browser is fully self-contained, works offline, and updates automatically on
 
 ```
 DSA in C++/
+│
+├── 📁 CH 00 Practice/
+│   ├── 01 function/                    # pass-by-reference practice
+│   └── 02 operators precedence/        # operator precedence drills
 │
 ├── 📁 CH 01 Var and DT/
 │   ├── 01 First code/                  # Hello World & first program
@@ -109,8 +113,14 @@ DSA in C++/
 │
 ├── 📁 CH 06 Patterns/                  # 🔄 star/number patterns
 │
-├── CH 07 Function/                 # functions, scope, overloading
-├── CH 08 Binary Number System/     # data types, bin-to-dec, dec-to-bin
+├── 📁 CH 07 Function/                  # functions, scope, overloading
+├── 📁 CH 08 Binary Number System/      # data types, bin-to-dec, dec-to-bin
+├── 📁 CH 09 Pointers/                  # pointers, dereferencing, pass-by-reference
+│   ├── 01 Basics/
+│   └── 02 Passing arguments/
+├── 📁 CH 10 Array/                     # array basics, traversal, search, reverse
+│   ├── 01 Basic and extra/
+│   └── 02 Array  01/                   # declarations, creation, I/O
 │
 ├── 📁 .vscode/                         # editor & debugger config
 └── 📄 README.md
@@ -125,6 +135,8 @@ DSA in C++/
 - 🔁 Moved prime-number problems under `CH 04 Loops / 05 problems`.
 - 🌱 Started `CH 06 Patterns`.
 - 🆕 Added `CH 08 Binary Number System` (data type modifiers, decimal↔binary conversion).
+- 🧷 Added `CH 09 Pointers` (pointer basics, dereferencing, pass-by-reference).
+- 🧮 Added `CH 10 Array` (array declaration, traversal, linear search, reverse, I/O).
 
 ---
 
@@ -142,13 +154,13 @@ Marked as completed based on the actual content of this repository.
 - [x] **Patterns** — star/number patterns (`CH 06`)
 - [x] **Functions** — parameters, return types, scope, overloading (CH 07)
 - [x] **Binary Number System** — data types, bin-to-dec, dec-to-bin (CH 08)
+- [x] **Pointers & References** — addresses, dereferencing, pass-by-value vs pass-by-reference (CH 09)
 
 ### 🔄 In Progress
-- [ ] (none currently)
+- [ ] **Arrays** — declaration, traversal, linear search, reverse (`CH 10`)
 
 ### 🗺️ Roadmap (Coming Soon)
-- [ ] Arrays & Strings
-- [ ] Pointers & References
+- [ ] Strings
 - [ ] Object-Oriented Programming (classes, inheritance, polymorphism)
 - [ ] Recursion & Backtracking
 - [ ] Searching & Sorting
@@ -216,8 +228,8 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 3. Open any `.cpp` file and press **`Ctrl + Alt + N`** (Run Code) or use the **Run ▶** button.
 4. The `.vscode/settings.json` already configures `g++` with strict warnings (`-Wall -Wextra -Wpedantic`).
 
-> 🧹 **Housekeeping:** compiled `.exe` / `a.out` files are build artifacts. They are committed here
-> for convenience but you can safely delete them — only the `.cpp` sources matter.
+> 🧹 **Housekeeping:** compiled `.exe` / `a.out` files are build artifacts and are ignored by git —
+> only the `.cpp` sources matter.
 
 ---
 
@@ -235,11 +247,18 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand - all 113 C++ source files</b></summary>
+<summary><b>Click to expand - all 140 C++ source files</b></summary>
 
 <br/>
 
 ```
+CH 00 Practice/
+├── 01 function/
+│   ├── _01_pass_by_reference.cpp
+│   └── _02_pass_by_reference.cpp
+└── 02 operators precedence/
+    └── _01_opr_precednece.cpp
+
 CH 01 Var and DT/
 ├── 01 First code/
 │   └── code.cpp
@@ -300,7 +319,7 @@ CH 03 Conditionals/
 ├── 02 else if statement/
 │   ├── _else_if_statement.cpp
 │   └── _q_01.cpp
-├── 03 Ternary operator/
+├── 03 Ternamry operator/
 │   ├── _01_ternary_basics.cpp
 │   └── _02_base_2.cpp
 ├── 04 Switch Statement/
@@ -354,51 +373,99 @@ CH 05 Statements/
     └── _02_problem.cpp
 
 CH 06 Patterns/
-    ├── 01 Problems/
-        ├── _01_problem_01.cpp
-        ├── _01_problem_genral_approacj.cpp
-        ├── _02_star_Pattern.cpp
-        ├── _03_inverted_star_pattern.cpp
-        ├── _04_half_pyramid_pattern.cpp
-        ├── _05_print_character_pyramid_pattern.cpp
-        ├── _06_hollow_rectangle_pattern.cpp
-        ├── _07_inverted_and_roated_half_pyramid.cpp
-        ├── _08_floyds_triangle.cpp
-        ├── _09_diamond_pattern.cpp
-        ├── _10_buttet_fly_pattern.cpp
-    ├── 03 Assignment Solution/
-        ├── _01_0_1_triangle.cpp
-        ├── _02_Rhombus_pattern.cpp
-        ├── _03_palindrome_pattern_with_numbers.cpp
+├── 01 Problems/
+│   ├── _01_problem_01.cpp
+│   ├── _01_problem_genral_approacj.cpp
+│   ├── _02_star_Pattern.cpp
+│   ├── _03_inverted_star_pattern.cpp
+│   ├── _04_half_pyramid_pattern.cpp
+│   ├── _05_print_character_pyramid_pattern.cpp
+│   ├── _06_hollow_rectangle_pattern.cpp
+│   ├── _07_inverted_and_roated_half_pyramid.cpp
+│   ├── _08_floyds_triangle.cpp
+│   ├── _09_diamond_pattern.cpp
+│   └── _10_buttet_fly_pattern.cpp
+└── 03 Assignment Solution/
+    ├── _01_0_1_triangle.cpp
+    ├── _02_Rhombus_pattern.cpp
+    └── _03_palindrome_pattern_with_numbers.cpp
 
 CH 07 Function/
-    ├── 01 Function intro/01 Basic things/
-        ├── _01_function_basic.cpp
-        ├── _02_function_basic.cpp
-        ├── _03_declaration.cpp
-        ├── _04_function_definition.cpp
-        ├── _05_forward_declaration.cpp
-        ├── _06_function_declaration_and_parameters.cpp
-        ├── _07_default_argument.cpp
-    ├── 01 Function intro/02 Practice Problems/
-        ├── _01_problem_01.cpp
-        ├── _02_odd_or_even.cpp
-        ├── _03_factorial.cpp
-    ├── 01 Function intro/03 scope/
-        ├── _01_local_scope.cpp
-        ├── _02_global_variable.cpp
-    ├── 01 Function intro/04 Practice problem/
-        ├── _01_prime_number.cpp
-        ├── _02_print_prime.cpp
-        ├── _03_binomial_coefficient.cpp
-    ├── 02 Function Overloading/
-        ├── _01_function_overloading.cpp
+├── 01 Function intro/
+│   ├── 01 Basic things/
+│   │   ├── _01_function_basic.cpp
+│   │   ├── _02_function_basic.cpp
+│   │   ├── _03_declaration.cpp
+│   │   ├── _04_function_definition.cpp
+│   │   ├── _05_forward_declaration.cpp
+│   │   ├── _06_function_declaration_and_parameters.cpp
+│   │   └── _07_default_argument.cpp
+│   ├── 02 Practice Problems/
+│   │   ├── _01_problem_01.cpp
+│   │   ├── _02_odd_or_even.cpp
+│   │   └── _03_factorial.cpp
+│   ├── 03 scope/
+│   │   ├── _01_local_scope.cpp
+│   │   └── _02_global_variable.cpp
+│   └── 04 Practice problem/
+│       ├── _01_prime_number.cpp
+│       ├── _02_print_prime.cpp
+│       └── _03_binomial_coefficient.cpp
+├── 02 Function Overloading/
+│   └── _01_function_overloading.cpp
+├── 03 Function assignment/
+│   └── 02 Solutions/
+│       └── 01 Codes/
+│           ├── _01__palindrome.cpp
+│           ├── _02_sum_of_digit.cpp
+│           ├── _03_square_formula.cpp
+│           ├── _04_largest__of_three.cpp
+│           └── _05_return_the_next_char.cpp
+└── 04 Extra about function/
+    ├── _01_function.cpp
+    ├── _02_practice.cpp
+    ├── _03_pass_by_reference.cpp
+    └── _04_practice.cpp
 
 CH 08 Binary Number System/
-    ├── 01 Basics/
-    │   ├── _01_data_type_modifiers.cpp
-    │   ├── _02_number_to_binary.cpp
-    │   └── _03_decimal_to_binary.cpp
+└── 01 Basics/
+    ├── _01_data_type_modifiers.cpp
+    ├── _02_number_to_binary.cpp
+    └── _03_decimal_to_binary.cpp
+
+CH 09 Pointers/
+├── 01 Basics/
+│   ├── _01_intro.cpp
+│   ├── _02_dereference.cpp
+│   └── _03_practice.cpp
+└── 02 Passing arguments/
+    ├── _01_pass_by_value.cpp
+    ├── _02_pass_by_ref.cpp
+    ├── _03_practice.cpp
+    ├── _04_pratice_q_01.cpp
+    ├── _05_pq_02.cpp
+    └── _06_ref.cpp
+
+CH 10 Array/
+├── 01 Basic and extra/
+│   ├── _01_array.cpp
+│   ├── _02_array_loop.cpp
+│   ├── _03_taking_input.cpp
+│   ├── _04_smallest_in_array.cpp
+│   ├── _05_find_largest_number.cpp
+│   ├── _06_pass_by_reference.cpp
+│   ├── _07_linear_search.cpp
+│   ├── _08_reverse_an_array.cpp
+│   └── _09_general_appraoch.cpp
+└── 02 Array  01/
+    ├── 01 basic/
+    │   ├── _01_array.cpp
+    │   ├── _02_creationg_of_array_01.cpp
+    │   ├── _03_creationg_of_array_02.cpp
+    │   └── _04_creationg_of_array_03.cpp
+    └── 02 input and output/
+        ├── _01_output.cpp
+        └── _02_input_array_value.cpp
 ```
 
 </details>
