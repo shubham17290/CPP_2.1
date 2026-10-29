@@ -155,12 +155,12 @@ Marked as completed based on the actual content of this repository.
 - [x] **Functions** — parameters, return types, scope, overloading (CH 07)
 - [x] **Binary Number System** — data types, bin-to-dec, dec-to-bin (CH 08)
 - [x] **Pointers & References** — addresses, dereferencing, pass-by-value vs pass-by-reference (CH 09)
+- [x] **Arrays** — declaration, traversal, linear search, reverse, I/O (`CH 10`)
 
 ### 🔄 In Progress
-- [ ] **Arrays** — declaration, traversal, linear search, reverse (`CH 10`)
+- [ ] **Strings**
 
 ### 🗺️ Roadmap (Coming Soon)
-- [ ] Strings
 - [ ] Object-Oriented Programming (classes, inheritance, polymorphism)
 - [ ] Recursion & Backtracking
 - [ ] Searching & Sorting
