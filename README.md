@@ -140,6 +140,62 @@ DSA in C++/
 
 ---
 
+## ❓ Quality Questions for Learning
+
+Use these questions every time you finish a topic, chapter, or assignment. They help you check whether you truly understand the concept and can explain it clearly.
+
+### Core Understanding Questions
+1. Can you explain the concept in your own words without looking at the code?
+2. What is the input, output, and expected behavior of the problem?
+3. Why is this concept important in real-world programming?
+4. What are the key rules, conditions, and edge cases?
+5. Can you identify the time complexity and space complexity?
+6. Can you dry run the code step by step on sample input?
+7. What would happen if the input size becomes very large?
+8. Can you write a simpler version of the logic using your own words?
+9. What mistakes are commonly made in this topic?
+10. How would you optimize this code further?
+
+### Problem-Solving Quality Questions
+11. What is the exact problem statement in simple terms?
+12. Which approach is better: brute force, optimized logic, or a data structure?
+13. Why did you choose this algorithm or method?
+14. Can you prove the logic works for all valid inputs?
+15. What are the corner cases such as empty input, zero, negative numbers, or duplicate values?
+16. Can you rewrite the same solution using a different approach?
+17. How would you test this solution manually?
+18. What happens if the constraints are increased tenfold?
+19. Is your code readable, clean, and beginner-friendly?
+20. Can you explain your code to someone who is new to programming?
+
+### DSA Practice Questions
+21. What is the difference between arrays and pointers?
+22. Why are loops useful in repetitive tasks?
+23. What is the difference between `if-else` and `switch`?
+24. When should you use a function instead of repeating code?
+25. How do patterns help in understanding loops and nested logic?
+26. What is the role of operators in decision-making?
+27. Why is binary representation important in computing?
+28. How does pointer arithmetic work in C++?
+29. What is the difference between pass-by-value and pass-by-reference?
+30. How do arrays help in organizing data efficiently?
+
+### Self-Check Questions for Revision
+31. Did I understand the topic before writing the code?
+32. Did I test the program with multiple examples?
+33. Did I handle invalid input or edge cases?
+34. Did I write clear variable names and comments?
+35. Can I solve the same question without copying previous code?
+36. Am I able to explain the algorithm in under 2 minutes?
+37. Can I identify the complexity of this solution immediately?
+38. Could I make this code shorter, cleaner, or faster?
+39. Which part of the topic is still confusing to me?
+40. What should I revise next to improve my confidence?
+
+> These questions are not just for exam prep; they are a quality check for deep learning. If you can answer them confidently, you are understanding the topic at a practical level.
+
+---
+
 ## 📊 Progress Tracker
 
 Marked as completed based on the actual content of this repository.
