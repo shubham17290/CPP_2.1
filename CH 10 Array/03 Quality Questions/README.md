@@ -11,6 +11,6 @@ Curated, interview-style practice problems for this chapter. Each file is self-c
 ## How to run
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "Quality Questions/<file>.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03 Quality Questions/<file>.cpp" -o out
 ./out
 ```
