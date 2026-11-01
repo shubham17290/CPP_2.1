@@ -5,9 +5,14 @@ using namespace std;
 
 int main() {
     //  creation of vector
+
     vector<int> marks;
+
     //  vector initialization
-    vector<int> marks2   = {1, 2, 3, 4, 5};
+    vector<int> miles(10); // 10 elements with default value 0
+
+    vector<int> distances(15,0); // 15 elements with default value 01
 
     return 0;
 }
+
