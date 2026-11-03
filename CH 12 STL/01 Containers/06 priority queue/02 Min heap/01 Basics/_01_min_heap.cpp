@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+//  min-heap:
+//  min
+priority_queue<int, vector<int>, greater<int>> pq;
+
+pq.push(100);
+pq.push(50);
+
+
+return 0; }
