@@ -9,6 +9,7 @@ priority_queue<int, vector<int>, greater<int>> pq;
 
 pq.push(100);
 pq.push(50);
-
+//50 , 100
+pq.push()
 
 return 0; }
