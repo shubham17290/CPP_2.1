@@ -1,40 +1,17 @@
 # Queue
 
-`std::queue` is a container adapter that provides FIFO (First In, First Out) behavior.
-By default it is backed by a `deque`.
+`std::queue` is a container adapter that provides FIFO (First In, First Out) behavior. By default it is backed by a `deque`.
 
-## Basic usage
+## Folders
 
-```cpp
-#include <iostream>
-#include <queue>
-using namespace std;
+| Folder | Contents |
+|--------|----------|
+| `01 Basics` | Queue basics and member function examples |
 
-int main() {
+## Member Functions
 
-    //  creating a queue
-    queue<int> q;
-    //  insertion and deletion
-
-    q.push(10);
-    // 10
-    q.push(20);
-    // 10,20
-    q.push(30);
-    // 10,20,30
-    q.push(40);
-    // 10,20,30,40
-    cout << q.size() << endl; // 4
-
-
-    return 0;
-}
-```
-
-## Member functions
-
-- `push(x)` / `emplace(x)` — insert at the rear
-- `pop()` — remove from the front
+- `push(x)` / `emplace(x)` — insert at the rear (enqueue)
+- `pop()` — remove from the front (dequeue)
 - `front()` — access the first element
 - `back()` — access the last element
 - `size()` — number of elements
