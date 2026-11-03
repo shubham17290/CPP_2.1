@@ -1,0 +1,37 @@
+# Vector — Member Functions
+
+One `.cpp` file per `std::vector` member function, demonstrating usage with inline state comments.
+
+## Files
+
+| File | Function |
+|------|----------|
+| `_01_begin.cpp` | `begin()` — iterator to first element |
+| `_02_insertion.cpp` | `insert()` — insert element(s) at position |
+| `_03_pop_back.cpp` | `pop_back()` — remove last element |
+| `_04_front_back.cpp` | `front()` / `back()` — access first/last element |
+| `_05_empty.cpp` | `empty()` — check if vector is empty |
+| `_06_at_and_index.cpp` | `at()` / `operator[]` — element access |
+| `_07_capacity_of_vector.cpp` | `capacity()` — allocated storage |
+| `_08_reserve.cpp` | `reserve()` — request capacity change |
+| `_09_clear_function.cpp` | `clear()` — remove all elements |
+| `_10_insert_function.cpp` | `insert()` — insert element |
+| `_11_swap.cpp` | `swap()` — swap contents with another vector |
+| `_12_for_each_loop.cpp` | Range-based for loop iteration |
+| `_13_iterator.cpp` | Iterator usage |
+
+## Example Pattern
+
+Each file follows this pattern:
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> v;
+    // ... operation ...
+    cout << "result: " << ... << endl;
+    return 0;
+}
+```
