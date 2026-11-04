@@ -2,9 +2,12 @@
 
 `std::map` is an associative container that stores key-value pairs sorted by key. Typically implemented as a red-black tree. O(log n) complexity for search, insert, and delete.
 
-## Contents
+## Folders
 
-- `02 Ordered Map/` — Ordered map examples (currently empty, to be populated)
+| Folder | Contents |
+|--------|----------|
+| `01 Basics` | Basic ordered map examples |
+| `02 functions` | Member function examples |
 
 ## Key Features
 

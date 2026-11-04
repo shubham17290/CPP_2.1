@@ -13,6 +13,7 @@ This chapter covers the Standard Template Library (STL) containers in C++. Each 
 | `05 Deque DS` | `std::deque` | Double-ended queue |
 | `06 priority queue` | `std::priority_queue` | Heap-based priority queue |
 | `07 Map` | `std::map` / `std::unordered_map` | Associative key-value containers |
+| `08 Set` | `std::set` / `std::unordered_set` | Associative unique-element containers |
 
 ## Folder Structure
 
@@ -36,3 +37,5 @@ See individual container README files for details on each container's functions 
 | `priority_queue` | `<queue>` |
 | `map` | `<map>` |
 | `unordered_map` | `<unordered_map>` |
+| `set` | `<set>` |
+| `unordered_set` | `<unordered_set>` |
