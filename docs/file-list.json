@@ -261,5 +261,19 @@
     "CH 12 STL/01 Containers/07 Map/01 UnOrdered Map/02 functions and methods/_02_updation_in_value.cpp",
     "CH 12 STL/01 Containers/07 Map/01 UnOrdered Map/02 functions and methods/_03_traversing_the_un_map.cpp",
     "CH 12 STL/01 Containers/07 Map/01 UnOrdered Map/02 functions and methods/_04_size.cpp",
-    "CH 12 STL/01 Containers/07 Map/01 UnOrdered Map/02 functions and methods/_05_erase.cpp"
+    "CH 12 STL/01 Containers/07 Map/01 UnOrdered Map/02 functions and methods/_05_erase.cpp",
+    "CH 12 STL/01 Containers/07 Map/01 UnOrdered Map/02 functions and methods/_06_find.cpp",
+    "CH 12 STL/01 Containers/07 Map/01 UnOrdered Map/02 functions and methods/_07_count.cpp",
+    "CH 12 STL/01 Containers/07 Map/02 Ordered Map/01 Basics/_01_basic.cpp",
+    "CH 12 STL/01 Containers/07 Map/02 Ordered Map/02 functions/_01_basisc.cpp",
+    "CH 12 STL/01 Containers/08 Set/01 ordered set/01 bsics of set/_01_basic_of_set.cpp",
+    "CH 12 STL/01 Containers/08 Set/01 ordered set/02 function/_01_erase.cpp",
+    "CH 12 STL/01 Containers/08 Set/01 ordered set/02 function/_01_size_clear_empty.cpp",
+    "CH 12 STL/01 Containers/08 Set/01 ordered set/02 function/_03_find.cpp",
+    "CH 12 STL/01 Containers/08 Set/01 ordered set/02 function/_04_count.cpp",
+    "CH 12 STL/01 Containers/08 Set/01 ordered set/02 function/_check.cpp",
+    "CH 12 STL/01 Containers/08 Set/02 unord set/01 bsics of set/_01_basic_of_set.cpp",
+    "CH 12 STL/01 Containers/08 Set/02 unord set/02 functions/_01_size_clear_empty.cpp",
+    "CH 12 STL/01 Containers/08 Set/02 unord set/02 functions/_02_erase.cpp",
+    "CH 12 STL/01 Containers/08 Set/02 unord set/02 functions/_03_find.cpp"
 ]
