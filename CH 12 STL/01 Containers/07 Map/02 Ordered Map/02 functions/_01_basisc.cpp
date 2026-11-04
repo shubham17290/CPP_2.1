@@ -6,31 +6,18 @@ using namespace std;
 int main() {
 
     //  creation of the ordered map
-    map<string, string> table;
-    //  insertion
-    //  method 01
-    table["in"] = "india";
-    //  method 02
-    table.insert((make_pair)("en", "england"));
+    map<int, string> table;
+    //  first operation on the ordered map !
+    table.insert(make_pair(1, "love"));
+    table.insert(make_pair(2, "anita"));
+    table.insert(make_pair(3, "babita"));
+    table.insert(make_pair(4, "savita"));
 
-    //  by making the pairs : method 03
 
-    pair<string, string> p;
-    p.first = "br";
-    p.second = "brazil";
-    table.insert(p);
-    cout << table.size() << endl;
 
-    /*if (table.empty()) {
-        cout << "map is empty ";
-
-    } else {
-        cout << " map is not empty ";
-    }
-*/
-    map<string, string>::iterator it = table.begin();
+    map<int, string>::iterator it = table.begin();
     while (it != table.end()) {
-        pair<string, string> p = *it;
+        pair<int, string> p = *it;
         cout << p.first << " " << p.second << endl;
         it++;
     }
