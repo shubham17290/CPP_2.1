@@ -93,13 +93,13 @@ DSA in C++/
 │   └── Quality Questions/
 ├── 📁 CH 09 Pointers/
 │   └── Quality Questions/
-├── 📁 CH 10 Array/
+├── 📁 CH 10 Array I/
 │   └── Quality Questions/
-├── 📁 CH 11 vector/
+├── 📁 CH 13 STL/00 vector(APC)/
 │   ├── 01 basics of the vector/
 │   ├── 02 Vector Function/
 │   └── 03 Static and dynamic/
-├── 📁 CH 12 STL/
+├── 📁 CH 13 STL/
 │   ├── 01 Containers/
 │   ├── 02 Iterators/
 │   └── 03 Algorithms/
@@ -114,16 +114,16 @@ DSA in C++/
 
 ## 🆕 What's New
 
-- 🔎 Added `CH 12 STL → 03 Algorithms → 03 Searching and finding algorithms` with
+- 🔎 Added `CH 13 STL → 03 Algorithms → 03 Searching and finding algorithms` with
   `binary_search`, `lower_bound`, `upper_bound`, and an `equal_range` homework placeholder.
-- 🧮 Added `CH 12 STL → 03 Algorithms → 02 Numeric algorithms` (`accumulate`,
+- 🧮 Added `CH 13 STL → 03 Algorithms → 02 Numeric algorithms` (`accumulate`,
   `inner_product`, `partial_sum`, `iota`).
-- 🔁 Added `CH 12 STL → 03 Algorithms → 01 iterators and iterating algorithms`
+- 🔁 Added `CH 13 STL → 03 Algorithms → 01 iterators and iterating algorithms`
   (`for_each`, `find`, `find_if`, `count`, `count_if`, `sort`, `reverse`, `unique`,
   `rotate`, `partition`).
-- 📦 Added `CH 12 STL → 01 Containers` coverage for vector, list, queue, stack,
+- 📦 Added `CH 13 STL → 01 Containers` coverage for vector, list, queue, stack,
   deque, priority queue, map, and set.
-- 🧷 Added `CH 11 vector` and `CH 09 Pointers` fundamentals.
+- 🧷 Added `CH 13 STL/00 vector(APC)` and `CH 09 Pointers` fundamentals.
 - ✨ Added a `Quality Questions` subfolder in every chapter (CH 00–CH 10) with curated practice problems.
 
 ---
@@ -468,7 +468,7 @@ CH 09 Pointers/
     ├── _01_pointer_arithmetic.cpp
     └── _02_swap_using_pointers.cpp
 
-CH 10 Array/
+CH 10 Array I/
 ├── 01 Basic and extra/
 │   ├── _01_array.cpp
 │   ├── _02_array_loop.cpp
@@ -521,7 +521,7 @@ CH 10 Array/
         ├── _02_search_in_rotated_sorted_array.cpp
         └── _03_maximum_product_subarray.cpp
 
-CH 11 vector/
+CH 13 STL/00 vector(APC)/
 ├── 01 basics of the vector/
 │   ├── _01_vector_syntax.cpp
 │   └── _02_for_each_loop.cpp
@@ -535,7 +535,7 @@ CH 11 vector/
 └── 03 Static and dynamic/
     └── _01_property_01.cpp
 
-CH 12 STL/
+CH 13 STL/
 ├── 01 Containers/
 │   ├── 01 vector DS/
 │   │   ├── 01 basics/
