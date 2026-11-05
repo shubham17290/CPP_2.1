@@ -9,7 +9,7 @@
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-176-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-295-blueviolet?style=for-the-badge)](#-complete-file-index)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
 
@@ -34,7 +34,7 @@ This repository is my personal learning journal for **Data Structures & Algorith
 The goal is simple:
 
 - ✅ **Learn by doing** — every concept is backed by runnable C++ code.
-- ✅ **Practice relentlessly** — multiple practice questions and assignment solutions per topic, plus curated **Quality Questions** in every chapter.
+- ✅ **Practice relentlessly** — multiple practice questions and assignment solutions per topic, plus curated **Quality Questions** in every core chapter.
 - ✅ **Stay organized** — numbered `CH xx` folders mirror the course syllabus.
 - ✅ **Track progress** — git history tells the story of the journey.
 
@@ -45,10 +45,11 @@ The goal is simple:
 
 ## ✨ Highlights
 
-- 🧩 **176 self-contained C++ programs** — each file compiles and runs independently.
-- 📁 **Syllabus-aligned folders** — `CH 00 … CH 10` in the exact order you should learn them.
+- 🧩 **295 self-contained C++ programs** — each file compiles and runs independently.
+- 📁 **Syllabus-aligned folders** — `CH 00 … CH 12` in the exact order you should learn them.
+- 🧱 **C++ STL coverage** — containers, iterators, and algorithms (`CH 12`), including the `binary_search` / `lower_bound` / `upper_bound` / `equal_range` family.
 - 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, …).
-- ✨ **Quality Questions** subfolder in every chapter with curated, interview-style problems (each folder has its own `README.md` index).
+- ✨ **Quality Questions** subfolder in every core chapter (CH 00–CH 10) with curated, interview-style problems (each folder has its own `README.md` index).
 - 🛠️ **VS Code ready** — `.vscode` config with g++, gdb, and strict warning flags.
 - 📝 **Commented code** — intent and logic explained inline.
 - 🔁 **Git history** — every milestone committed, so you can replay the learning path.
@@ -94,6 +95,14 @@ DSA in C++/
 │   └── Quality Questions/
 ├── 📁 CH 10 Array/
 │   └── Quality Questions/
+├── 📁 CH 11 vector/
+│   ├── 01 basics of the vector/
+│   ├── 02 Vector Function/
+│   └── 03 Static and dynamic/
+├── 📁 CH 12 STL/
+│   ├── 01 Containers/
+│   ├── 02 Iterators/
+│   └── 03 Algorithms/
 │
 ├── 📁 .github/workflows/        # GitHub Pages deploy workflow
 ├── 📁 .vscode/                 # editor & debugger config
@@ -105,10 +114,17 @@ DSA in C++/
 
 ## 🆕 What's New
 
-- ✨ Added `Quality Questions` subfolder in every chapter (CH 00–CH 10) with curated practice problems.
-- 🧮 Expanded `CH 10 Array` with array pointer traversal, binary search, and more.
-- 🧷 Added `CH 09 Pointers` (pointer basics, dereferencing, pass-by-reference).
-- 🆕 Added `CH 08 Binary Number System` (data types, bin-to-dec, dec-to-bin).
+- 🔎 Added `CH 12 STL → 03 Algorithms → 03 Searching and finding algorithms` with
+  `binary_search`, `lower_bound`, `upper_bound`, and an `equal_range` homework placeholder.
+- 🧮 Added `CH 12 STL → 03 Algorithms → 02 Numeric algorithms` (`accumulate`,
+  `inner_product`, `partial_sum`, `iota`).
+- 🔁 Added `CH 12 STL → 03 Algorithms → 01 iterators and iterating algorithms`
+  (`for_each`, `find`, `find_if`, `count`, `count_if`, `sort`, `reverse`, `unique`,
+  `rotate`, `partition`).
+- 📦 Added `CH 12 STL → 01 Containers` coverage for vector, list, queue, stack,
+  deque, priority queue, map, and set.
+- 🧷 Added `CH 11 vector` and `CH 09 Pointers` fundamentals.
+- ✨ Added a `Quality Questions` subfolder in every chapter (CH 00–CH 10) with curated practice problems.
 
 ---
 
@@ -128,6 +144,10 @@ Marked as completed based on the actual content of this repository.
 - [x] **Binary Number System** — data types, bin-to-dec, dec-to-bin (CH 08)
 - [x] **Pointers & References** — addresses, dereferencing, pass-by-value vs pass-by-reference (CH 09)
 - [x] **Arrays** — declaration, traversal, linear search, reverse, I/O (`CH 10`)
+- [x] **Vectors** — declaration, member functions, static vs dynamic behavior (`CH 11`)
+- [x] **STL Containers** — vector, list, queue, stack, deque, priority queue, map, set (`CH 12`)
+- [x] **STL Iterators** — iterator basics and iterator ranges (`CH 12`)
+- [x] **STL Algorithms** — iterating, numeric, and searching algorithms (`CH 12`)
 
 ### 🔄 In Progress
 - [ ] **Strings**
@@ -218,7 +238,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand - all 176 C++ source files</b></summary>
+<summary><b>Click to expand - all 295 C++ source files</b></summary>
 
 <br/>
 
@@ -232,6 +252,7 @@ CH 00 Practice/
 └── Quality Questions/
     ├── _01_swap_without_temp.cpp
     └── _02_operator_precedence_challenge.cpp
+
 CH 01 Var and DT/
 ├── 01 First code/
 │   └── code.cpp
@@ -257,6 +278,7 @@ CH 01 Var and DT/
 └── Quality Questions/
     ├── _01_type_conversion.cpp
     └── _02_ascii_value.cpp
+
 CH 02 Operators/
 ├── 1 Constants/
 │   └── constant.cpp
@@ -288,6 +310,7 @@ CH 02 Operators/
 └── Quality Questions/
     ├── _01_bitwise_operations.cpp
     └── _02_compound_assignment.cpp
+
 CH 03 Conditionals/
 ├── 01 if else statement/
 │   ├── _if_else_c.cpp
@@ -319,6 +342,7 @@ CH 03 Conditionals/
     ├── _01_leap_year.cpp
     ├── _02_grade_calculator.cpp
     └── _03_vowel_consonant.cpp
+
 CH 04 Loops/
 ├── 01 for loops/
 │   ├── 00 bsics/
@@ -347,6 +371,7 @@ CH 04 Loops/
     ├── _01_fibonacci_series.cpp
     ├── _02_armstrong_number.cpp
     └── _03_gcd_lcm.cpp
+
 CH 05 Statements/
 ├── 01 Break/
 │   ├── _01_break.cpp
@@ -356,6 +381,7 @@ CH 05 Statements/
 │   └── _02_problem.cpp
 └── Quality Questions/
     └── _01_prime_in_range.cpp
+
 CH 06 Patterns/
 ├── 01 Problems/
 │   ├── _01_problem_01.cpp
@@ -376,6 +402,7 @@ CH 06 Patterns/
 └── Quality Questions/
     ├── _01_pascal_triangle.cpp
     └── _02_number_pyramid.cpp
+
 CH 07 Function/
 ├── 01 Function intro/
 │   ├── 01 Basic things/
@@ -415,6 +442,7 @@ CH 07 Function/
 └── Quality Questions/
     ├── _01_recursive_factorial.cpp
     └── _02_gcd_recursive.cpp
+
 CH 08 Binary Number System/
 ├── 01 Basics/
 │   ├── _01_data_type_modifiers.cpp
@@ -423,6 +451,7 @@ CH 08 Binary Number System/
 └── Quality Questions/
     ├── _01_set_bits_count.cpp
     └── _02_power_of_two.cpp
+
 CH 09 Pointers/
 ├── 01 Basics/
 │   ├── _01_intro.cpp
@@ -438,6 +467,7 @@ CH 09 Pointers/
 └── Quality Questions/
     ├── _01_pointer_arithmetic.cpp
     └── _02_swap_using_pointers.cpp
+
 CH 10 Array/
 ├── 01 Basic and extra/
 │   ├── _01_array.cpp
@@ -471,11 +501,184 @@ CH 10 Array/
 │       ├── _01_array_pointer.cpp
 │       ├── _02_increment_and_decrement_opr.cpp
 │       ├── _03_pointer_array.cpp
-│       └── _04_traversing_arra_using_pointers.cpp
-└── Quality Questions/
-    ├── _01_second_largest.cpp
-    ├── _02_rotate_array.cpp
-    └── _03_remove_duplicates.cpp
+│       ├── _04_traversing_arra_using_pointers.cpp
+│       ├── _05_addition.cpp
+│       └── _06_boolean_play_with_pointers.cpp
+├── 03 Quality Questions/
+│   ├── _01_second_largest.cpp
+│   ├── _02_rotate_array.cpp
+│   └── _03_remove_duplicates.cpp
+├── 04 Array 02/
+│   ├── _01_print_subarray.cpp
+│   ├── _02_max_subarray_sum.cpp
+│   ├── _03_max_array_sum_02.cpp
+│   ├── _04_kadans_algorithms.cpp
+│   ├── _05_buy_and_sell_stocks.cpp
+│   └── _06_trapping_water.cpp
+└── 05 Assignment/
+    └── 02 solution/
+        ├── _01_contains_duplicate.cpp
+        ├── _02_search_in_rotated_sorted_array.cpp
+        └── _03_maximum_product_subarray.cpp
+
+CH 11 vector/
+├── 01 basics of the vector/
+│   ├── _01_vector_syntax.cpp
+│   └── _02_for_each_loop.cpp
+├── 02 Vector Function/
+│   ├── _01_size.cpp
+│   ├── _02_push_back.cpp
+│   ├── _03_pop_back.cpp
+│   ├── _04_front.cpp
+│   ├── _05_back.cpp
+│   └── _06_at.cpp
+└── 03 Static and dynamic/
+    └── _01_property_01.cpp
+
+CH 12 STL/
+├── 01 Containers/
+│   ├── 01 vector DS/
+│   │   ├── 01 basics/
+│   │   │   └── _01_vector_intro.cpp
+│   │   ├── 02 member functions in vector/
+│   │   │   ├── _01_begin.cpp
+│   │   │   ├── _02_insertion.cpp
+│   │   │   ├── _03_pop_back.cpp
+│   │   │   ├── _04_front_back.cpp
+│   │   │   ├── _05_empty.cpp
+│   │   │   ├── _06_at_and_index.cpp
+│   │   │   ├── _07_capacity_of_vector.cpp
+│   │   │   ├── _08_reserve.cpp
+│   │   │   ├── _09_clear_function.cpp
+│   │   │   ├── _10_insert_function.cpp
+│   │   │   ├── _11_swap.cpp
+│   │   │   ├── _12_for_each_loop.cpp
+│   │   │   └── _13_iterator.cpp
+│   │   └── 03 advance of vector/
+│   │       ├── _01_2D_vector.cpp
+│   │       └── _02_zaged_array.cpp
+│   ├── 02 List DS/
+│   │   └── 01 basics and functions/
+│   │       ├── _01_basics_of_list.cpp
+│   │       ├── _02_empty.cpp
+│   │       ├── _03_accessing_the_front_and_back.cpp
+│   │       ├── _04_traversing.cpp
+│   │       ├── _05_deletion_in_list.cpp
+│   │       ├── _06_inserting_element_at_the_begening.cpp
+│   │       └── _07_insert.cpp
+│   ├── 03 Queue DS/
+│   │   └── 01 Basics/
+│   │       ├── _01_basic_of_queue.cpp
+│   │       ├── _02_push_and_pop.cpp
+│   │       ├── _03_front_and_back.cpp
+│   │       ├── _04_size_and_empty.cpp
+│   │       ├── _05_swap.cpp
+│   │       ├── _06_emplace.cpp
+│   │       └── _07_traversing_queue.cpp
+│   ├── 04 Stack DS/
+│   │   └── 01 Basics/
+│   │       ├── _01_basic_of_stack.cpp
+│   │       ├── _02_empty_check.cpp
+│   │       └── _03_stack_swap.cpp
+│   ├── 05 Deque DS/
+│   │   ├── 01 Basics of dequeue/
+│   │   │   ├── _01_dequeue_basics.cpp
+│   │   │   └── _02_traversing_the_dequeue.cpp
+│   │   └── 02 functions on the dequeue/
+│   │       ├── _01_erase.cpp
+│   │       ├── _02_clear_deque.cpp
+│   │       └── _03_swap.cpp
+│   ├── 06 priority queue/
+│   │   ├── 01 Max heap DS/
+│   │   │   ├── 01 bsics of priority queue/
+│   │   │   │   └── _01_basic.cpp
+│   │   │   └── 02 functions of the priority queue/
+│   │   │       ├── _01_push.cpp
+│   │   │       ├── _02_pop.cpp
+│   │   │       ├── _03_top.cpp
+│   │   │       ├── _04_empty.cpp
+│   │   │       ├── _05_size.cpp
+│   │   │       ├── _06_swap.cpp
+│   │   │       └── _07_emplace.cpp
+│   │   ├── 02 Min heap/
+│   │   │   ├── 01 Basics/
+│   │   │   │   └── _01_min_heap.cpp
+│   │   │   └── 02 functions of the min heap/
+│   │   │       ├── _01_push.cpp
+│   │   │       ├── _02_pop.cpp
+│   │   │       ├── _03_top.cpp
+│   │   │       ├── _04_empty.cpp
+│   │   │       ├── _05_size.cpp
+│   │   │       ├── _06_swap.cpp
+│   │   │       └── _07_emplace.cpp
+│   │   └── 02 functions of the priority queue/
+│   │       ├── _01_push.cpp
+│   │       ├── _02_pop.cpp
+│   │       ├── _03_top.cpp
+│   │       ├── _04_empty.cpp
+│   │       ├── _05_size.cpp
+│   │       ├── _06_swap.cpp
+│   │       └── _07_emplace.cpp
+│   ├── 07 Map/
+│   │   ├── 01 UnOrdered Map/
+│   │   │   ├── 01 Basics/
+│   │   │   │   └── _01_introduction.cpp
+│   │   │   └── 02 functions and methods/
+│   │   │       ├── _01_at.cpp
+│   │   │       ├── _02_updation_in_value.cpp
+│   │   │       ├── _03_traversing_the_un_map.cpp
+│   │   │       ├── _04_size.cpp
+│   │   │       ├── _05_erase.cpp
+│   │   │       ├── _06_find.cpp
+│   │   │       └── _07_count.cpp
+│   │   └── 02 Ordered Map/
+│   │       ├── 01 Basics/
+│   │       │   └── _01_basic.cpp
+│   │       └── 02 functions/
+│   │           └── _01_basisc.cpp
+│   └── 08 Set/
+│       ├── 01 ordered set/
+│       │   ├── 01 bsics of set/
+│       │   │   └── _01_basic_of_set.cpp
+│       │   └── 02 function/
+│       │       ├── _01_erase.cpp
+│       │       ├── _01_size_clear_empty.cpp
+│       │       ├── _03_find.cpp
+│       │       ├── _04_count.cpp
+│       │       └── _check.cpp
+│       └── 02 unord set/
+│           ├── 01 bsics of set/
+│           │   └── _01_basic_of_set.cpp
+│           └── 02 functions/
+│               ├── _01_size_clear_empty.cpp
+│               ├── _02_erase.cpp
+│               └── _03_find.cpp
+└── 03 Algorithms/
+    ├── 01 iterators and iterating algorithms/
+    │   ├── _01_for_each.cpp
+    │   ├── _02_find.cpp
+    │   ├── _03_find_if.cpp
+    │   ├── _04_count.cpp
+    │   ├── _05_count_if.cpp
+    │   ├── _06_sort.cpp
+    │   ├── _07_reverse.cpp
+    │   ├── _09_unique.cpp
+    │   ├── _10_rotate.cpp
+    │   └── _11_partition.cpp
+    ├── 02 Numeric algorithms/
+    │   ├── _01_numeric_basic.cpp
+    │   ├── _02_inner_product.cpp
+    │   ├── _03_partial_sum.cpp
+    │   └── _04_iota.cpp
+    └── 03 Searching and finding algorithms/
+        ├── 01 binary search/
+        │   └── _01_binary_search.cpp
+        ├── 02 lower bound/
+        │   └── _01_lower_bound.cpp
+        ├── 03 upper bound/
+        │   └── _01_upper_bound.cpp
+        └── 04 equal range/
+            └── _01_equal_range.cpp
 ```
 
 </details>
