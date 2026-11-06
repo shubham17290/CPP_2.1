@@ -10,20 +10,27 @@ int main() {
     vector<int> v = {10, 20, 30, 40, 50};
     auto itr = v.begin();
 
-    cout << "itr[2] = " << itr[2] << endl;        // 30
-    cout << "*(itr+3) = " << *(itr + 3) << endl; // 40
+    cout << "itr[2] = " << itr[2] << endl;            // 30
+    cout << "*(itr+3) = " << *(itr + 3) << endl;      // 40
     cout << "distance = " << (itr + 2 - itr) << endl; // 2
 
     auto last = v.end() - 1;
-    cout << "last = " << *last << endl;          // 50
+    cout << "last = " << *last << endl; // 50
 
     itr[1] = 999;
     cout << "After itr[1]=999: ";
-    for (int x : v) cout << x << " ";
+    for (int x : v)
+        cout << x << " ";
     cout << endl;
 
     // Supported: *itr, *itr=value, ++,--, +n,-n, [], <,<=,>,>=
     // All operations O(1)
+
+    //  clear block for the random access
+
+    vector<int> arr = {10, 20, 30, 40, 50, 60};
+    vector<int>::iterator it = arr.begin() + 3;
+    cout << *it << endl;
 
     return 0;
 }
