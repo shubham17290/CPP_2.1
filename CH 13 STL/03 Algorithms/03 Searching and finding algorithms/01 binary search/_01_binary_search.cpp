@@ -13,6 +13,7 @@ int main() {
     arr.push_back(50);
     arr.push_back(60);
     int target = 40;
+    //  this returns the boolean value 
     bool it = binary_search(arr.begin(), arr.end(), target);
     cout << it << endl;
 

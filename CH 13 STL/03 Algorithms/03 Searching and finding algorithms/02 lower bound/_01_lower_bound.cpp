@@ -12,7 +12,7 @@ int main() {
     arr.push_back(40);
     arr.push_back(50);
     arr.push_back(60);
-
+    // this also return the value
     auto it = lower_bound(arr.begin(), arr.end(), 35);
     cout << *it << endl;
 

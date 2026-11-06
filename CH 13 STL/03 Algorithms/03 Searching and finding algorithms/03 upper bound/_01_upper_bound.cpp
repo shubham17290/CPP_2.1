@@ -12,7 +12,7 @@ int main() {
     arr.push_back(40);
     arr.push_back(50);
     arr.push_back(60);
-
+//  this return the actual value of the upper bound 
     auto it = upper_bound(arr.begin(), arr.end(), 40);
     cout << *it << endl;
 
