@@ -8,7 +8,7 @@ void print(int arr[], int n) {
     }
     cout << endl;
 }
-//  bubble sort logic code -> without optimization
+//  bubble sort logic code -> with optimization
 
 void bubbleSort(int arr[], int n) {
     // Optimized bubble sort with early exit when no swaps occur
