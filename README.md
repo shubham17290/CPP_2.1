@@ -9,7 +9,7 @@
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-295-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-321-blueviolet?style=for-the-badge)](#-complete-file-index)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
 
@@ -238,7 +238,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand - all 295 C++ source files</b></summary>
+<summary><b>Click to expand - all 321 C++ source files</b></summary>
 
 <br/>
 
