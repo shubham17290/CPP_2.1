@@ -34,4 +34,15 @@ desktop.ini
 
 # Logs
 *.log
-">
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.*
+*.vcxproj.user
+*.ipdb
+*.iobj
+
+# Editor temp artifacts
+tempCodeRunnerFile.cpp
