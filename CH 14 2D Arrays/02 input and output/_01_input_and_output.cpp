@@ -1,30 +1,33 @@
 #include <iostream>
+
 using namespace std;
-//  lets , see the how to take the input in the matrix (2D)
+
 int main() {
-    int n = 3, m = 4;
-    int arr[3][4]; // this will take 12 values..
-                   // this is how we take input inside the 2d array !
-    cout << "Enter numbers here sir : " << endl;
-    for (int i = 0; i < n; i++) // n -> 0,1,2
-    {
-        for (int j = 0; j < m; j++) // m -> 0,1,2,3
-        {
+    // ---- Dimensions as named constants (easier to change later) ----
+    const int ROWS = 3;
+    const int COLS = 4;
+
+    int arr[ROWS][COLS]; // holds ROWS * COLS = 12 values
+
+    // ---- Input: fill the 2D array ----
+    cout << "Enter " << ROWS * COLS << " numbers: " << endl;
+    for (int i = 0; i < ROWS; ++i) {
+        for (int j = 0; j < COLS; ++j) {
             cin >> arr[i][j];
         }
     }
-    // this is how we traverse the 2d array !
+
+    // ---- Output: traverse and print the 2D array ----
     int count = 0;
-    for (int i = 0; i < n; i++) // n -> 0,1,2
-    {
-        for (int j = 0; j < m; j++) // m -> 0,1,2,3
-        {
+    for (int i = 0; i < ROWS; ++i) {
+        for (int j = 0; j < COLS; ++j) {
             cout << arr[i][j] << "    ";
-            count++;
+            ++count;
         }
         cout << endl;
     }
-    cout << "see how many times the loop runed: " << count << endl;
+
+    cout << "Total elements printed: " << count << endl;
 
     return 0;
 }
