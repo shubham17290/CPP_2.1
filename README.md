@@ -9,7 +9,7 @@
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-321-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-324-blueviolet?style=for-the-badge)](#-complete-file-index)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
 
@@ -45,9 +45,10 @@ The goal is simple:
 
 ## ✨ Highlights
 
-- 🧩 **295 self-contained C++ programs** — each file compiles and runs independently.
-- 📁 **Syllabus-aligned folders** — `CH 00 … CH 12` in the exact order you should learn them.
-- 🧱 **C++ STL coverage** — containers, iterators, and algorithms (`CH 12`), including the `binary_search` / `lower_bound` / `upper_bound` / `equal_range` family.
+- 🧩 **324 self-contained C++ programs** — each file compiles and runs independently.
+- 📁 **Syllabus-aligned folders** — `CH 00 … CH 14` in the exact order you should learn them.
+- 🧱 **C++ STL coverage** — containers, iterators, and algorithms (`CH 13`), including the `binary_search` / `lower_bound` / `upper_bound` / `equal_range` family, plus heap, set, and min/max algorithms.
+- 🔃 **Sorting algorithms** — bubble, selection, insertion, counting, and in-built `sort()` (`CH 12`).
 - 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, …).
 - ✨ **Quality Questions** subfolder in every core chapter (CH 00–CH 10) with curated, interview-style problems (each folder has its own `README.md` index).
 - 🛠️ **VS Code ready** — `.vscode` config with g++, gdb, and strict warning flags.
@@ -95,6 +96,8 @@ DSA in C++/
 │   └── Quality Questions/
 ├── 📁 CH 10 Array I/
 │   └── Quality Questions/
+├── 📁 CH 12 Array II/
+│   └── 01 Sorting/
 ├── 📁 CH 13 STL/00 vector(APC)/
 │   ├── 01 basics of the vector/
 │   ├── 02 Vector Function/
@@ -103,6 +106,10 @@ DSA in C++/
 │   ├── 01 Containers/
 │   ├── 02 Iterators/
 │   └── 03 Algorithms/
+├── 📁 CH 14 2D Arrays/
+│   ├── 01 intro/
+│   ├── 02 input and output/
+│   └── 03 Spiral Matrix/
 │
 ├── 📁 .github/workflows/        # GitHub Pages deploy workflow
 ├── 📁 .vscode/                 # editor & debugger config
@@ -114,6 +121,14 @@ DSA in C++/
 
 ## 🆕 What's New
 
+- 🧭 Started `CH 14 2D Arrays` — introduction, input/output traversal, and spiral matrix basics.
+- 🔃 Added `CH 12 Array II → 01 Sorting` — bubble (with optimization), selection, insertion,
+  counting sort, in-built `sort()` (ascending & descending), plus practice solutions.
+- 🧮 Added `CH 13 STL → 03 Algorithms → 04 min max algorithms` (`min`, `max`, `min_element`, `max_element`).
+- ⛰️ Added `CH 13 STL → 03 Algorithms → 05 Heap Algorithm` (`make_heap`, `push_heap`, `pop_heap`, `sort_heap`).
+- 🔷 Added `CH 13 STL → 03 Algorithms → 06 Set algorithms` (`set_union`, `set_intersection`,
+  `set_difference`, `set_symmetric_difference`).
+- 🔁 Added `CH 13 STL → 02 Iterators` — iterator basics and all five iterator categories.
 - 🔎 Added `CH 13 STL → 03 Algorithms → 03 Searching and finding algorithms` with
   `binary_search`, `lower_bound`, `upper_bound`, and an `equal_range` homework placeholder.
 - 🧮 Added `CH 13 STL → 03 Algorithms → 02 Numeric algorithms` (`accumulate`,
@@ -144,18 +159,19 @@ Marked as completed based on the actual content of this repository.
 - [x] **Binary Number System** — data types, bin-to-dec, dec-to-bin (CH 08)
 - [x] **Pointers & References** — addresses, dereferencing, pass-by-value vs pass-by-reference (CH 09)
 - [x] **Arrays** — declaration, traversal, linear search, reverse, I/O (`CH 10`)
-- [x] **Vectors** — declaration, member functions, static vs dynamic behavior (`CH 11`)
-- [x] **STL Containers** — vector, list, queue, stack, deque, priority queue, map, set (`CH 12`)
-- [x] **STL Iterators** — iterator basics and iterator ranges (`CH 12`)
-- [x] **STL Algorithms** — iterating, numeric, and searching algorithms (`CH 12`)
+- [x] **Sorting** — bubble, selection, insertion, counting, in-built `sort()` (`CH 12`)
+- [x] **Vectors** — declaration, member functions, static vs dynamic behavior (`CH 13 → 00 vector(APC)`)
+- [x] **STL Containers** — vector, list, queue, stack, deque, priority queue, map, set (`CH 13`)
+- [x] **STL Iterators** — iterator basics, types, and ranges (`CH 13`)
+- [x] **STL Algorithms** — iterating, numeric, searching, min/max, heap, and set algorithms (`CH 13`)
 
 ### 🔄 In Progress
+- [ ] **2D Arrays** — intro, input/output, spiral matrix (`CH 14`)
 - [ ] **Strings**
 
 ### 🗺️ Roadmap (Coming Soon)
 - [ ] Object-Oriented Programming (classes, inheritance, polymorphism)
 - [ ] Recursion & Backtracking
-- [ ] Searching & Sorting
 - [ ] Linked Lists
 - [ ] Stacks & Queues
 - [ ] Trees & Binary Search Trees
@@ -238,7 +254,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand - all 321 C++ source files</b></summary>
+<summary><b>Click to expand - all 324 C++ source files</b></summary>
 
 <br/>
 
@@ -521,6 +537,23 @@ CH 10 Array I/
         ├── _02_search_in_rotated_sorted_array.cpp
         └── _03_maximum_product_subarray.cpp
 
+CH 12 Array II/
+└── 01 Sorting/
+    ├── 01 bubble sort/
+    │   ├── _01_bubble_sort.cpp
+    │   └── _02_bubble_sort_with_optimization.cpp
+    ├── 02 selection sort/
+    │   └── _01_insertion_sort.cpp
+    ├── 03 insertion sort/
+    │   └── _01_insertion_sort.cpp
+    ├── 04 Counting sort/
+    │   └── _01_countsort.cpp
+    ├── 05 in built sort/
+    │   ├── _01_inbuilt_sort_ascending.cpp
+    │   └── _02_decending_order_sorting.cpp
+    └── 06 Practice question/
+        └── _01_solution.cpp
+
 CH 13 STL/00 vector(APC)/
 ├── 01 basics of the vector/
 │   ├── _01_vector_syntax.cpp
@@ -653,6 +686,15 @@ CH 13 STL/
 │               ├── _01_size_clear_empty.cpp
 │               ├── _02_erase.cpp
 │               └── _03_find.cpp
+├── 02 Iterators/
+│   ├── 01 basic/
+│   │   └── _01_iterator_basics.cpp
+│   └── 02 types of iterators/
+│       ├── _01_input_iterator.cpp
+│       ├── _02_output_iterator.cpp
+│       ├── _03_forward_iterator.cpp
+│       ├── _04_bidirectional_iterator.cpp
+│       └── _05_random_access_iterator.cpp
 └── 03 Algorithms/
     ├── 01 iterators and iterating algorithms/
     │   ├── _01_for_each.cpp
@@ -670,15 +712,38 @@ CH 13 STL/
     │   ├── _02_inner_product.cpp
     │   ├── _03_partial_sum.cpp
     │   └── _04_iota.cpp
-    └── 03 Searching and finding algorithms/
-        ├── 01 binary search/
-        │   └── _01_binary_search.cpp
-        ├── 02 lower bound/
-        │   └── _01_lower_bound.cpp
-        ├── 03 upper bound/
-        │   └── _01_upper_bound.cpp
-        └── 04 equal range/
-            └── _01_equal_range.cpp
+    ├── 03 Searching and finding algorithms/
+    │   ├── 01 binary search/
+    │   │   └── _01_binary_search.cpp
+    │   ├── 02 lower bound/
+    │   │   └── _01_lower_bound.cpp
+    │   ├── 03 upper bound/
+    │   │   └── _01_upper_bound.cpp
+    │   └── 04 equal range/
+    │       └── _01_equal_range.cpp
+    ├── 04 min max algorithms/
+    │   ├── _01_min.cpp
+    │   ├── _02_max.cpp
+    │   ├── _03_min_element.cpp
+    │   └── _04_max_element.cpp
+    ├── 05 Heap Algorithm/
+    │   ├── _01_make_heap.cpp
+    │   ├── _02_push_heap.cpp
+    │   ├── _03_pop_heap.cpp
+    │   └── _04_sort_heap.cpp
+    └── 06 Set algorithms/
+        ├── _01_union.cpp
+        ├── _02_intersection.cpp
+        ├── _03_difference.cpp
+        └── _04_set_symmetric_difference.cpp
+
+CH 14 2D Arrays/
+├── 01 intro/
+│   └── _01_introduction_to_2d_arrau.cpp
+├── 02 input and output/
+│   └── _01_input_and_output.cpp
+└── 03 Spiral Matrix/
+    └── _01_basic_of_sprial_matrix.cpp
 ```
 
 </details>
