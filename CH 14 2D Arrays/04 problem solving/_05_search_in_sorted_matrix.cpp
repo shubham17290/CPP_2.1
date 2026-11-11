@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+//   searching a key or the element in the sorted matrix and the heart of the logic
+
 bool search(int mtx[][4], int n, int m, int key) {
     int i = 0, j = m - 1;
     while (i < n && j >= 0) {
