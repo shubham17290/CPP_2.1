@@ -4,8 +4,8 @@ using namespace std;
 
 int main() {
     string str = " Hi shubham sir how's is going !";
-    for (int i : str) {
-        cout << str[i] << "-";
+    for (char ch : str) {
+        cout << ch << "-";
     }
 
     cout << endl;
