@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSA in C++ — Code Browser</title>
+<meta name="description" content="A structured, searchable archive of hand-written C++ data structures and algorithms solutions.">
+<meta name="theme-color" content="#050101">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff0033'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='white' text-anchor='middle'%3EC%2B%2B%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+:root{
+  --bg:#050101;
+  --panel:rgba(15,5,8,.78);
+  --panel-solid:#0d0508;
+  --border:rgba(255,255,255,.065);
+  --border-strong:rgba(255,0,51,.28);
+  --text:#f7f3f4;
+  --muted:#a39e9f;
+  --subtle:#6b6364;
+  --accent:#ff0033;
+  --accent-2:#ff4d6d;
+  --accent-dim:rgba(255,0,51,.1);
+  --grad:linear-gradient(135deg,#ff0033 0%,#b30024 100%);
+  --code-bg:#080204;
+  --shadow:0 24px 70px rgba(0,0,0,.55);
+  --radius:14px;
+  --sidebar-w:332px;
+  --display:'Rajdhani',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --sans:'Inter',-apple-system,Segoe UI,Roboto,sans-serif;
+  --code-lh:22px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{
+  margin:0;display:flex;overflow:hidden;color:var(--text);font-family:var(--sans);
+  background:
+    radial-gradient(900px 520px at 82% 4%,rgba(255,0,51,.10),transparent 62%),
+    radial-gradient(700px 480px at 12% 96%,rgba(120,0,20,.12),transparent 60%),
+    var(--bg);
+}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:radial-gradient(ellipse at 50% 40%,#000 8%,transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 8%,transparent 78%);
+}
+::selection{background:rgba(255,0,51,.35);color:#fff}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button{font-family:inherit}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,0,51,.2);border-radius:6px;border:2px solid transparent;background-clip:padding-box}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,0,51,.45);background-clip:padding-box}
+
+/* ---------- Shell ---------- */
+#sidebar{
+  position:relative;z-index:30;flex:0 0 var(--sidebar-w);width:var(--sidebar-w);height:100%;
+  display:flex;flex-direction:column;
+  background:linear-gradient(180deg,rgba(20,7,10,.94),rgba(7,2,4,.97));
+  border-right:1px solid var(--border);backdrop-filter:blur(20px);
+  box-shadow:12px 0 50px rgba(0,0,0,.35);
+}
+#main{position:relative;z-index:1;flex:1;min-width:0;display:flex;flex-direction:column;height:100%}
+#content{flex:1;overflow-y:auto;overflow-x:hidden;scroll-behavior:smooth}
+.view[hidden]{display:none!important}
+
+/* ---------- Sidebar ---------- */
+.sidebar-head{padding:22px 20px 14px;border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:42px;height:42px;flex:0 0 42px;border-radius:11px;background:var(--grad);
+  display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:15px;
+  letter-spacing:-.02em;color:#fff;box-shadow:0 8px 26px rgba(255,0,51,.3);
+}
+.brand-text{min-width:0;flex:1}
+.brand h1{margin:0;font-family:var(--display);font-size:18px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;line-height:1.1}
+.brand p{margin:3px 0 0;font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--subtle)}
+.sidebar-close{margin-left:auto}
+.search{position:relative;margin-top:17px}
+.search>svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--subtle);pointer-events:none}
+#search{
+  width:100%;padding:10px 36px 10px 35px;border-radius:9px;border:1px solid var(--border);
+  background:rgba(0,0,0,.38);color:var(--text);font-family:var(--mono);font-size:11.5px;
+  outline:none;transition:border-color .18s,box-shadow .18s,background .18s;
+}
+#search::placeholder{color:var(--subtle)}
+#search:focus{border-color:rgba(255,0,51,.5);box-shadow:0 0 0 3px rgba(255,0,51,.1);background:rgba(0,0,0,.55)}
+.search kbd{
+  position:absolute;right:9px;top:50%;transform:translateY(-50%);
+  font-family:var(--mono);font-size:9px;color:var(--subtle);border:1px solid var(--border);
+  border-radius:4px;padding:2px 5px;background:rgba(255,255,255,.03);pointer-events:none;
+}
+.search-meta{padding:8px 2px 0;font-family:var(--mono);font-size:9.5px;color:var(--accent-2);letter-spacing:.02em}
+.side-nav{padding:10px 12px;display:flex;flex-direction:column;gap:2px;border-bottom:1px solid var(--border)}
+.nav-item{
+  display:flex;align-items:center;gap:10px;width:100%;padding:9px 10px;border:0;border-radius:8px;
+  background:none;color:var(--muted);font-size:12.5px;font-weight:500;text-align:left;cursor:pointer;
+  transition:background .15s,color .15s,box-shadow .15s;
+}
+.nav-item svg{width:15px;height:15px;opacity:.8}
+.nav-item:hover{background:rgba(255,0,51,.06);color:var(--text)}
+.nav-item.active{background:rgba(255,0,51,.12);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,0,51,.18)}
+.nav-item.active svg{color:var(--accent-2);opacity:1}
+.tree-label{padding:15px 22px 7px;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--subtle)}
+#tree{flex:1;overflow-y:auto;padding:0 12px 18px}
+.tree-empty{display:flex;flex-direction:column;align-items:center;gap:10px;padding:38px 18px;text-align:center;color:var(--subtle)}
+.tree-empty svg{width:22px;height:22px;opacity:.5}
+.tree-empty p{margin:0;font-size:11.5px;line-height:1.6}
+.tree-empty strong{color:var(--muted);font-family:var(--mono);font-size:10.5px;word-break:break-word}
+.link-btn{border:0;background:none;color:var(--accent-2);font-family:var(--mono);font-size:10px;cursor:pointer;padding:2px;text-transform:uppercase;letter-spacing:.08em}
+.link-btn:hover{text-decoration:underline}
+
+details.chapter-node,details.folder{margin:1px 0}
+details.chapter-node>summary,details.folder>summary{
+  list-style:none;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;
+  padding:8px 9px;border-radius:8px;color:var(--muted);transition:background .15s,color .15s;
+}
+details.chapter-node>summary::-webkit-details-marker,details.folder>summary::-webkit-details-marker{display:none}
+details.chapter-node>summary:hover,details.folder>summary:hover{background:rgba(255,255,255,.03);color:var(--text)}
+details.chapter-node.current>summary{color:#fff;background:rgba(255,0,51,.09);box-shadow:inset 2px 0 0 var(--accent)}
+.ch-idx{flex:0 0 19px;font-family:var(--mono);font-size:9.5px;color:var(--accent);letter-spacing:.03em}
+.ch-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase}
+.ch-count,.f-count{font-family:var(--mono);font-size:9px;color:var(--subtle);flex:0 0 auto}
+.chev{display:flex;color:var(--subtle);transition:transform .18s ease;flex:0 0 auto}
+.chev svg{width:11px;height:11px}
+details[open]>summary .chev{transform:rotate(90deg)}
+details.folder>summary{padding:6px 9px;font-size:11px}
+.f-icon{display:flex;color:var(--subtle);flex:0 0 auto}
+.f-icon svg{width:13px;height:13px}
+.f-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;color:var(--muted)}
+.children{padding-left:9px;margin:2px 0 4px 14px;border-left:1px solid rgba(255,0,51,.14)}
+.file{
+  display:flex;align-items:center;gap:8px;width:100%;padding:6px 9px;margin:1px 0;border:0;border-left:2px solid transparent;
+  border-radius:7px;background:none;color:var(--muted);font-family:var(--mono);font-size:10.5px;text-align:left;
+  cursor:pointer;transition:background .15s,color .15s,border-color .15s;
+}
+.file:hover{background:rgba(255,0,51,.06);color:var(--text);border-left-color:rgba(255,0,51,.5)}
+.file.active{background:rgba(255,0,51,.14);color:#fff;border-left-color:var(--accent);box-shadow:inset 0 0 0 1px rgba(255,0,51,.16)}
+.file-icon{display:flex;color:var(--subtle);flex:0 0 auto}
+.file-icon svg{width:12px;height:12px}
+.file.active .file-icon,.file:hover .file-icon{color:var(--accent-2)}
+.file-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sidebar-foot{padding:13px 20px 16px;border-top:1px solid var(--border);background:rgba(0,0,0,.18)}
+.foot-link{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--muted);text-decoration:none;font-size:11px;font-weight:500;transition:color .15s}
+.foot-link:hover{color:var(--accent-2)}
+.foot-link span{font-family:var(--mono);font-size:10px;color:var(--subtle)}
+.foot-meta{margin-top:6px;font-family:var(--mono);font-size:9px;color:var(--subtle);letter-spacing:.04em}
+
+/* ---------- Top bar ---------- */
+.topbar{
+  flex:0 0 58px;height:58px;display:flex;align-items:center;gap:14px;padding:0 24px;
+  border-bottom:1px solid var(--border);background:rgba(5,1,1,.72);backdrop-filter:blur(18px);z-index:20;
+}
+.icon-btn{
+  width:34px;height:34px;flex:0 0 34px;display:inline-flex;align-items:center;justify-content:center;
+  border-radius:8px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--muted);
+  cursor:pointer;transition:color .15s,border-color .15s,background .15s;
+}
+.icon-btn:hover{color:#fff;border-color:var(--border-strong);background:rgba(255,0,51,.08)}
+.icon-btn svg{width:16px;height:16px}
+.menu-btn{display:none}
+.crumbs{display:flex;align-items:center;gap:7px;flex:1;min-width:0;font-family:var(--mono);font-size:10.5px;color:var(--subtle);overflow:hidden}
+.crumb{border:0;background:none;padding:2px 0;color:var(--subtle);font-family:inherit;font-size:inherit;cursor:pointer;white-space:nowrap;transition:color .15s}
+button.crumb:hover{color:var(--accent-2)}
+.crumb.current{color:var(--text);overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.crumb-sep{color:var(--subtle);opacity:.45;flex:0 0 auto}
+.topbar-right{display:flex;align-items:center;gap:9px;flex:0 0 auto}
+.meta-chip{
+  font-family:var(--mono);font-size:9.5px;color:var(--muted);padding:5px 9px;border:1px solid var(--border);
+  border-radius:6px;background:rgba(255,255,255,.02);white-space:nowrap;
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 15px;border-radius:8px;
+  border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);cursor:pointer;
+  font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;
+  text-decoration:none;transition:transform .18s,border-color .18s,background .18s,box-shadow .18s;
+}
+.btn svg{width:14px;height:14px}
+.btn:hover{border-color:var(--border-strong);background:rgba(255,0,51,.08);transform:translateY(-1px)}
+.btn.primary{background:var(--grad);border-color:transparent;color:#fff;box-shadow:0 10px 30px rgba(255,0,51,.22)}
+.btn.primary:hover{box-shadow:0 14px 38px rgba(255,0,51,.32)}
+.btn.ghost{background:transparent}
+.btn.ghost:hover{background:rgba(255,255,255,.03)}
+
+/* ---------- Page frame ---------- */
+.page{max-width:1180px;margin:0 auto;padding:54px 44px 90px}
+.page-wide{max-width:1400px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--accent-2)}
+.pulse{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* ---------- Home ---------- */
+.hero{position:relative;padding:22px 0 54px;border-bottom:1px solid var(--border);overflow:hidden}
+.hero::after{
+  content:'C++';position:absolute;right:-16px;top:-72px;font-family:var(--display);font-weight:700;
+  font-size:290px;line-height:1;letter-spacing:-.05em;color:transparent;
+  -webkit-text-stroke:1px rgba(255,0,51,.085);pointer-events:none;user-select:none;
+}
+.hero h1{
+  position:relative;z-index:1;margin:18px 0 20px;font-family:var(--display);font-weight:700;
+  font-size:clamp(54px,7.4vw,96px);line-height:.9;letter-spacing:.005em;text-transform:uppercase;
+}
+.hero h1 span{color:transparent;-webkit-text-stroke:1.5px var(--accent);text-shadow:0 0 46px rgba(255,0,51,.28)}
+.hero>p{position:relative;z-index:1;max-width:620px;margin:0 0 30px;color:var(--muted);font-size:15.5px;line-height:1.8}
+.hero-actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:10px}
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:38px;overflow:hidden;
+  background:var(--border);border:1px solid var(--border);border-radius:var(--radius);
+}
+.stat{position:relative;padding:21px 20px;background:rgba(13,5,8,.82);overflow:hidden}
+.stat::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--grad);opacity:.65}
+.stat .num{font-family:var(--display);font-size:34px;font-weight:700;line-height:1;letter-spacing:.01em;color:#fff}
+.stat .num.accent{color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+.stat .lbl{margin-top:7px;font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--subtle)}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin:62px 0 20px}
+.section-head h2{margin:0;font-family:var(--display);font-size:29px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.section-head p{margin:7px 0 0;font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--subtle)}
+.section-tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);border-radius:6px;padding:6px 10px;white-space:nowrap}
+.chapter-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.chapter-card{
+  position:relative;display:flex;flex-direction:column;min-height:196px;padding:19px 19px 17px;
+  border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;text-align:left;
+  color:var(--text);background:linear-gradient(160deg,rgba(23,8,12,.86),rgba(9,3,5,.92));
+  transition:transform .2s,border-color .2s,box-shadow .2s;
+  animation:rise .45s ease both;
+}
+.chapter-card::before{
+  content:'';position:absolute;inset:0;opacity:0;transition:opacity .2s;pointer-events:none;
+  background:radial-gradient(420px 150px at 100% 0,rgba(255,0,51,.13),transparent 72%);
+}
+.chapter-card:hover{transform:translateY(-3px);border-color:rgba(255,0,51,.34);box-shadow:0 18px 44px rgba(0,0,0,.48),0 0 0 1px rgba(255,0,51,.08)}
+.chapter-card:hover::before{opacity:1}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.cc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.cc-idx{font-family:var(--mono);font-size:10.5px;color:var(--accent);letter-spacing:.12em}
+.cc-arrow{display:flex;color:var(--subtle);transition:transform .2s,color .2s}
+.cc-arrow svg{width:15px;height:15px}
+.chapter-card:hover .cc-arrow{color:var(--accent);transform:translate(2px,-2px)}
+.cc-title{margin:13px 0 3px;font-family:var(--display);font-size:22px;font-weight:700;line-height:1.02;letter-spacing:.035em;text-transform:uppercase}
+.cc-meta{font-family:var(--mono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--subtle)}
+.cc-preview{list-style:none;margin:13px 0 15px;padding:0;display:flex;flex-direction:column;gap:4px;min-width:0}
+.cc-preview li{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cc-preview li::before{content:'';width:3px;height:3px;flex:0 0 3px;border-radius:50%;background:rgba(255,0,51,.65)}
+.cc-bar{margin-top:auto;height:2px;border-radius:2px;background:rgba(255,255,255,.06);overflow:hidden}
+.cc-bar span{display:block;height:100%;background:var(--grad);border-radius:2px}
+.guide{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:58px}
+.guide-step{padding:19px 20px;border:1px solid var(--border);border-radius:var(--radius);background:rgba(255,255,255,.014)}
+.step-n{font-family:var(--mono);font-size:9.5px;color:var(--accent);letter-spacing:.12em}
+.guide-step h3{margin:9px 0 6px;font-family:var(--display);font-size:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.guide-step p{margin:0;color:var(--subtle);font-size:12px;line-height:1.7}
+.home-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:58px;padding-top:22px;border-top:1px solid var(--border);font-family:var(--mono);font-size:10px;color:var(--subtle)}
+.home-foot a{color:var(--muted);text-decoration:none;transition:color .15s}
+.home-foot a:hover{color:var(--accent-2)}
+
+/* ---------- Chapter view ---------- */
+.page-head{padding-bottom:27px;border-bottom:1px solid var(--border);margin-bottom:30px}
+.page-head h1{margin:10px 0 9px;font-family:var(--display);font-size:clamp(42px,5.2vw,66px);font-weight:700;line-height:.94;letter-spacing:.015em;text-transform:uppercase}
+.page-head>p{max-width:660px;margin:0;color:var(--muted);font-size:14.5px;line-height:1.75}
+.meta-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border:1px solid var(--border);border-radius:6px;background:rgba(255,255,255,.02);font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.chip.accent{color:var(--accent-2);border-color:rgba(255,0,51,.22);background:rgba(255,0,51,.07)}
+.group{margin-bottom:32px}
+.group-head{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.group-head h3{margin:0;font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--text)}
+.group-head .gcount{font-family:var(--mono);font-size:9px;color:var(--subtle);border:1px solid var(--border);border-radius:10px;padding:1px 7px}
+.group-head::after{content:'';flex:1;height:1px;background:var(--border)}
+.file-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:11px;overflow:hidden}
+.file-row{display:flex;align-items:center;gap:12px;padding:12px 15px;border:0;background:rgba(11,4,6,.78);color:var(--text);cursor:pointer;text-align:left;transition:background .15s}
+.file-row:hover{background:rgba(255,0,51,.065)}
+.fr-icon{display:flex;color:var(--subtle);flex:0 0 auto;transition:color .15s}
+.fr-icon svg{width:15px;height:15px}
+.file-row:hover .fr-icon{color:var(--accent-2)}
+.fr-main{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.fr-name{font-family:var(--mono);font-size:12px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fr-path{font-family:var(--mono);font-size:9px;color:var(--subtle);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fr-lines{flex:0 0 auto;font-family:var(--mono);font-size:9.5px;color:var(--subtle);white-space:nowrap}
+.fr-arrow{display:flex;flex:0 0 auto;color:var(--subtle);transition:transform .15s,color .15s}
+.fr-arrow svg{width:13px;height:13px}
+.file-row:hover .fr-arrow{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- File view ---------- */
+.file-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:19px}
+.file-head h1{margin:8px 0 0;font-family:var(--display);font-size:clamp(29px,4vw,46px);font-weight:700;line-height:1;letter-spacing:.015em;word-break:break-word}
+.file-path{margin-top:9px;font-family:var(--mono);font-size:10px;color:var(--subtle);word-break:break-all}
+.file-head .meta-row{margin-top:14px;justify-content:flex-end}
+.code-card{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--code-bg);box-shadow:var(--shadow)}
+.code-bar{display:flex;align-items:center;gap:11px;padding:10px 15px;border-bottom:1px solid var(--border);background:rgba(255,255,255,.022)}
+.dots{display:flex;gap:5px;flex:0 0 auto}
+.dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.13)}
+.dots i:first-child{background:rgba(255,0,51,.7)}
+.code-bar .path{font-family:var(--mono);font-size:9.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.code-scroll{display:flex;align-items:stretch;overflow:auto;max-height:calc(100vh - 305px)}
+.gutter{
+  position:sticky;left:0;z-index:2;flex:0 0 auto;padding:20px 11px 20px 17px;text-align:right;
+  background:var(--code-bg);border-right:1px solid rgba(255,255,255,.045);color:#4b3f42;
+  font-family:var(--mono);font-size:13px;line-height:var(--code-lh);user-select:none;
+}
+.gutter span{display:block}
+.code-scroll pre{flex:1;min-width:0;margin:0;padding:20px 24px;font-family:var(--mono);font-size:13px;line-height:var(--code-lh);color:#e9e3e4;tab-size:4}
+.code-scroll code{font-family:inherit;font-size:inherit;line-height:inherit;background:none!important;padding:0!important}
+.hljs{background:transparent!important;color:#e9e3e4!important}
+.hljs-keyword,.hljs-built_in,.hljs-type{color:#ff6b85!important}
+.hljs-title,.hljs-title.function_,.hljs-function .hljs-title{color:#ffa3b3!important}
+.hljs-string,.hljs-char.escape_{color:#e8b4a0!important}
+.hljs-number,.hljs-literal{color:#ffd08a!important}
+.hljs-comment{color:#65595c!important;font-style:italic}
+.hljs-meta,.hljs-preprocessor{color:#c98a9a!important}
+.file-nav{display:flex;align-items:stretch;justify-content:space-between;gap:12px;margin-top:22px}
+.file-nav-btn{
+  display:flex;flex-direction:column;gap:4px;min-width:0;max-width:48%;padding:11px 15px;border:1px solid var(--border);
+  border-radius:9px;background:rgba(255,255,255,.02);color:var(--text);cursor:pointer;text-align:left;transition:border-color .15s,background .15s;
+}
+.file-nav-btn:hover{border-color:var(--border-strong);background:rgba(255,0,51,.06)}
+.file-nav-btn.next{margin-left:auto;text-align:right;align-items:flex-end}
+.nav-dir{font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-2)}
+.nav-name{font-family:var(--mono);font-size:10.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+
+/* ---------- README ---------- */
+.readme-shell{max-width:860px;margin:0 auto}
+.readme-top{display:flex;align-items:center;gap:11px;padding-bottom:16px;margin-bottom:34px;border-bottom:1px solid var(--border)}
+.readme-badge{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);border:1px solid rgba(255,0,51,.24);background:rgba(255,0,51,.07);padding:5px 9px;border-radius:6px}
+.readme-note{font-family:var(--mono);font-size:9.5px;color:var(--subtle);letter-spacing:.08em;text-transform:uppercase}
+.readme{color:#cfc7c9;font-size:15.5px;line-height:1.82;overflow-wrap:break-word}
+.readme h1,.readme h2,.readme h3,.readme h4{font-family:var(--display);color:#fff;letter-spacing:.04em;text-transform:uppercase;line-height:1.12}
+.readme h1{font-size:clamp(38px,5vw,54px);font-weight:700;margin:0 0 24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.readme h2{font-size:27px;font-weight:700;margin:46px 0 16px;padding-bottom:9px;border-bottom:1px solid var(--border)}
+.readme h3{font-size:19px;font-weight:600;margin:32px 0 10px;color:#f3ecee}
+.readme h4{font-size:16px;margin:24px 0 8px;color:var(--muted)}
+.readme p{margin:0 0 16px}
+.readme a{color:var(--accent-2);text-decoration:none;border-bottom:1px solid rgba(255,0,51,.24)}
+.readme a:hover{border-bottom-color:var(--accent)}
+.readme strong{color:#fff;font-weight:600}
+.readme ul,.readme ol{margin:0 0 18px;padding-left:22px}
+.readme li{margin:5px 0}
+.readme li::marker{color:var(--accent)}
+.readme code{font-family:var(--mono);font-size:.84em;background:rgba(255,0,51,.1);border:1px solid rgba(255,0,51,.12);padding:2px 6px;border-radius:4px;color:#ffb7c3}
+.readme pre{margin:20px 0;padding:19px 21px;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:9px;background:var(--code-bg);overflow:auto;box-shadow:inset 0 0 30px rgba(0,0,0,.4)}
+.readme pre code{background:none;border:0;padding:0;color:#e9e3e4;font-size:12.5px;line-height:1.7}
+.readme blockquote{margin:22px 0;padding:12px 20px;border-left:3px solid var(--accent);border-radius:0 8px 8px 0;background:rgba(255,0,51,.055);color:var(--muted)}
+.readme blockquote p:last-child{margin:0}
+.readme table{display:block;width:100%;overflow-x:auto;border-collapse:collapse;margin:22px 0;font-size:13px}
+.readme th,.readme td{border:1px solid var(--border);padding:10px 13px;text-align:left}
+.readme th{background:rgba(255,0,51,.08);color:#fff;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.readme tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+.readme hr{border:0;height:1px;background:var(--border);margin:36px 0}
+.readme img{max-width:100%;border-radius:9px}
+
+/* ---------- Toast ---------- */
+.toast{
+  position:fixed;right:26px;bottom:26px;z-index:80;padding:11px 17px;border:1px solid var(--accent);
+  border-radius:8px;background:var(--panel-solid);color:#fff;font-family:var(--mono);font-size:10px;
+  letter-spacing:.1em;text-transform:uppercase;box-shadow:0 10px 34px rgba(255,0,51,.2);
+  opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .25s,transform .25s;
+}
+.toast.show{opacity:1;transform:translateY(0)}
+
+/* ---------- Overlay + mobile ---------- */
+#overlay{position:fixed;inset:0;z-index:55;background:rgba(0,0,0,.62);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .25s}
+#overlay.show{opacity:1;pointer-events:auto}
+
+@media(max-width:1024px){
+  .chapter-grid{grid-template-columns:repeat(2,1fr)}
+  .page{padding:44px 30px 76px}
+}
+@media(max-width:860px){
+  body{display:block}
+  #sidebar{
+    position:fixed;inset:0 auto 0 0;z-index:60;width:min(87vw,340px);flex-basis:auto;height:100dvh;
+    transform:translateX(-103%);transition:transform .26s ease;box-shadow:30px 0 80px rgba(0,0,0,.6);
+  }
+  #sidebar.open{transform:none}
+  #main{height:100dvh}
+  .menu-btn{display:inline-flex}
+  .sidebar-close{display:inline-flex}
+  .topbar{padding:0 15px;gap:10px}
+  .search kbd{display:none}
+  .crumbs{font-size:9.5px;gap:5px}
+  .meta-chip{display:none}
+  .btn{padding:8px 11px;font-size:9px}
+  .page{padding:32px 20px 64px}
+  .hero{padding:8px 0 36px}
+  .hero::after{display:none}
+  .hero h1{font-size:clamp(48px,15vw,72px)}
+  .hero>p{font-size:14px}
+  .stats{grid-template-columns:repeat(2,1fr);margin-top:28px}
+  .stat{padding:17px 16px}
+  .stat .num{font-size:28px}
+  .section-head{margin-top:46px;align-items:flex-start}
+  .section-head h2{font-size:24px}
+  .section-tag{display:none}
+  .chapter-grid{grid-template-columns:1fr}
+  .chapter-card{min-height:0}
+  .guide{grid-template-columns:1fr;margin-top:44px}
+  .home-foot{flex-direction:column;align-items:flex-start}
+  .file-head{flex-direction:column;gap:8px}
+  .file-head .meta-row{justify-content:flex-start;margin-top:2px}
+  .code-scroll{max-height:none}
+  .gutter{padding-left:12px}
+  .code-scroll pre{padding:20px 16px;font-size:12.5px}
+  .gutter{font-size:12.5px}
+  .file-nav{flex-direction:column}
+  .file-nav-btn{max-width:100%}
+  .file-nav-btn.next{margin-left:0}
+  .readme{font-size:14.5px}
+  .toast{right:16px;bottom:16px;left:16px;text-align:center}
+}
+@media(min-width:861px){
+  #overlay{display:none}
+  .sidebar-close{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<aside id="sidebar" aria-label="Repository navigation">
+  <div class="sidebar-head">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">C++</div>
+      <div class="brand-text">
+        <h1>DSA in C++</h1>
+        <p>Learning archive</p>
+      </div>
+      <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+      <input id="search" type="search" placeholder="Search files…" autocomplete="off" spellcheck="false" aria-label="Search files">
+      <kbd>/</kbd>
+    </div>
+    <div class="search-meta" id="searchMeta" hidden aria-live="polite"></div>
+  </div>
+  <nav class="side-nav" aria-label="Sections">
+    <button class="nav-item active" id="navHome" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+      <span>Overview</span>
+    </button>
+    <button class="nav-item" id="navReadme" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span>README</span>
+    </button>
+  </nav>
+  <div class="tree-label">Chapters</div>
+  <div id="tree" aria-label="Chapter and file tree"></div>
+  <div class="sidebar-foot">
+    <a class="foot-link" href="https://github.com/shubham17290/CPP_2.1" target="_blank" rel="noopener">
+      <span>GitHub repository</span><span>↗</span>
+    </a>
+    <div class="foot-meta" id="footStats">—</div>
+  </div>
+</aside>
+<div id="overlay"></div>
+
+<main id="main">
+  <header class="topbar">
+    <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"></nav>
+    <div class="topbar-right">
+      <span class="meta-chip" id="metaChip">—</span>
+      <button class="btn" id="copyBtn" type="button" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="content">
+    <section class="view" id="view-home">
+      <div class="page">
+        <section class="hero">
+          <div class="eyebrow"><span class="pulse"></span> CPP_2.1 · Learning archive</div>
+          <h1>DSA in <span>C++</span></h1>
+          <p>A structured, searchable archive of hand-written C++ solutions — from first patterns and arrays to strings, vectors, and the STL. Pick a chapter, open a file, copy the solution.</p>
+          <div class="hero-actions">
+            <button class="btn primary" id="browseBtn" type="button">
+              Browse chapters
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg>
+            </button>
+            <button class="btn" id="heroReadmeBtn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              Read README
+            </button>
+            <a class="btn ghost" href="https://github.com/shubham17290/CPP_2.1" target="_blank" rel="noopener">
+              GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </section>
+
+        <div class="stats">
+          <div class="stat"><div class="num accent" id="statFiles">—</div><div class="lbl">Source files</div></div>
+          <div class="stat"><div class="num" id="statChapters">—</div><div class="lbl">Chapters</div></div>
+          <div class="stat"><div class="num" id="statLines">—</div><div class="lbl">Lines of code</div></div>
+          <div class="stat"><div class="num">C++17</div><div class="lbl">Standard</div></div>
+        </div>
+
+        <section id="chapterIndex">
+          <div class="section-head">
+            <div>
+              <h2>Chapter index</h2>
+              <p id="chapterIndexMeta">—</p>
+            </div>
+            <span class="section-tag" id="chapterIndexTag">—</span>
+          </div>
+          <div class="chapter-grid" id="chapterGrid"></div>
+        </section>
+
+        <section class="guide" aria-label="How to use this archive">
+          <div class="guide-step">
+            <div class="step-n">01</div>
+            <h3>Choose a chapter</h3>
+            <p>Scan the index or search the sidebar to find the topic you want to revise.</p>
+          </div>
+          <div class="guide-step">
+            <div class="step-n">02</div>
+            <h3>Open a solution</h3>
+            <p>Every file is listed with its folder and line count, so the right problem is easy to spot.</p>
+          </div>
+          <div class="guide-step">
+            <div class="step-n">03</div>
+            <h3>Read or copy</h3>
+            <p>Syntax-highlighted source, line numbers, and one-click copy for your own experiments.</p>
+          </div>
+        </section>
+
+        <footer class="home-foot">
+          <span id="homeFootStats">—</span>
+          <a href="https://github.com/shubham17290/CPP_2.1" target="_blank" rel="noopener">View source on GitHub ↗</a>
+        </footer>
+      </div>
+    </section>
+
+    <section class="view" id="view-chapter" hidden>
+      <div class="page">
+        <div class="page-head">
+          <div class="eyebrow" id="chapterEyebrow">Chapter</div>
+          <h1 id="chapterTitle">—</h1>
+          <p id="chapterLede"></p>
+          <div class="meta-row" id="chapterChips"></div>
+        </div>
+        <div id="chapterBody"></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-file" hidden>
+      <div class="page page-wide">
+        <div class="file-head">
+          <div>
+            <div class="eyebrow" id="fileEyebrow">Source file</div>
+            <h1 id="fileTitle">—</h1>
+            <div class="file-path" id="filePath"></div>
+          </div>
+          <div class="meta-row" id="fileChips"></div>
+        </div>
+        <div class="code-card">
+          <div class="code-bar">
+            <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span class="path" id="codePath"></span>
+          </div>
+          <div class="code-scroll">
+            <div class="gutter" id="gutter" aria-hidden="true"></div>
+            <pre><code id="code" class="language-cpp"></code></pre>
+          </div>
+        </div>
+        <div class="file-nav" id="fileNav"></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-readme" hidden>
+      <div class="page">
+        <div class="readme-shell">
+          <div class="readme-top">
+            <span class="readme-badge">README.md</span>
+            <span class="readme-note">Repository guide</span>
+          </div>
+          <article class="readme" id="readmeBody"></article>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+'use strict';
+const DATA = {{DATA}};
+
+const FILES = ((DATA && DATA.files) || []).slice().sort((a,b)=>a.path.localeCompare(b.path,undefined,{numeric:true}));
+const README = (DATA && DATA.readme) || '';
+const REPO = 'https://github.com/shubham17290/CPP_2.1';
+const byPath = new Map(FILES.map(f=>[f.path,f]));
+const LINE_COUNTS = new Map(FILES.map(f=>[f.path,f.content.split('\n').length]));
+
+const chapters=[];
+const chapterMap=new Map();
+for(const f of FILES){
+  const name=f.path.split('/')[0];
+  let chapter=chapterMap.get(name);
+  if(!chapter){chapter={name,files:[]};chapterMap.set(name,chapter);chapters.push(chapter);}
+  chapter.files.push(f);
+}
+chapters.sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true}));
+
+const $=(selector,root=document)=>root.querySelector(selector);
+const $$=(selector,root=document)=>Array.from(root.querySelectorAll(selector));
+function esc(value){return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
+function fmt(number){return Number(number).toLocaleString('en-US');}
+function baseName(path){return path.split('/').pop();}
+function chapterIndex(name){const match=name.match(/^CH\s*(\d+)/i);return match?match[1].padStart(2,'0'):'—';}
+function chapterTitle(name){return name.replace(/^CH\s*\d+\s*[-–—:]?\s*/i,'').trim()||name;}
+function lineCount(path){return LINE_COUNTS.get(path)||1;}
+
+const ICONS={
+  file:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>',
+  folder:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>',
+  chevron:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>',
+  arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>',
+  search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>'
+};
+
+const sidebar=$('#sidebar'),overlay=$('#overlay'),treeEl=$('#tree'),contentEl=$('#content');
+const searchEl=$('#search'),searchMeta=$('#searchMeta'),crumbsEl=$('#crumbs');
+const metaChip=$('#metaChip'),copyBtn=$('#copyBtn'),toastEl=$('#toast');
+const menuBtn=$('#menuBtn'),sidebarClose=$('#sidebarClose');
+const navHome=$('#navHome'),navReadme=$('#navReadme');
+const chapterEyebrow=$('#chapterEyebrow'),chapterTitleEl=$('#chapterTitle'),chapterLede=$('#chapterLede'),chapterChips=$('#chapterChips'),chapterBody=$('#chapterBody');
+const fileTitle=$('#fileTitle'),filePathEl=$('#filePath'),fileChips=$('#fileChips'),codeEl=$('#code'),gutterEl=$('#gutter'),codePathEl=$('#codePath'),fileNav=$('#fileNav');
+const readmeBody=$('#readmeBody');
+
+let currentFile=null;
+let currentChapter=null;
+let currentText='';
+
+function openDrawer(){sidebar.classList.add('open');overlay.classList.add('show');menuBtn.setAttribute('aria-expanded','true');}
+function closeDrawer(){sidebar.classList.remove('open');overlay.classList.remove('show');menuBtn.setAttribute('aria-expanded','false');}
+menuBtn.addEventListener('click',()=>sidebar.classList.contains('open')?closeDrawer():openDrawer());
+sidebarClose.addEventListener('click',closeDrawer);
+overlay.addEventListener('click',closeDrawer);
+
+function buildTree(list){
+  const root={dirs:new Map(),files:[]};
+  for(const file of list){
+    const parts=file.path.split('/');
+    let node=root;
+    for(let i=0;i<parts.length-1;i++){
+      const key=parts[i];
+      if(!node.dirs.has(key))node.dirs.set(key,{dirs:new Map(),files:[]});
+      node=node.dirs.get(key);
+    }
+    node.files.push(file);
+  }
+  return root;
+}
+function countFiles(node){let count=node.files.length;for(const sub of node.dirs.values())count+=countFiles(sub);return count;}
+function renderNode(node,depth,filtering){
+  const frag=document.createDocumentFragment();
+  const dirs=Array.from(node.dirs.keys()).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
+  for(const dir of dirs){
+    const sub=node.dirs.get(dir);
+    const details=document.createElement('details');
+    details.className=depth===0?'chapter-node':'folder';
+    if(depth===0)details.dataset.chapter=dir;
+    const summary=document.createElement('summary');
+    const count=countFiles(sub);
+    if(depth===0){
+      summary.innerHTML=`<span class="ch-idx">${esc(chapterIndex(dir))}</span><span class="ch-name">${esc(chapterTitle(dir))}</span><span class="ch-count">${count}</span><span class="chev">${ICONS.chevron}</span>`;
+    }else{
+      summary.innerHTML=`<span class="f-icon">${ICONS.folder}</span><span class="f-name">${esc(dir)}</span><span class="f-count">${count}</span><span class="chev">${ICONS.chevron}</span>`;
+    }
+    details.appendChild(summary);
+    const children=document.createElement('div');
+    children.className='children';
+    children.appendChild(renderNode(sub,depth+1,filtering));
+    details.appendChild(children);
+    if(filtering)details.open=true;
+    frag.appendChild(details);
+  }
+  const files=node.files.slice().sort((a,b)=>a.path.localeCompare(b.path,undefined,{numeric:true}));
+  for(const file of files){
+    const button=document.createElement('button');
+    button.type='button';button.className='file';button.dataset.path=file.path;button.title=file.path;
+    button.innerHTML=`<span class="file-icon">${ICONS.file}</span><span class="file-name">${esc(baseName(file.path))}</span>`;
+    button.addEventListener('click',()=>openFile(file.path));
+    frag.appendChild(button);
+  }
+  return frag;
+}
+function renderTree(){
+  const raw=searchEl.value.trim();
+  const query=raw.toLowerCase();
+  const list=query?FILES.filter(file=>file.path.toLowerCase().includes(query)):FILES;
+  treeEl.innerHTML='';
+  searchMeta.hidden=!query;
+  if(query)searchMeta.textContent=`${list.length} ${list.length===1?'match':'matches'} for “${raw}”`;
+  if(!list.length){
+    treeEl.innerHTML=`<div class="tree-empty">${ICONS.search}<p>No files match<br><strong>${esc(raw)}</strong></p><button type="button" class="link-btn" id="clearSearch">Clear search</button></div>`;
+    const clear=$('#clearSearch');
+    if(clear)clear.addEventListener('click',()=>{searchEl.value='';renderTree();searchEl.focus();});
+    return;
+  }
+  treeEl.appendChild(renderNode(buildTree(list),0,!!query));
+  markCurrentChapter();
+  if(currentFile){
+    const active=$$('.file',treeEl).find(button=>button.dataset.path===currentFile);
+    if(active)active.classList.add('active');
+  }
+}
+function markCurrentChapter(){
+  $$('.chapter-node',treeEl).forEach(details=>{
+    const isCurrent=!!currentChapter&&details.dataset.chapter===currentChapter;
+    details.classList.toggle('current',isCurrent);
+    if(isCurrent)details.open=true;
+  });
+}
+function revealInTree(path){
+  const button=$$('.file',treeEl).find(item=>item.dataset.path===path);
+  if(!button)return;
+  let node=button.parentElement;
+  while(node&&node!==treeEl){if(node.tagName==='DETAILS')node.open=true;node=node.parentElement;}
+  button.classList.add('active');
+  button.scrollIntoView({block:'nearest'});
+}
+function setCrumbs(items){
+  crumbsEl.innerHTML='';
+  items.forEach((item,index)=>{
+    if(index){const separator=document.createElement('span');separator.className='crumb-sep';separator.textContent='/';crumbsEl.appendChild(separator);}
+    if(item.action){
+      const button=document.createElement('button');button.type='button';button.className='crumb';button.textContent=item.label;button.addEventListener('click',item.action);crumbsEl.appendChild(button);
+    }else{
+      const label=document.createElement('span');label.className='crumb current';label.textContent=item.label;crumbsEl.appendChild(label);
+    }
+  });
+}
+function setNav(view){navHome.classList.toggle('active',view==='home');navReadme.classList.toggle('active',view==='readme');}
+function showView(id){$$('.view',contentEl).forEach(view=>{view.hidden=view.id!==id;});contentEl.scrollTop=0;}
+function setCopy(text){currentText=text||'';copyBtn.hidden=!currentText;}
+function setMeta(text){metaChip.textContent=text;}
+
+function buildHome(){
+  const totalLines=FILES.reduce((sum,file)=>sum+lineCount(file.path),0);
+  $('#statFiles').textContent=fmt(FILES.length);
+  $('#statChapters').textContent=fmt(chapters.length);
+  $('#statLines').textContent=fmt(totalLines);
+  $('#chapterIndexMeta').textContent=`${chapters.length} chapters · ${FILES.length} files · sorted by chapter`;
+  $('#chapterIndexTag').textContent=`${FILES.length} solutions`;
+  $('#footStats').textContent=`${fmt(FILES.length)} files · ${chapters.length} chapters`;
+  $('#homeFootStats').textContent=`${fmt(FILES.length)} C++ files · ${chapters.length} chapters · ${fmt(totalLines)} lines`;
+  const grid=$('#chapterGrid');
+  grid.innerHTML='';
+  const max=Math.max(...chapters.map(chapter=>chapter.files.length),1);
+  chapters.forEach((chapter,index)=>{
+    const card=document.createElement('button');
+    card.type='button';card.className='chapter-card';
+    card.style.animationDelay=Math.min(index*35,420)+'ms';
+    const preview=chapter.files.slice(0,3).map(file=>baseName(file.path));
+    const width=Math.max(6,Math.round(chapter.files.length/max*100));
+    card.innerHTML=`
+      <div class="cc-top"><span class="cc-idx">${esc(chapterIndex(chapter.name))}</span><span class="cc-arrow">${ICONS.arrow}</span></div>
+      <h3 class="cc-title">${esc(chapterTitle(chapter.name))}</h3>
+      <div class="cc-meta">${chapter.files.length} ${chapter.files.length===1?'file':'files'}</div>
+      <ul class="cc-preview">${preview.map(name=>`<li>${esc(name)}</li>`).join('')}</ul>
+      <div class="cc-bar"><span style="width:${width}%"></span></div>`;
+    card.addEventListener('click',()=>openChapter(chapter.name));
+    grid.appendChild(card);
+  });
+}
+function showHome(){
+  currentFile=null;currentChapter=null;currentText='';
+  showView('view-home');setNav('home');
+  setCrumbs([{label:'Overview'}]);
+  setMeta(`${FILES.length} files`);
+  setCopy('');
+  markCurrentChapter();
+  $$('.file',treeEl).forEach(button=>button.classList.remove('active'));
+  document.title='DSA in C++ — Code Browser';
+  closeDrawer();
+}
+
+function relGroup(path){
+  const parts=path.split('/').slice(1);
+  return parts.length>1?parts.slice(0,-1).join(' / '):'Chapter files';
+}
+function openChapter(name){
+  const chapter=chapterMap.get(name);
+  if(!chapter)return;
+  currentFile=null;currentChapter=name;currentText='';
+  const index=chapterIndex(name);
+  const title=chapterTitle(name);
+  const groups=new Map();
+  for(const file of chapter.files){
+    const key=relGroup(file.path);
+    if(!groups.has(key))groups.set(key,[]);
+    groups.get(key).push(file);
+  }
+  const sortedGroups=Array.from(groups.entries()).sort((a,b)=>a[0].localeCompare(b[0],undefined,{numeric:true}));
+  chapterEyebrow.textContent=`Chapter ${index}`;
+  chapterTitleEl.textContent=title;
+  chapterLede.textContent=`${chapter.files.length} ${chapter.files.length===1?'solution':'solutions'} across ${sortedGroups.length} ${sortedGroups.length===1?'topic':'topics'}. Open any file to read the full source, or use the sidebar to keep browsing.`;
+  chapterChips.innerHTML=`<span class="chip accent">${chapter.files.length} files</span><span class="chip">${sortedGroups.length} topics</span><span class="chip">C++</span>`;
+  chapterBody.innerHTML='';
+  for(const [group,files] of sortedGroups){
+    const section=document.createElement('section');section.className='group';
+    const head=document.createElement('div');head.className='group-head';
+    head.innerHTML=`<h3>${esc(group)}</h3><span class="gcount">${files.length}</span>`;
+    const list=document.createElement('div');list.className='file-list';
+    for(const file of files){
+      const row=document.createElement('button');row.type='button';row.className='file-row';
+      const parent=file.path.split('/').slice(1,-1).join(' / ')||name;
+      row.innerHTML=`<span class="fr-icon">${ICONS.file}</span>
+        <span class="fr-main"><span class="fr-name">${esc(baseName(file.path))}</span><span class="fr-path">${esc(parent)}</span></span>
+        <span class="fr-lines">${lineCount(file.path)} lines</span><span class="fr-arrow">${ICONS.chevron}</span>`;
+      row.addEventListener('click',()=>openFile(file.path));
+      list.appendChild(row);
+    }
+    section.appendChild(head);section.appendChild(list);chapterBody.appendChild(section);
+  }
+  setCrumbs([{label:'Overview',action:showHome},{label:name}]);
+  setMeta(`${chapter.files.length} files`);setCopy('');
+  showView('view-chapter');setNav('');
+  markCurrentChapter();
+  $$('.file',treeEl).forEach(button=>button.classList.remove('active'));
+  document.title=`${title} — DSA in C++`;
+  closeDrawer();
+}
+
+function openFile(path){
+  const entry=byPath.get(path);
+  if(!entry)return;
+  currentFile=path;currentChapter=path.split('/')[0];currentText=entry.content;
+  const name=baseName(path);
+  const chapterName=currentChapter;
+  const chapterLabel=chapterTitle(chapterName);
+  const lines=lineCount(path);
+  setCrumbs([
+    {label:'Overview',action:showHome},
+    {label:chapterLabel,action:()=>openChapter(chapterName)},
+    {label:name}
+  ]);
+  setMeta(`${lines} lines`);
+  setCopy(entry.content);
+  fileTitle.textContent=name;
+  filePathEl.textContent=path;
+  fileChips.innerHTML=`<span class="chip accent">${esc(chapterLabel)}</span><span class="chip">${lines} lines</span><span class="chip">C++</span>`;
+  codePathEl.textContent=path;
+  codeEl.className='language-cpp';
+  codeEl.removeAttribute('data-highlighted');
+  codeEl.textContent=entry.content;
+  if(window.hljs){try{window.hljs.highlightElement(codeEl);}catch(error){console.warn('highlight failed',error);}}
+  gutterEl.innerHTML=entry.content.split('\n').map((_,index)=>`<span>${index+1}</span>`).join('');
+  const fileIndex=FILES.findIndex(file=>file.path===path);
+  const previous=FILES[fileIndex-1],next=FILES[fileIndex+1];
+  fileNav.innerHTML='';
+  const makeNav=(file,direction)=>{
+    if(!file)return null;
+    const button=document.createElement('button');button.type='button';button.className='file-nav-btn '+direction;
+    button.innerHTML=`<span class="nav-dir">${direction==='prev'?'← Previous':'Next →'}</span><span class="nav-name">${esc(baseName(file.path))}</span>`;
+    button.addEventListener('click',()=>openFile(file.path));
+    return button;
+  };
+  const previousButton=makeNav(previous,'prev'),nextButton=makeNav(next,'next');
+  if(previousButton)fileNav.appendChild(previousButton);
+  if(nextButton)fileNav.appendChild(nextButton);
+  showView('view-file');setNav('');
+  markCurrentChapter();
+  const treeButton=$$('.file',treeEl).find(button=>button.dataset.path===path);
+  if(treeButton)revealInTree(path);else $$('.file',treeEl).forEach(button=>button.classList.remove('active'));
+  document.title=`${name} — DSA in C++`;
+  closeDrawer();
+}
+function fixReadmeLinks(){
+  const blobBase=REPO+'/blob/main/';
+  const rawBase='https://raw.githubusercontent.com/shubham17290/CPP_2.1/main/';
+  $$('a[href]',readmeBody).forEach(link=>{
+    const href=link.getAttribute('href');
+    if(!href||/^(https?:|#|mailto:|tel:)/i.test(href))return;
+    link.setAttribute('href',blobBase+encodeURI(href.replace(/^\.\//,'')));
+    link.setAttribute('target','_blank');link.setAttribute('rel','noopener');
+  });
+  $$('img[src]',readmeBody).forEach(image=>{
+    const src=image.getAttribute('src');
+    if(!src||/^(https?:|data:)/i.test(src))return;
+    image.setAttribute('src',rawBase+encodeURI(src.replace(/^\.\//,'')));
+  });
+}
+function showReadme(){
+  currentFile=null;currentChapter=null;currentText=README;
+  if(window.marked){
+    try{readmeBody.innerHTML=window.marked.parse(README);}
+    catch(error){readmeBody.innerHTML=`<pre>${esc(README)}</pre>`;}
+  }else{
+    readmeBody.innerHTML=`<pre>${esc(README)}</pre>`;
+  }
+  fixReadmeLinks();
+  $$('pre code',readmeBody).forEach(block=>{if(window.hljs){try{window.hljs.highlightElement(block);}catch(error){}}});
+  setCrumbs([{label:'Overview',action:showHome},{label:'README.md'}]);
+  setMeta('Repository guide');setCopy(README);
+  showView('view-readme');setNav('readme');
+  markCurrentChapter();
+  $$('.file',treeEl).forEach(button=>button.classList.remove('active'));
+  document.title='README — DSA in C++';
+  closeDrawer();
+}
+
+let toastTimer=null;
+function toast(message){
+  toastEl.textContent=message;toastEl.classList.add('show');
+  clearTimeout(toastTimer);toastTimer=setTimeout(()=>toastEl.classList.remove('show'),1900);
+}
+async function copyCurrent(){
+  if(!currentText){toast('Nothing to copy');return;}
+  try{
+    if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(currentText);}
+    else{
+      const area=document.createElement('textarea');area.value=currentText;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();
+    }
+    toast('Copied to clipboard');
+  }catch(error){
+    try{
+      const area=document.createElement('textarea');area.value=currentText;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();toast('Copied to clipboard');
+    }catch(fallbackError){toast('Copy failed');}
+  }
+}
+
+searchEl.addEventListener('input',renderTree);
+navHome.addEventListener('click',showHome);
+navReadme.addEventListener('click',showReadme);
+copyBtn.addEventListener('click',copyCurrent);
+$('#browseBtn').addEventListener('click',()=>{const target=$('#chapterIndex');if(target)target.scrollIntoView({behavior:'smooth',block:'start'});});
+$('#heroReadmeBtn').addEventListener('click',showReadme);
+document.addEventListener('keydown',event=>{
+  const tag=document.activeElement?document.activeElement.tagName:'';
+  const typing=/^(INPUT|TEXTAREA|SELECT)$/.test(tag);
+  if(event.key==='/'&&!typing){event.preventDefault();if(window.innerWidth<=860)openDrawer();searchEl.focus();searchEl.select();}
+  if(event.key==='Escape'){
+    if(sidebar.classList.contains('open'))closeDrawer();
+    else if(document.activeElement===searchEl){if(searchEl.value){searchEl.value='';renderTree();}searchEl.blur();}
+  }
+});
+
+buildHome();
+renderTree();
+showHome();
+})();
+</script>
+</body>
+</html>
+
+
+
+
+

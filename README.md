@@ -70,7 +70,7 @@ Browse the entire codebase online with syntax highlighting and search:
 
 **https://shubham17290.github.io/CPP_2.1/**
 
-The browser is fully self-contained, works offline, and updates automatically on every push.
+The browser includes a chapter index, full-text file search, a README reader, and syntax-highlighted source with line numbers. It is fully self-contained apart from CDN-hosted fonts and highlighting, and it updates automatically on every push.
 
 ---
 
