@@ -2,14 +2,15 @@
 
 # 🚀 DSA in C++ — My Personal Learning Journey
 
-### *From "Hello, World!" to Data Structures & Algorithms — one commit at a time.*
+### *From `Hello, World!` to Data Structures & Algorithms — one commit at a time.*
 
 [![Language](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
 [![Standard](https://img.shields.io/badge/Standard-C%2B%2B17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://en.cppreference.com/)
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-363-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-362-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Chapters](https://img.shields.io/badge/Chapters-15-orange?style=for-the-badge)](#-chapter-overview)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
 
@@ -21,7 +22,7 @@
 
 <br/>
 
-[📖 About](#-about) · [🗂️ Structure](#-repository-structure) · [📊 Progress](#-progress-tracker) · [⚙️ Run](#️-getting-started) · [📚 Index](#-complete-file-index) · [🤝 Contribute](#-contributing)
+[📖 About](#-about) · [🗂️ Structure](#-repository-structure) · [📊 Chapters](#-chapter-overview) · [🆕 What's New](#-whats-new) · [⚙️ Run](#️-getting-started) · [📚 Index](#-complete-file-index) · [🤝 Contribute](#-contributing)
 
 </div>
 
@@ -29,7 +30,9 @@
 
 ## 📖 About
 
-This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built by following a structured DSA syllabus. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, functions, pointers, arrays and beyond, all the way toward full DSA mastery.
+This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built by following a structured DSA syllabus. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, functions, pointers, arrays, 2D arrays, strings, and the STL.
+
+Every program is **self-contained**, **compile-ready**, and written to be read by a beginner. The repository is organized like a course: numbered `CH xx` folders mirror the syllabus, and each topic has its own focused examples, practice questions, and assignment solutions.
 
 The goal is simple:
 
@@ -37,6 +40,7 @@ The goal is simple:
 - ✅ **Practice relentlessly** — multiple practice questions and assignment solutions per topic, plus curated **Quality Questions** in every core chapter.
 - ✅ **Stay organized** — numbered `CH xx` folders mirror the course syllabus.
 - ✅ **Track progress** — git history tells the story of the journey.
+- ✅ **Make it browsable** — the whole repo is available as an online code browser with syntax highlighting.
 
 > Whether you're a beginner picking up C++ for the first time or revising fundamentals before
 > diving into DSA, this repo is designed to be **readable, runnable, and reusable**.
@@ -45,21 +49,24 @@ The goal is simple:
 
 ## ✨ Highlights
 
-- 🧩 **363 self-contained C++ programs** — each file compiles and runs independently.
-- 📁 **Syllabus-aligned folders** — `CH 00 … CH 14` in the exact order you should learn them.
-- 🧱 **C++ STL coverage** — containers, iterators, and algorithms (`CH 13`), including the `binary_search` / `lower_bound` / `upper_bound` / `equal_range` family, plus heap, set, and min/max algorithms.
-- 🔃 **Sorting algorithms** — bubble, selection, insertion, counting, and in-built `sort()` (`CH 12`).
-- 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, …).
-- ✨ **Quality Questions** subfolder in every core chapter (CH 00–CH 10) with curated, interview-style problems (each folder has its own `README.md` index).
+- 🧩 **362 self-contained C++ programs** — each file compiles and runs independently.
+- 📁 **15 syllabus-aligned chapter folders** — `CH 00` through `CH 15`, in the order you should learn them.
+- 🧱 **Deep C++ STL coverage** — containers, iterators, and algorithms (`CH 13`, 126 programs), including `binary_search` / `lower_bound` / `upper_bound` / `equal_range`, heap and set algorithms, and the min/max family.
+- 🔃 **Sorting algorithms** — bubble (with optimization), selection, insertion, counting, and in-built `sort()` (`CH 12`).
+- 🔤 **Strings & character arrays** — C-style strings, `cstring` functions, `std::string`, member functions, anagrams, comparisons, and assignment solutions (`CH 15`).
+- 🧮 **2D Arrays** — input/output, traversal, diagonal sums, sorted-matrix search, spiral matrix, matrix pointers, and assignments (`CH 14`).
+- 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, patterns, strings, …).
+- ✨ **Quality Questions** subfolder in every core chapter (CH 00–CH 10) with curated, interview-style problems.
 - 🛠️ **VS Code ready** — `.vscode` config with g++, gdb, and strict warning flags.
 - 📝 **Commented code** — intent and logic explained inline.
+- 🌐 **Live code browser** — a fully self-contained GitHub Pages site with search and syntax highlighting.
 - 🔁 **Git history** — every milestone committed, so you can replay the learning path.
 
 ---
 
 ## 🗂️ Web Code Browser
 
-Browse the entire codebase online with syntax highlighting:
+Browse the entire codebase online with syntax highlighting and search:
 
 **https://shubham17290.github.io/CPP_2.1/**
 
@@ -70,76 +77,71 @@ The browser is fully self-contained, works offline, and updates automatically on
 ## 📂 Repository Structure
 
 ```
-DSA in C++/
+CPP_2.1/
 │
-├── 📁 CH 00 Practice/
-│   ├── 01 function/
-│   ├── 02 operators precedence/
-│   └── Quality Questions/
-├── 📁 CH 01 Var and DT/
-│   └── Quality Questions/
-├── 📁 CH 02 Operators/
-│   └── Quality Questions/
-├── 📁 CH 03 Conditionals/
-│   └── Quality Questions/
-├── 📁 CH 04 Loops/
-│   └── Quality Questions/
-├── 📁 CH 05 Statements/
-│   └── Quality Questions/
-├── 📁 CH 06 Patterns/
-│   └── Quality Questions/
-├── 📁 CH 07 Function/
-│   └── Quality Questions/
-├── 📁 CH 08 Binary Number System/
-│   └── Quality Questions/
-├── 📁 CH 09 Pointers/
-│   └── Quality Questions/
-├── 📁 CH 10 Array I/
-│   └── Quality Questions/
-├── 📁 CH 12 Array II/
-│   └── 01 Sorting/
-├── 📁 CH 13 STL/00 vector(APC)/
-│   ├── 01 basics of the vector/
-│   ├── 02 Vector Function/
-│   └── 03 Static and dynamic/
-├── 📁 CH 13 STL/
-│   ├── 01 Containers/
-│   ├── 02 Iterators/
-│   └── 03 Algorithms/
-├── 📁 CH 14 2D Arrays/
-│   ├── 01 intro/
-│   ├── 02 input and output/
-│   └── 03 Spiral Matrix/
+├── CH 00 Practice/                  # Warm-up programs & operator precedence
+├── CH 01 Var and DT/                # Variables, data types, I/O
+├── CH 02 Operators/                 # Arithmetic, relational, logical, bitwise
+├── CH 03 Conditionals/              # if/else, ternary, switch, calculator project
+├── CH 04 Loops/                     # for, while, do-while, digit problems
+├── CH 05 Statements/                # break, continue
+├── CH 06 Patterns/                  # Star, number, and character patterns
+├── CH 07 Function/                  # Functions, scope, overloading, recursion
+├── CH 08 Binary Number System/      # Binary/dec conversions, bit tricks
+├── CH 09 Pointers/                  # Pointers, references, pass-by semantics
+├── CH 10 Array I/                   # Arrays, searching, subarrays, Kadane
+├── CH 12 Array II/                  # Sorting algorithms
+├── CH 13 STL/                       # Containers, iterators, algorithms
+├── CH 14 2D Arrays/                 # Matrices, spiral traversal, pointers
+├── CH 15 char array's and strings/  # C-strings, std::string, assignments
 │
-├── 📁 .github/workflows/        # GitHub Pages deploy workflow
-├── 📁 .vscode/                 # editor & debugger config
-├── 📁 docs/                    # GitHub Pages site (index.html)
-└── 📄 README.md
+├── .github/workflows/pages.yml      # GitHub Pages deployment workflow
+├── .vscode/                         # Editor & debugger configuration
+├── docs/                            # Self-contained GitHub Pages code browser
+├── .gitignore                       # Ignores build artifacts (*.exe, *.out, …)
+└── README.md
 ```
+
+> 📌 **Naming convention:** `CH xx` folders are ordered by the syllabus. Subfolders group
+> examples by topic (`01 basics`, `02 member functions`, `03 assignment`, …), and files are
+> prefixed with `_01_`, `_02_` to keep lessons in teaching order.
+
+---
+
+## 📊 Chapter Overview
+
+| Chapter | Topic | Programs | Status |
+|:--|:--|--:|:--:|
+| `CH 00` | Practice & warm-ups | 5 | ✅ |
+| `CH 01` | Variables & Data Types | 18 | ✅ |
+| `CH 02` | Operators | 20 | ✅ |
+| `CH 03` | Conditionals | 21 | ✅ |
+| `CH 04` | Loops | 18 | ✅ |
+| `CH 05` | Break & Continue | 5 | ✅ |
+| `CH 06` | Patterns | 16 | ✅ |
+| `CH 07` | Functions | 27 | ✅ |
+| `CH 08` | Binary Number System | 5 | ✅ |
+| `CH 09` | Pointers & References | 11 | ✅ |
+| `CH 10` | Arrays I | 41 | ✅ |
+| `CH 12` | Arrays II & Sorting | 8 | ✅ |
+| `CH 13` | STL (containers, iterators, algorithms) | 126 | ✅ |
+| `CH 14` | 2D Arrays & Matrices | 12 | ✅ |
+| `CH 15` | Character Arrays & Strings | 29 | 🔄 |
+| **Total** | **15 chapters** | **362** | |
+
+> `CH 11` is intentionally skipped to match the original course numbering.
 
 ---
 
 ## 🆕 What's New
 
-- 🧭 Started `CH 14 2D Arrays` — introduction, input/output traversal, and spiral matrix basics.
-- 🔃 Added `CH 12 Array II → 01 Sorting` — bubble (with optimization), selection, insertion,
-  counting sort, in-built `sort()` (ascending & descending), plus practice solutions.
-- 🧮 Added `CH 13 STL → 03 Algorithms → 04 min max algorithms` (`min`, `max`, `min_element`, `max_element`).
-- ⛰️ Added `CH 13 STL → 03 Algorithms → 05 Heap Algorithm` (`make_heap`, `push_heap`, `pop_heap`, `sort_heap`).
-- 🔷 Added `CH 13 STL → 03 Algorithms → 06 Set algorithms` (`set_union`, `set_intersection`,
-  `set_difference`, `set_symmetric_difference`).
-- 🔁 Added `CH 13 STL → 02 Iterators` — iterator basics and all five iterator categories.
-- 🔎 Added `CH 13 STL → 03 Algorithms → 03 Searching and finding algorithms` with
-  `binary_search`, `lower_bound`, `upper_bound`, and an `equal_range` homework placeholder.
-- 🧮 Added `CH 13 STL → 03 Algorithms → 02 Numeric algorithms` (`accumulate`,
-  `inner_product`, `partial_sum`, `iota`).
-- 🔁 Added `CH 13 STL → 03 Algorithms → 01 iterators and iterating algorithms`
-  (`for_each`, `find`, `find_if`, `count`, `count_if`, `sort`, `reverse`, `unique`,
-  `rotate`, `partition`).
-- 📦 Added `CH 13 STL → 01 Containers` coverage for vector, list, queue, stack,
-  deque, priority queue, map, and set.
-- 🧷 Added `CH 13 STL/00 vector(APC)` and `CH 09 Pointers` fundamentals.
-- ✨ Added a `Quality Questions` subfolder in every chapter (CH 00–CH 10) with curated practice problems.
+- 🔤 **Strings chapter (`CH 15`)** — character arrays, string literals, `strlen`, `strcpy`, `strcat`, `strcmp`, `std::string` input with `getline`, index-based access, range-based `for` loops, and member functions (`length`, `at`, `substr`, `find`).
+- 🧠 **String practice** — anagram check, string comparison, vowel counting, and "almost equal" assignment solutions.
+- 📄 **Assignment material** — question and answer PDFs plus runnable C++ solutions under `CH 15 → 05 Strings in c++ → 03 assignment`.
+- 🗂️ **Reorganized string lessons** into `01 basic ones`, `02 String member functions`, and `03 assignment` for a cleaner learning flow.
+- 🧮 **2D Arrays completed (`CH 14`)** — diagonal sum, search in a sorted matrix, spiral matrix, matrix pointers, and assignment solutions.
+- 🌐 **Refreshed GitHub Pages site** — the embedded file index and README are regenerated on every push.
+- 🧹 **Housekeeping** — compiled `.exe` / `.out` artifacts are ignored and removed from the working tree.
 
 ---
 
@@ -148,32 +150,35 @@ DSA in C++/
 Marked as completed based on the actual content of this repository.
 
 ### ✅ Completed
+
 - [x] **Variables & Data Types** — declaration, initialization, I/O
 - [x] **Operators** — arithmetic, relational, logical, unary, type casting
 - [x] **Conditional Statements** — `if`, `else if`, ternary, `switch`
 - [x] **Loops** — `for`, `while`, `do-while`
 - [x] **Jump Statements** — `break`, `continue`
 - [x] **Prime Numbers** — primality checks
-- [x] **Patterns** — star/number patterns (`CH 06`)
-- [x] **Functions** — parameters, return types, scope, overloading (CH 07)
-- [x] **Binary Number System** — data types, bin-to-dec, dec-to-bin (CH 08)
-- [x] **Pointers & References** — addresses, dereferencing, pass-by-value vs pass-by-reference (CH 09)
-- [x] **Arrays** — declaration, traversal, linear search, reverse, I/O (`CH 10`)
+- [x] **Patterns** — star/number/character patterns (`CH 06`)
+- [x] **Functions** — parameters, return types, scope, overloading (`CH 07`)
+- [x] **Binary Number System** — data types, bin-to-dec, dec-to-bin (`CH 08`)
+- [x] **Pointers & References** — addresses, dereferencing, pass-by-value vs pass-by-reference (`CH 09`)
+- [x] **Arrays** — declaration, traversal, linear search, reverse, I/O, subarrays, Kadane (`CH 10`)
 - [x] **Sorting** — bubble, selection, insertion, counting, in-built `sort()` (`CH 12`)
 - [x] **Vectors** — declaration, member functions, static vs dynamic behavior (`CH 13 → 00 vector(APC)`)
 - [x] **STL Containers** — vector, list, queue, stack, deque, priority queue, map, set (`CH 13`)
 - [x] **STL Iterators** — iterator basics, types, and ranges (`CH 13`)
 - [x] **STL Algorithms** — iterating, numeric, searching, min/max, heap, and set algorithms (`CH 13`)
+- [x] **2D Arrays** — intro, input/output, diagonal sum, sorted-matrix search, spiral matrix, matrix pointers (`CH 14`)
 
 ### 🔄 In Progress
-- [ ] **2D Arrays** — intro, input/output, spiral matrix (`CH 14`)
-- [ ] **Strings**
+
+- [ ] **Strings** — core material complete (29 programs); adding more practice and assignment problems (`CH 15`)
 
 ### 🗺️ Roadmap (Coming Soon)
+
 - [ ] Object-Oriented Programming (classes, inheritance, polymorphism)
 - [ ] Recursion & Backtracking
 - [ ] Linked Lists
-- [ ] Stacks & Queues
+- [ ] Stacks & Queues (implementation from scratch)
 - [ ] Trees & Binary Search Trees
 - [ ] Heaps & Hashing
 - [ ] Graphs (BFS, DFS, shortest paths)
@@ -248,13 +253,14 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 - 💬 Inline comments explain *why*, not *what*.
 - 🧪 Every practice question is self-contained with its own `cin`/`cout`.
 - ⚠️ Compile with warnings enabled: `-Wall -Wextra -Wpedantic`.
+- 🗂️ Numbered prefixes (`_01_`, `_02_`, …) keep files in teaching order.
 
 ---
 
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand - all 363 C++ source files</b></summary>
+<summary><b>Click to expand — all 362 C++ source files</b></summary>
 
 <br/>
 
@@ -554,21 +560,20 @@ CH 12 Array II/
     └── 06 Practice question/
         └── _01_solution.cpp
 
-CH 13 STL/00 vector(APC)/
-├── 01 basics of the vector/
-│   ├── _01_vector_syntax.cpp
-│   └── _02_for_each_loop.cpp
-├── 02 Vector Function/
-│   ├── _01_size.cpp
-│   ├── _02_push_back.cpp
-│   ├── _03_pop_back.cpp
-│   ├── _04_front.cpp
-│   ├── _05_back.cpp
-│   └── _06_at.cpp
-└── 03 Static and dynamic/
-    └── _01_property_01.cpp
-
 CH 13 STL/
+├── 00 vector(APC)/
+│   ├── 01 basics of the vector/
+│   │   ├── _01_vector_syntax.cpp
+│   │   └── _02_for_each_loop.cpp
+│   ├── 02 Vector Function/
+│   │   ├── _01_size.cpp
+│   │   ├── _02_push_back.cpp
+│   │   ├── _03_pop_back.cpp
+│   │   ├── _04_front.cpp
+│   │   ├── _05_back.cpp
+│   │   └── _06_at.cpp
+│   └── 03 Static and dynamic/
+│       └── _01_property_01.cpp
 ├── 01 Containers/
 │   ├── 01 vector DS/
 │   │   ├── 01 basics/
@@ -633,25 +638,25 @@ CH 13 STL/
 │   │   │       ├── _05_size.cpp
 │   │   │       ├── _06_swap.cpp
 │   │   │       └── _07_emplace.cpp
-│   │   ├── 02 Min heap/
-│   │   │   ├── 01 Basics/
-│   │   │   │   └── _01_min_heap.cpp
-│   │   │   └── 02 functions of the min heap/
-│   │   │       ├── _01_push.cpp
-│   │   │       ├── _02_pop.cpp
-│   │   │       ├── _03_top.cpp
-│   │   │       ├── _04_empty.cpp
-│   │   │       ├── _05_size.cpp
-│   │   │       ├── _06_swap.cpp
-│   │   │       └── _07_emplace.cpp
-│   │   └── 02 functions of the priority queue/
-│   │       ├── _01_push.cpp
-│   │       ├── _02_pop.cpp
-│   │       ├── _03_top.cpp
-│   │       ├── _04_empty.cpp
-│   │       ├── _05_size.cpp
-│   │       ├── _06_swap.cpp
-│   │       └── _07_emplace.cpp
+│   │   ├── 02 functions of the priority queue/
+│   │   │   ├── _01_push.cpp
+│   │   │   ├── _02_pop.cpp
+│   │   │   ├── _03_top.cpp
+│   │   │   ├── _04_empty.cpp
+│   │   │   ├── _05_size.cpp
+│   │   │   ├── _06_swap.cpp
+│   │   │   └── _07_emplace.cpp
+│   │   └── 02 Min heap/
+│   │       ├── 01 Basics/
+│   │       │   └── _01_min_heap.cpp
+│   │       └── 02 functions of the min heap/
+│   │           ├── _01_push.cpp
+│   │           ├── _02_pop.cpp
+│   │           ├── _03_top.cpp
+│   │           ├── _04_empty.cpp
+│   │           ├── _05_size.cpp
+│   │           ├── _06_swap.cpp
+│   │           └── _07_emplace.cpp
 │   ├── 07 Map/
 │   │   ├── 01 UnOrdered Map/
 │   │   │   ├── 01 Basics/
@@ -742,11 +747,77 @@ CH 14 2D Arrays/
 │   └── _01_introduction_to_2d_arrau.cpp
 ├── 02 input and output/
 │   └── _01_input_and_output.cpp
-└── 03 Spiral Matrix/
-    └── _01_basic_of_sprial_matrix.cpp
+├── 03 problem solving/
+│   ├── 00 Spiral Matrix/
+│   │   └── _01_basic_of_sprial_matrix.cpp
+│   ├── _04_diagonal_sum.cpp
+│   └── _05_search_in_sorted_matrix.cpp
+├── 04 Matrix pointer/
+│   ├── _01_matrix_pointer_intro.cpp
+│   └── _02_matrix_pointerpart_02.cpp
+└── 05 assignment/
+    └── 02 solution/
+        ├── _01_solution.cpp
+        ├── _02_solution.cpp
+        ├── _03_solution.cpp
+        ├── _04_solution.cpp
+        └── _05_solution.cpp
+
+CH 15 char array's and strings/
+├── 01 Basics of the strings/
+│   ├── _01_basics.cpp
+│   ├── _02_string_data_accessing.cpp
+│   └── _03_printing_the_position_of_the_element.cpp
+├── 02 Character arrays/
+│   ├── _01_char_array.cpp
+│   ├── _02_accessing_the_array.cpp
+│   ├── _03_string_literal.cpp
+│   └── _04_string_length.cpp
+├── 03 imp String programs/
+│   ├── _01_noraml_input_in_char_array.cpp
+│   ├── _02_taking_whole_sentence_input.cpp
+│   ├── _03_uppercase_converter_in_string_array.cpp
+│   ├── _04_reverse_string.cpp
+│   └── _05_checking_a_string_is_it_palindrome_or_not.cpp
+├── 04 cstring/
+│   ├── _01_strcpy.cpp
+│   ├── _02_strcat.cpp
+│   └── _03_strcmp.cpp
+└── 05 Strings in c++/
+    ├── 01 basic ones/
+    │   ├── _01_string_input.cpp
+    │   ├── _02_string_input.cpp
+    │   ├── _03_sting_getline.cpp
+    │   ├── _04_string_index_based_accessing.cpp
+    │   ├── _05_accessing_string_elements.cpp
+    │   └── _06_accessing_the_string_element_using_for_each_loop.cpp
+    ├── 02 String member functions/
+    │   ├── _01_string_lenght.cpp
+    │   ├── _02_dot_at.cpp
+    │   ├── _03_sub_string.cpp
+    │   ├── _04_find_method.cpp
+    │   ├── _05_anagram_check.cpp
+    │   └── _06_string_comparision.cpp
+    └── 03 assignment/
+        └── 03 code/
+            ├── _01_vawlCount.cpp
+            └── _02_almost_equal.cpp
 ```
 
 </details>
+
+---
+
+## 📈 Repository Stats
+
+| Metric | Value |
+|:--|--:|
+| C++ source files | **362** |
+| Chapter folders | **15** |
+| STL programs (`CH 13`) | **126** |
+| String programs (`CH 15`) | **29** |
+| Array programs (`CH 10` + `CH 12`) | **49** |
+| Build artifacts tracked | **0** |
 
 ---
 
@@ -761,6 +832,7 @@ Contributions, suggestions, and improvements are welcome!
 5. **Open** a Pull Request.
 
 ### Contribution Ideas
+
 - 📌 Add a new DSA topic folder following the `CH xx` numbering convention.
 - 🧪 Add more practice problems with edge cases.
 - 🐛 Fix bugs or improve existing solutions.
