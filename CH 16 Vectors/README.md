@@ -15,6 +15,7 @@ A dedicated vectors chapter that starts with memory: how a fixed-size array is l
 | [`02 2D vector/`](02%202D%20vector/) | A grid stored as `vector<vector<int>>` and traversed with nested loops. |
 | [`03 practice questions/`](03%20practice%20questions/) | Extra practice with `push_back`, `size()`, and `capacity()`. |
 | [`04 Assignment/`](04%20Assignment/) | A [PDF question set](04%20Assignment/01%20questions/Vectors%20Questions.pdf) with room for written and coding solutions. |
+| [`04 Assignment/03 coding solution/`](04%20Assignment/03%20coding%20solution/) | Coding workspace for the assignment: LeetCode 645, 11, and 3Sum. |
 
 ## 🧪 Practice Questions
 
