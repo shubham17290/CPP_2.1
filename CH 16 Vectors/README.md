@@ -9,6 +9,7 @@ A dedicated vectors chapter that starts with memory: how a fixed-size array is l
 | Folder | What you'll find |
 |:--|:--|
 | [`01 Basics of the vector/`](01%20Basics%20of%20the%20vector/) | Static memory allocation, fixed capacity, and element addresses. |
+| [`02 2D array/`](02%202D%20array/) | A 2D array passed to functions with pointers and pointer arithmetic. |
 
 ## 🧪 Practice Questions
 
@@ -17,6 +18,7 @@ A dedicated vectors chapter that starts with memory: how a fixed-size array is l
 | # | Question | Solution |
 |--:|:--|:--|
 | 1 | Inspect static memory allocation and the address of the first element. | [`_01_memory_location.cpp`](01%20Basics%20of%20the%20vector/_01_memory_location.cpp) |
+| 2 | Print, sum, and update a 2D array using pointers and functions. | [`_01_2d_array.cpp`](02%202D%20array/_01_2d_array.cpp) |
 
 ### 🧠 Try it yourself
 
