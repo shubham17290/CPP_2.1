@@ -30,3 +30,17 @@ iota(seq.begin(), seq.end(), 250);           // 250 251 252 253 254
 - `inner_product(first.begin(), first.end(), second.begin(), 0)` multiplies
   matching elements and adds the products.
 - `partial_sum` writes `1 3 6 10 15` for the input `1 2 3 4 5`.
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Compute the product of all elements with `accumulate`. | Pass `1` as the initial value and `multiplies<int>()`. |
+| 2 | Build prefix sums with `partial_sum`. | Compare with a manual loop. |
+| 3 | Fill a vector with 1..n using `iota`. | Then sum it with `accumulate`. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../README.md).

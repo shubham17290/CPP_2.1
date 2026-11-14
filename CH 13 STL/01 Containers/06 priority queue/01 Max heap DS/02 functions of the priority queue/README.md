@@ -13,3 +13,17 @@ One `.cpp` file per `std::priority_queue` member function (max heap), with inlin
 | `_05_size.cpp` | `size()` — number of elements |
 | `_06_swap.cpp` | `swap()` — swap with another queue |
 | `_07_emplace.cpp` | `emplace()` — construct in place |
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Push, pop, and inspect `top()`, `size()`, and `empty()`. | Combine all member functions in one program. |
+| 2 | Swap two heaps. | `swap` exchanges contents. |
+| 3 | Use `emplace` instead of `push`. | Construct in place. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../../../README.md).

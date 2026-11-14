@@ -31,3 +31,17 @@ cout << *it << endl; // 50
 ```
 
 Header: `#include <algorithm>`
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Find the first element `> x`. | `upper_bound`. |
+| 2 | Count elements `<= x`. | `upper_bound - begin()`. |
+| 3 | Find the last occurrence of x. | `upper_bound` then step back. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../../README.md).

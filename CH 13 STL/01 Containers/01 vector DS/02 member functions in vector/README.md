@@ -35,3 +35,17 @@ int main() {
     return 0;
 }
 ```
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Erase all even numbers with the erase-remove idiom. | `remove_if` + `erase`. |
+| 2 | Insert 99 at index 3, then erase it. | `insert(begin() + 3, 99)`. |
+| 3 | Reserve 100 elements and observe `capacity()`. | Reserve changes capacity, not size. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../../README.md).

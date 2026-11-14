@@ -35,3 +35,18 @@ The searching algorithms (`binary_search`, `lower_bound`, `upper_bound`,
 - Each `.cpp` file is self-contained and can be compiled on its own.
 - Searching examples use an ascending `vector<int>` so the sorted-range
   requirement is satisfied.
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Count elements satisfying a predicate with `count_if`. | Write a lambda. |
+| 2 | Sort with a custom comparator. | Descending or by pair second. |
+| 3 | Remove duplicates with `unique` + `erase`. | Sort first. |
+| 4 | Find the first element greater than x. | `find_if` or `upper_bound`. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../README.md).

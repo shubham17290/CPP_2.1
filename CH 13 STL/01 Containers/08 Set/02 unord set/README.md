@@ -22,3 +22,17 @@
 #include <unordered_set>
 unordered_set<int> st;
 ```
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Count distinct values with `unordered_set`. | Average O(1) insertion. |
+| 2 | Check whether two arrays intersect. | Insert one, scan the other. |
+| 3 | Compare ordered and unordered set output. | Ordering vs average lookup speed. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../../README.md).

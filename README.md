@@ -22,7 +22,7 @@
 
 <br/>
 
-[📖 About](#-about) · [🗂️ Structure](#-repository-structure) · [📊 Chapters](#-chapter-overview) · [🆕 What's New](#-whats-new) · [⚙️ Run](#️-getting-started) · [📚 Index](#-complete-file-index) · [🤝 Contribute](#-contributing)
+[📖 About](#-about) · [🗂️ Structure](#-repository-structure) · [📊 Chapters](#-chapter-overview) · [🧪 Practice](#-practice-questions-by-chapter) · [🆕 What's New](#-whats-new) · [⚙️ Run](#️-getting-started) · [📚 Index](#-complete-file-index) · [🤝 Contribute](#-contributing)
 
 </div>
 
@@ -57,6 +57,7 @@ The goal is simple:
 - 🧮 **2D Arrays** — input/output, traversal, diagonal sums, sorted-matrix search, spiral matrix, matrix pointers, and assignments (`CH 14`).
 - 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, patterns, strings, …).
 - ✨ **Quality Questions** subfolder in every core chapter (CH 00–CH 10) with curated, interview-style problems.
+- 🧭 **Chapter guides + practice sets** — every chapter now opens with a `README.md` that maps its folders, links solved examples, and adds unsolved challenges.
 - 🛠️ **VS Code ready** — `.vscode` config with g++, gdb, and strict warning flags.
 - 📝 **Commented code** — intent and logic explained inline.
 - 🌐 **Live code browser** — a fully self-contained GitHub Pages site with search and syntax highlighting.
@@ -106,6 +107,9 @@ CPP_2.1/
 > 📌 **Naming convention:** `CH xx` folders are ordered by the syllabus. Subfolders group
 > examples by topic (`01 basics`, `02 member functions`, `03 assignment`, …), and files are
 > prefixed with `_01_`, `_02_` to keep lessons in teaching order.
+>
+> 🧭 **Every chapter folder has a `README.md`** with a folder map, solved examples, and an
+> unsolved practice set. Start there when you open a chapter for the first time.
 
 ---
 
@@ -113,30 +117,65 @@ CPP_2.1/
 
 | Chapter | Topic | Programs | Status |
 |:--|:--|--:|:--:|
-| `CH 00` | Practice & warm-ups | 5 | ✅ |
-| `CH 01` | Variables & Data Types | 18 | ✅ |
-| `CH 02` | Operators | 20 | ✅ |
-| `CH 03` | Conditionals | 21 | ✅ |
-| `CH 04` | Loops | 18 | ✅ |
-| `CH 05` | Break & Continue | 5 | ✅ |
-| `CH 06` | Patterns | 16 | ✅ |
-| `CH 07` | Functions | 27 | ✅ |
-| `CH 08` | Binary Number System | 5 | ✅ |
-| `CH 09` | Pointers & References | 11 | ✅ |
-| `CH 10` | Arrays I | 41 | ✅ |
-| `CH 12` | Arrays II & Sorting | 8 | ✅ |
-| `CH 13` | STL (containers, iterators, algorithms) | 126 | ✅ |
-| `CH 14` | 2D Arrays & Matrices | 12 | ✅ |
-| `CH 15` | Character Arrays & Strings | 29 | 🔄 |
-| `CH 16` | Vectors (basics & memory) | 1 | 🔄 |
+| `CH 00` | [Practice & warm-ups](CH%2000%20Practice/README.md) | 5 | ✅ |
+| `CH 01` | [Variables & Data Types](CH%2001%20Var%20and%20DT/README.md) | 18 | ✅ |
+| `CH 02` | [Operators](CH%2002%20Operators/README.md) | 20 | ✅ |
+| `CH 03` | [Conditionals](CH%2003%20Conditionals/README.md) | 21 | ✅ |
+| `CH 04` | [Loops](CH%2004%20Loops/README.md) | 18 | ✅ |
+| `CH 05` | [Break & Continue](CH%2005%20Statements/README.md) | 5 | ✅ |
+| `CH 06` | [Patterns](CH%2006%20Patterns/README.md) | 16 | ✅ |
+| `CH 07` | [Functions](CH%2007%20Function/README.md) | 27 | ✅ |
+| `CH 08` | [Binary Number System](CH%2008%20Binary%20Number%20System/README.md) | 5 | ✅ |
+| `CH 09` | [Pointers & References](CH%2009%20Pointers/README.md) | 11 | ✅ |
+| `CH 10` | [Arrays I](CH%2010%20Array%20I/README.md) | 41 | ✅ |
+| `CH 12` | [Arrays II & Sorting](CH%2012%20Array%20II/README.md) | 8 | ✅ |
+| `CH 13` | [STL (containers, iterators, algorithms)](CH%2013%20STL/README.md) | 126 | ✅ |
+| `CH 14` | [2D Arrays & Matrices](CH%2014%202D%20Arrays/README.md) | 12 | ✅ |
+| `CH 15` | [Character Arrays & Strings](CH%2015%20char%20array's%20and%20strings/README.md) | 29 | 🔄 |
+| `CH 16` | [Vectors (basics & memory)](CH%2016%20Vectors/README.md) | 1 | 🔄 |
 | **Total** | **16 chapters** | **363** | |
 
-> `CH 11` is intentionally skipped to match the original course numbering.
+> `CH 11` is intentionally skipped to match the original course numbering. Each chapter title above opens its guide.
+
+---
+
+## 🧪 Practice Questions by Chapter
+
+Every chapter folder now starts with a **chapter guide** (`README.md`) that contains:
+
+- 📂 a folder map for the chapter,
+- ✅ solved examples linked directly to the code,
+- 🧠 an unsolved **Try it yourself** set with hints, and
+- ▶️ a ready-to-run compile command.
+
+| Chapter | Practice focus | Chapter guide |
+|:--|:--|:--|
+| `CH 00` | References, swapping, operator precedence | [Open practice →](CH%2000%20Practice/README.md#-practice-questions) |
+| `CH 01` | Types, input/output, ASCII, arithmetic | [Open practice →](CH%2001%20Var%20and%20DT/README.md#-practice-questions) |
+| `CH 02` | Bitwise operators, casting, compound assignment | [Open practice →](CH%2002%20Operators/README.md#-practice-questions) |
+| `CH 03` | Branching, `switch`, calculator logic | [Open practice →](CH%2003%20Conditionals/README.md#-practice-questions) |
+| `CH 04` | Loops, digit problems, series, primes | [Open practice →](CH%2004%20Loops/README.md#-practice-questions) |
+| `CH 05` | `break` / `continue`, filtering ranges | [Open practice →](CH%2005%20Statements/README.md#-practice-questions) |
+| `CH 06` | Nested-loop patterns and pyramids | [Open practice →](CH%2006%20Patterns/README.md#-practice-questions) |
+| `CH 07` | Functions, recursion, overloading | [Open practice →](CH%2007%20Function/README.md#-practice-questions) |
+| `CH 08` | Binary conversion and bit tricks | [Open practice →](CH%2008%20Binary%20Number%20System/README.md#-practice-questions) |
+| `CH 09` | Pointers, references, pass-by semantics | [Open practice →](CH%2009%20Pointers/README.md#-practice-questions) |
+| `CH 10` | Arrays, subarrays, Kadane, two pointers | [Open practice →](CH%2010%20Array%20I/README.md#-practice-questions) |
+| `CH 12` | Sorting algorithms and comparators | [Open practice →](CH%2012%20Array%20II/README.md#-practice-questions) |
+| `CH 13` | STL containers, iterators, algorithms | [Open practice →](CH%2013%20STL/README.md#-practice-questions) |
+| `CH 14` | Matrices, spiral order, transpose | [Open practice →](CH%2014%202D%20Arrays/README.md#-practice-questions) |
+| `CH 15` | Strings, anagrams, frequency counts | [Open practice →](CH%2015%20char%20array's%20and%20strings/README.md#-practice-questions) |
+| `CH 16` | Memory layout and dynamic storage | [Open practice →](CH%2016%20Vectors/README.md#-practice-questions) |
+
+> The anchor `#-practice-questions` matches the `## 🧪 Practice Questions` heading on GitHub. If your Markdown viewer generates a different slug, the chapter guide is still the first place to look.
 
 ---
 
 ## 🆕 What's New
 
+- 🧪 **Practice questions in every chapter** — all 16 chapter folders now have a guide with solved examples and an unsolved **Try it yourself** set.
+- 🧭 **Sub-level READMEs refreshed** — existing topic READMEs now link back to their chapter guide and include extra practice prompts; missing STL sub-level guides were added.
+- 🌐 **GitHub Pages rebuilt** — the code browser now embeds each chapter guide so the practice sets appear inside the chapter view.
 - 🧮 **Vectors chapter started (`CH 16`)** — static memory allocation, fixed-size array capacity, and memory addresses, laying the groundwork for `std::vector` and dynamic memory.
 - 🔤 **Strings chapter (`CH 15`)** — character arrays, string literals, `strlen`, `strcpy`, `strcat`, `strcmp`, `std::string` input with `getline`, index-based access, range-based `for` loops, and member functions (`length`, `at`, `substr`, `find`).
 - 🧠 **String practice** — anagram check, string comparison, vowel counting, and "almost equal" assignment solutions.
@@ -822,6 +861,8 @@ CH 16 Vectors/
 |:--|--:|
 | C++ source files | **363** |
 | Chapter folders | **16** |
+| Chapter guides (`README.md`) | **16** |
+| Sub-level READMEs | **66** |
 | STL programs (`CH 13`) | **126** |
 | String programs (`CH 15`) | **29** |
 | Vector basics programs (`CH 16`) | **1** |

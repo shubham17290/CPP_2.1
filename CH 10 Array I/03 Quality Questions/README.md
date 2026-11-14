@@ -14,3 +14,18 @@ Curated, interview-style practice problems for this chapter. Each file is self-c
 g++ -std=c++17 -O2 -Wall -Wextra "03 Quality Questions/<file>.cpp" -o out
 ./out
 ```
+
+<!-- practice-questions -->
+
+## 🧪 More Practice
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Move all zeroes to the end while keeping the order of non-zero elements. | Two pointers, stable partition. |
+| 2 | Find the missing number in `1..n`. | Sum formula or XOR. |
+| 3 | Solve two-sum on a sorted array. | Two pointers from both ends. |
+| 4 | Merge two sorted arrays into a third array. | Compare the fronts and advance. |
+
+> Part of [CH 10 — Arrays I](../README.md).

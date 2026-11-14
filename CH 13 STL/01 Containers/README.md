@@ -39,3 +39,19 @@ See individual container README files for details on each container's functions 
 | `unordered_map` | `<unordered_map>` |
 | `set` | `<set>` |
 | `unordered_set` | `<unordered_set>` |
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Count word frequencies with `unordered_map`. | Read words, then `++freq[word]`. |
+| 2 | Find the k-th largest element with `priority_queue`. | Keep a min-heap of size k. |
+| 3 | Check balanced brackets with `stack`. | Push openers, pop and match closers. |
+| 4 | Implement sliding-window maximum with `deque`. | Keep indices in decreasing value order. |
+| 5 | Remove duplicates from a vector. | Sort, then `unique` + `erase`. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../README.md).

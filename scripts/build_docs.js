@@ -24,7 +24,18 @@ const files = walk(root)
   .sort((a, b) => (a.path < b.path ? -1 : a.path > b.path ? 1 : 0));
 
 const readme = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
-const data = { files, readme };
+
+// Chapter guides are rendered inside the chapter view of the code browser.
+const readmes = {};
+for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
+  if (!entry.isDirectory() || !/^CH\s+\d+/i.test(entry.name)) continue;
+  const full = path.join(root, entry.name, 'README.md');
+  if (fs.existsSync(full)) {
+    readmes[entry.name + '/README.md'] = fs.readFileSync(full, 'utf8');
+  }
+}
+
+const data = { files, readme, readmes };
 
 const template = fs.readFileSync(templatePath, 'utf8');
 if (!template.includes('{{DATA}}')) {

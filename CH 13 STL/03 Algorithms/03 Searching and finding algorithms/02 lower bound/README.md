@@ -25,3 +25,17 @@ cout << *it << endl; // 40
 ```
 
 Header: `#include <algorithm>`
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Find the first element `>= x`. | `lower_bound`. |
+| 2 | Find the insertion index for x. | Subtract `begin()`. |
+| 3 | Count elements smaller than x. | `lower_bound - begin()`. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../../README.md).

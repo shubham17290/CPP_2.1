@@ -26,3 +26,17 @@ Min-heap priority queue: the smallest element always stays at the top. Uses `gre
 #include <vector>
 priority_queue<int, vector<int>, greater<int>> pq; // min heap
 ```
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Build a min-heap and print values in ascending order. | Pop until empty. |
+| 2 | Find the k-th smallest element. | Max-heap of size k. |
+| 3 | Merge k sorted lists. | Min-heap of the current heads. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../../README.md).

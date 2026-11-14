@@ -33,3 +33,18 @@ vector<int> v = {40, 10, 30, 20};
 sort(v.begin(), v.end());      // 10 20 30 40
 reverse(v.begin(), v.end());   // 40 30 20 10
 ```
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Count even numbers with `count_if`. | Lambda predicate. |
+| 2 | Find the first negative number with `find_if`. | Check against `end()`. |
+| 3 | Sort descending with a lambda. | `sort(v.begin(), v.end(), [](int a, int b){ return a > b; })`. |
+| 4 | Partition an array into even and odd values. | `partition` or `stable_partition`. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../README.md).

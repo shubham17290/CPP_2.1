@@ -14,3 +14,17 @@ Solutions to `05 Assignment/01 problems/Arrays_Questions.pdf`, one file per ques
 g++ -std=c++17 -O2 -Wall -Wextra "05 Assignment/02 solution/<file>.cpp" -o out
 ./out
 ```
+
+<!-- practice-questions -->
+
+## 🧪 More Practice
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Find the majority element in an array. | Sorting, hash map, or Boyer-Moore voting. |
+| 2 | Print every subarray of an array. | Nested loops with a running start. |
+| 3 | Find the maximum sum of a subarray of length k. | Sliding window. |
+
+> Part of [CH 10 — Arrays I](../../README.md).

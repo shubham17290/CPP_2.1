@@ -23,3 +23,18 @@
 
 - **Max heap (default)**: `priority_queue<int>` — largest element at top
 - **Min heap**: `priority_queue<int, vector<int>, greater<int>>` — smallest element at top
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Find the k-th largest element. | Min-heap of size k. |
+| 2 | Merge k sorted arrays. | Push the first element of each array. |
+| 3 | Schedule tasks by priority. | Max-heap of task objects or pairs. |
+| 4 | Implement heap sort with `priority_queue`. | Pop repeatedly into an array. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../README.md).

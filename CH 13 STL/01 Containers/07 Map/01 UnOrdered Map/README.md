@@ -15,3 +15,17 @@
 - No guaranteed ordering of elements
 - Average O(1) lookup, insertion, deletion
 - Keys must be hashable
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Build an unordered map from names to marks. | Insert with `[]` or `insert`. |
+| 2 | Update a value and print it with `at`. | `at` throws when the key is missing. |
+| 3 | Find and erase a key. | Check `find` before dereferencing. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../../README.md).

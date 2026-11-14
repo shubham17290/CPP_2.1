@@ -21,3 +21,17 @@
 - `erase(pos)` — remove element at position
 - `clear()` — remove all elements
 - `swap(d2)` — swap contents with another deque
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Implement sliding-window maximum. | Keep candidate indices in a deque. |
+| 2 | Check a palindrome with a deque. | Compare `front()` and `back()`. |
+| 3 | Push and pop from both ends. | `push_front`, `push_back`, `pop_front`, `pop_back`. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../README.md).

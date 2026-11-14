@@ -45,3 +45,18 @@ int main() {
     return 0;
 }
 ```
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Remove duplicates from a vector. | Sort, then `unique` + `erase`. |
+| 2 | Rotate a vector left by k positions. | `std::rotate` or three reversals. |
+| 3 | Build a 2D vector and print row sums. | `vector<vector<int>>`. |
+| 4 | Compare `size()` and `capacity()` after several `push_back` calls. | Capacity grows in implementation-defined steps. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../README.md).

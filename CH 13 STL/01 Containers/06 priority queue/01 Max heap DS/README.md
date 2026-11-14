@@ -25,3 +25,17 @@ Max-heap priority queue: the largest element always stays at the top. This is th
 #include <queue>
 priority_queue<int> pq; // max heap by default
 ```
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Push and pop values and print the top after each operation. | The largest value is always on top. |
+| 2 | Find the three largest values in an array. | Pop three times. |
+| 3 | Use a max-heap to sort an array descending. | Pop into a vector. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../../README.md).

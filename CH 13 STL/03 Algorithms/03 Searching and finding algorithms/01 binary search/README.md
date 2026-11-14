@@ -24,3 +24,17 @@ cout << found << endl; // 1
 ```
 
 Header: `#include <algorithm>`
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Check whether a value exists in a sorted array. | `binary_search`. |
+| 2 | Search a rotated sorted array. | Find the pivot, then binary search. |
+| 3 | Compare `binary_search` with `find` on a sorted vector. | Logarithmic vs linear. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../../README.md).

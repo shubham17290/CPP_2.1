@@ -26,3 +26,18 @@ Associative containers that store key-value pairs. `std::map` is ordered (sorted
 
 - `std::map` — `<map>`
 - `std::unordered_map` — `<unordered_map>`
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Count word frequencies. | `++freq[word]`. |
+| 2 | Find the first non-repeating character. | Count, then scan the original order. |
+| 3 | Group anagrams. | Map from sorted word to a list of words. |
+| 4 | Implement a phone book with lookup and erase. | `map` or `unordered_map`. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../README.md).

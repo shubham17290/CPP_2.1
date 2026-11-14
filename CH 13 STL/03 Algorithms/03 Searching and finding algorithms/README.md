@@ -37,3 +37,18 @@ binary_search(v.begin(), v.end(), 40);   // true
 *lower_bound(v.begin(), v.end(), 35);    // 40
 *upper_bound(v.begin(), v.end(), 40);    // 50
 ```
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Count occurrences of x in a sorted array. | `upper_bound - lower_bound`. |
+| 2 | Find the first and last position of x. | Use both bounds. |
+| 3 | Find the insertion position for x. | `lower_bound - begin()`. |
+| 4 | Search in a rotated sorted array. | Modified binary search. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../README.md).

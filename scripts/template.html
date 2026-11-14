@@ -1591,6 +1591,47 @@
         border-radius: 9px;
       }
 
+      /* ---------- Chapter guide ---------- */
+      .chapter-guide-wrap {
+        margin: 0 0 42px;
+        padding: 26px 28px 10px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background:
+          linear-gradient(135deg, rgba(255, 0, 51, 0.055), transparent 45%),
+          var(--panel);
+        box-shadow: var(--shadow);
+      }
+      .chapter-guide-wrap::before {
+        content: "Chapter guide & practice questions";
+        display: block;
+        margin-bottom: 10px;
+        color: var(--accent-2);
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .chapter-guide-wrap .readme h1 {
+        display: none;
+      }
+      .chapter-guide-wrap .readme h2 {
+        margin-top: 30px;
+        font-size: 22px;
+      }
+      .chapter-guide-wrap .readme h2:first-of-type {
+        margin-top: 4px;
+      }
+      .chapter-guide-wrap .readme > p:first-of-type {
+        font-size: 16px;
+        color: #ddd4d6;
+      }
+      @media (max-width: 640px) {
+        .chapter-guide-wrap {
+          padding: 20px 18px 6px;
+        }
+      }
+
       /* ---------- Toast ---------- */
       .toast {
         position: fixed;
@@ -2080,6 +2121,9 @@
               <p id="chapterLede"></p>
               <div class="meta-row" id="chapterChips"></div>
             </div>
+            <div class="chapter-guide-wrap" id="chapterGuideWrap" hidden>
+              <article class="readme" id="chapterGuide"></article>
+            </div>
             <div id="chapterBody"></div>
           </div>
         </section>
@@ -2167,6 +2211,7 @@
       const menuBtn=$('#menuBtn'),sidebarClose=$('#sidebarClose');
       const navHome=$('#navHome'),navReadme=$('#navReadme');
       const chapterEyebrow=$('#chapterEyebrow'),chapterTitleEl=$('#chapterTitle'),chapterLede=$('#chapterLede'),chapterChips=$('#chapterChips'),chapterBody=$('#chapterBody');
+      const chapterGuideWrap=$('#chapterGuideWrap'),chapterGuide=$('#chapterGuide');
       const fileTitle=$('#fileTitle'),filePathEl=$('#filePath'),fileChips=$('#fileChips'),codeEl=$('#code'),gutterEl=$('#gutter'),codePathEl=$('#codePath'),fileNav=$('#fileNav');
       const readmeBody=$('#readmeBody');
 
@@ -2336,10 +2381,20 @@
           groups.get(key).push(file);
         }
         const sortedGroups=Array.from(groups.entries()).sort((a,b)=>a[0].localeCompare(b[0],undefined,{numeric:true}));
+        const guide=(DATA.readmes||{})[name+'/README.md'];
         chapterEyebrow.textContent=`Chapter ${index}`;
         chapterTitleEl.textContent=title;
         chapterLede.textContent=`${chapter.files.length} ${chapter.files.length===1?'solution':'solutions'} across ${sortedGroups.length} ${sortedGroups.length===1?'topic':'topics'}. Open any file to read the full source, or use the sidebar to keep browsing.`;
-        chapterChips.innerHTML=`<span class="chip accent">${chapter.files.length} files</span><span class="chip">${sortedGroups.length} topics</span><span class="chip">C++</span>`;
+        chapterChips.innerHTML=`<span class="chip accent">${chapter.files.length} files</span><span class="chip">${sortedGroups.length} topics</span><span class="chip">C++</span>${guide?'<span class="chip accent">Practice set</span>':''}`;
+        if(guide){
+          renderMarkdown(guide,chapterGuide);
+          fixDocLinks(chapterGuide,name);
+          $$('pre code',chapterGuide).forEach(block=>{if(window.hljs){try{window.hljs.highlightElement(block);}catch(error){}}});
+          chapterGuideWrap.hidden=false;
+        }else{
+          chapterGuide.innerHTML='';
+          chapterGuideWrap.hidden=true;
+        }
         chapterBody.innerHTML='';
         for(const [group,files] of sortedGroups){
           const section=document.createElement('section');section.className='group';
@@ -2410,30 +2465,50 @@
         document.title=`${name} — DSA in C++`;
         closeDrawer();
       }
-      function fixReadmeLinks(){
+      function normalizeRepoPath(baseDir,href){
+        let value=href.replace(/^\.\//,'');
+        let suffix='';
+        const hashIndex=value.indexOf('#');
+        if(hashIndex!==-1){suffix=value.slice(hashIndex);value=value.slice(0,hashIndex);}
+        try{value=decodeURIComponent(value);}catch(error){}
+        const isDir=/\/$/.test(value);
+        const parts=(baseDir?baseDir.split('/'):[]).concat(value.split('/'));
+        const stack=[];
+        for(const part of parts){
+          if(!part||part==='.')continue;
+          if(part==='..')stack.pop();
+          else stack.push(part);
+        }
+        return stack.map(part=>encodeURIComponent(part)).join('/')+(isDir?'/':'')+suffix;
+      }
+      function fixDocLinks(container,baseDir){
         const blobBase=REPO+'/blob/main/';
+        const treeBase=REPO+'/tree/main/';
         const rawBase='https://raw.githubusercontent.com/shubham17290/CPP_2.1/main/';
-        $$('a[href]',readmeBody).forEach(link=>{
+        $$('a[href]',container).forEach(link=>{
           const href=link.getAttribute('href');
           if(!href||/^(https?:|#|mailto:|tel:)/i.test(href))return;
-          link.setAttribute('href',blobBase+encodeURI(href.replace(/^\.\//,'')));
+          const target=normalizeRepoPath(baseDir,href);
+          link.setAttribute('href',(/\/$/.test(target)?treeBase:blobBase)+target);
           link.setAttribute('target','_blank');link.setAttribute('rel','noopener');
         });
-        $$('img[src]',readmeBody).forEach(image=>{
+        $$('img[src]',container).forEach(image=>{
           const src=image.getAttribute('src');
           if(!src||/^(https?:|data:)/i.test(src))return;
-          image.setAttribute('src',rawBase+encodeURI(src.replace(/^\.\//,'')));
+          image.setAttribute('src',rawBase+normalizeRepoPath(baseDir,src));
         });
+      }
+      function renderMarkdown(text,target){
+        if(window.marked){
+          try{target.innerHTML=window.marked.parse(text);return;}
+          catch(error){}
+        }
+        target.innerHTML=`<pre>${esc(text)}</pre>`;
       }
       function showReadme(){
         currentFile=null;currentChapter=null;currentText=README;
-        if(window.marked){
-          try{readmeBody.innerHTML=window.marked.parse(README);}
-          catch(error){readmeBody.innerHTML=`<pre>${esc(README)}</pre>`;}
-        }else{
-          readmeBody.innerHTML=`<pre>${esc(README)}</pre>`;
-        }
-        fixReadmeLinks();
+        renderMarkdown(README,readmeBody);
+        fixDocLinks(readmeBody,'');
         $$('pre code',readmeBody).forEach(block=>{if(window.hljs){try{window.hljs.highlightElement(block);}catch(error){}}});
         setCrumbs([{label:'Overview',action:showHome},{label:'README.md'}]);
         setMeta('Repository guide');setCopy(README);

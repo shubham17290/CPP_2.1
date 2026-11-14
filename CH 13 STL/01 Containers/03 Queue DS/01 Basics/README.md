@@ -13,3 +13,17 @@ Basic operations of `std::queue`: push, pop, front, back, size, empty, swap, emp
 | `_05_swap.cpp` | `swap()` — swap contents with another queue |
 | `_06_emplace.cpp` | `emplace()` — construct element in place |
 | `_07_traversing_queue.cpp` | Traversing a queue |
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Push three values and print the front. | `front()` does not remove. |
+| 2 | Empty a queue while printing each element. | Loop while `!empty()`. |
+| 3 | Compare `queue` and `deque` for a simple task. | Which operations are supported? |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../../README.md).

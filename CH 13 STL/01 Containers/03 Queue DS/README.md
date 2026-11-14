@@ -21,3 +21,17 @@
 ## Example files
 
 See `01 Basics/` for one-file-per-function examples: `_01_basic_of_queue.cpp`, `_02_push_and_pop.cpp`, `_03_front_and_back.cpp`, `_04_size_and_empty.cpp`, `_05_swap.cpp`, `_06_emplace.cpp`, `_07_traversing_queue.cpp`.
+
+<!-- practice-questions -->
+
+## 🧪 Practice Questions
+
+Try these prompts after reading the examples above. They are deliberately left unsolved here, so you can practise the concept yourself.
+
+| # | Challenge | Hint |
+|--:|:--|:--|
+| 1 | Simulate a ticket counter queue. | Push arrivals, pop served customers. |
+| 2 | Reverse a queue using a stack. | Pop from queue, push to stack, move back. |
+| 3 | Run BFS on a small graph. | Queue of nodes plus a visited set. |
+
+> Part of [CH 13 — Standard Template Library (STL)](../../README.md).
