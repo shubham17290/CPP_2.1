@@ -9,8 +9,8 @@
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-362-blueviolet?style=for-the-badge)](#-complete-file-index)
-[![Chapters](https://img.shields.io/badge/Chapters-15-orange?style=for-the-badge)](#-chapter-overview)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-363-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Chapters](https://img.shields.io/badge/Chapters-16-orange?style=for-the-badge)](#-chapter-overview)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
 
@@ -30,7 +30,7 @@
 
 ## 📖 About
 
-This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built by following a structured DSA syllabus. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, functions, pointers, arrays, 2D arrays, strings, and the STL.
+This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built by following a structured DSA syllabus. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, functions, pointers, arrays, 2D arrays, strings, vectors, and the STL.
 
 Every program is **self-contained**, **compile-ready**, and written to be read by a beginner. The repository is organized like a course: numbered `CH xx` folders mirror the syllabus, and each topic has its own focused examples, practice questions, and assignment solutions.
 
@@ -49,8 +49,8 @@ The goal is simple:
 
 ## ✨ Highlights
 
-- 🧩 **362 self-contained C++ programs** — each file compiles and runs independently.
-- 📁 **15 syllabus-aligned chapter folders** — `CH 00` through `CH 15`, in the order you should learn them.
+- 🧩 **363 self-contained C++ programs** — each file compiles and runs independently.
+- 📁 **16 syllabus-aligned chapter folders** — `CH 00` through `CH 16`, in the order you should learn them.
 - 🧱 **Deep C++ STL coverage** — containers, iterators, and algorithms (`CH 13`, 126 programs), including `binary_search` / `lower_bound` / `upper_bound` / `equal_range`, heap and set algorithms, and the min/max family.
 - 🔃 **Sorting algorithms** — bubble (with optimization), selection, insertion, counting, and in-built `sort()` (`CH 12`).
 - 🔤 **Strings & character arrays** — C-style strings, `cstring` functions, `std::string`, member functions, anagrams, comparisons, and assignment solutions (`CH 15`).
@@ -94,6 +94,7 @@ CPP_2.1/
 ├── CH 13 STL/                       # Containers, iterators, algorithms
 ├── CH 14 2D Arrays/                 # Matrices, spiral traversal, pointers
 ├── CH 15 char array's and strings/  # C-strings, std::string, assignments
+├── CH 16 Vectors/                   # Static vs dynamic memory, vector basics
 │
 ├── .github/workflows/pages.yml      # GitHub Pages deployment workflow
 ├── .vscode/                         # Editor & debugger configuration
@@ -127,7 +128,8 @@ CPP_2.1/
 | `CH 13` | STL (containers, iterators, algorithms) | 126 | ✅ |
 | `CH 14` | 2D Arrays & Matrices | 12 | ✅ |
 | `CH 15` | Character Arrays & Strings | 29 | 🔄 |
-| **Total** | **15 chapters** | **362** | |
+| `CH 16` | Vectors (basics & memory) | 1 | 🔄 |
+| **Total** | **16 chapters** | **363** | |
 
 > `CH 11` is intentionally skipped to match the original course numbering.
 
@@ -135,6 +137,7 @@ CPP_2.1/
 
 ## 🆕 What's New
 
+- 🧮 **Vectors chapter started (`CH 16`)** — static memory allocation, fixed-size array capacity, and memory addresses, laying the groundwork for `std::vector` and dynamic memory.
 - 🔤 **Strings chapter (`CH 15`)** — character arrays, string literals, `strlen`, `strcpy`, `strcat`, `strcmp`, `std::string` input with `getline`, index-based access, range-based `for` loops, and member functions (`length`, `at`, `substr`, `find`).
 - 🧠 **String practice** — anagram check, string comparison, vowel counting, and "almost equal" assignment solutions.
 - 📄 **Assignment material** — question and answer PDFs plus runnable C++ solutions under `CH 15 → 05 Strings in c++ → 03 assignment`.
@@ -172,6 +175,7 @@ Marked as completed based on the actual content of this repository.
 ### 🔄 In Progress
 
 - [ ] **Strings** — core material complete (29 programs); adding more practice and assignment problems (`CH 15`)
+- [ ] **Vectors (dedicated chapter)** — static memory allocation, memory locations, and the move toward dynamic storage (`CH 16`)
 
 ### 🗺️ Roadmap (Coming Soon)
 
@@ -260,7 +264,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand — all 362 C++ source files</b></summary>
+<summary><b>Click to expand — all 363 C++ source files</b></summary>
 
 <br/>
 
@@ -802,6 +806,10 @@ CH 15 char array's and strings/
         └── 03 code/
             ├── _01_vawlCount.cpp
             └── _02_almost_equal.cpp
+
+CH 16 Vectors/
+└── 01 Basics of the vector/
+    └── _01_memory_location.cpp
 ```
 
 </details>
@@ -812,10 +820,11 @@ CH 15 char array's and strings/
 
 | Metric | Value |
 |:--|--:|
-| C++ source files | **362** |
-| Chapter folders | **15** |
+| C++ source files | **363** |
+| Chapter folders | **16** |
 | STL programs (`CH 13`) | **126** |
 | String programs (`CH 15`) | **29** |
+| Vector basics programs (`CH 16`) | **1** |
 | Array programs (`CH 10` + `CH 12`) | **49** |
 | Build artifacts tracked | **0** |
 
