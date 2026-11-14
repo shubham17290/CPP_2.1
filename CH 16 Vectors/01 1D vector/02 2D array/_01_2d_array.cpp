@@ -10,7 +10,7 @@ void printMatrix(int (*mat)[COLS], int rows) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < COLS; j++) {
             // mat[i][j] is the same as *(*(mat + i) + j)
-            cout << *(*(mat + i) + j) << ' ';
+            cout << *( *(mat + i) + j) << ' ';
         }
         cout << '\n';
     }

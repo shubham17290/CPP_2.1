@@ -9,7 +9,7 @@
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-363-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-368-blueviolet?style=for-the-badge)](#-complete-file-index)
 [![Chapters](https://img.shields.io/badge/Chapters-16-orange?style=for-the-badge)](#-chapter-overview)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
@@ -49,7 +49,7 @@ The goal is simple:
 
 ## ✨ Highlights
 
-- 🧩 **363 self-contained C++ programs** — each file compiles and runs independently.
+- 🧩 **368 self-contained C++ programs** — each file compiles and runs independently.
 - 📁 **16 syllabus-aligned chapter folders** — `CH 00` through `CH 16`, in the order you should learn them.
 - 🧱 **Deep C++ STL coverage** — containers, iterators, and algorithms (`CH 13`, 126 programs), including `binary_search` / `lower_bound` / `upper_bound` / `equal_range`, heap and set algorithms, and the min/max family.
 - 🔃 **Sorting algorithms** — bubble (with optimization), selection, insertion, counting, and in-built `sort()` (`CH 12`).
@@ -133,7 +133,7 @@ CPP_2.1/
 | `CH 14` | [2D Arrays & Matrices](CH%2014%202D%20Arrays/README.md) | 12 | ✅ |
 | `CH 15` | [Character Arrays & Strings](CH%2015%20char%20array's%20and%20strings/README.md) | 29 | 🔄 |
 | `CH 16` | [Vectors (basics & memory)](CH%2016%20Vectors/README.md) | 1 | 🔄 |
-| **Total** | **16 chapters** | **363** | |
+| **Total** | **16 chapters** | **368** | |
 
 > `CH 11` is intentionally skipped to match the original course numbering. Each chapter title above opens its guide.
 
@@ -303,7 +303,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand — all 363 C++ source files</b></summary>
+<summary><b>Click to expand — all 368 C++ source files</b></summary>
 
 <br/>
 
@@ -847,8 +847,16 @@ CH 15 char array's and strings/
             └── _02_almost_equal.cpp
 
 CH 16 Vectors/
-└── 01 Basics of the vector/
-    └── _01_memory_location.cpp
+└── 01 1D vector/
+    ├── 01 Basics of the vector/
+    │   └── _01_memory_location.cpp
+    ├── 02 2D array/
+    │   └── _01_2d_array.cpp
+    └── 03 vector/
+        ├── _01_intro_to_vector_ds.cpp
+        ├── _02_vector_size_and_capacity.cpp
+        ├── _03_vector_operation.cpp
+        └── _04_pair_sum.cpp
 ```
 
 </details>
@@ -859,13 +867,13 @@ CH 16 Vectors/
 
 | Metric | Value |
 |:--|--:|
-| C++ source files | **363** |
+| C++ source files | **368** |
 | Chapter folders | **16** |
 | Chapter guides (`README.md`) | **16** |
 | Sub-level READMEs | **66** |
 | STL programs (`CH 13`) | **126** |
 | String programs (`CH 15`) | **29** |
-| Vector basics programs (`CH 16`) | **1** |
+| Vector basics programs (`CH 16`) | **6** |
 | Array programs (`CH 10` + `CH 12`) | **49** |
 | Build artifacts tracked | **0** |
 
