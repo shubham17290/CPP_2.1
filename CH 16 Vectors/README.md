@@ -15,7 +15,7 @@ A dedicated vectors chapter that starts with memory: how a fixed-size array is l
 | [`02 2D vector/`](02%202D%20vector/) | A grid stored as `vector<vector<int>>` and traversed with nested loops. |
 | [`03 practice questions/`](03%20practice%20questions/) | Extra practice with `push_back`, `size()`, and `capacity()`. |
 | [`04 Assignment/`](04%20Assignment/) | A [PDF question set](04%20Assignment/01%20questions/Vectors%20Questions.pdf) with room for written and coding solutions. |
-| [`04 Assignment/03 coding solution/`](04%20Assignment/03%20coding%20solution/) | Coding workspace for the assignment: LeetCode 645, 11, and 3Sum. |
+| [`04 Assignment/03 coding solution/`](04%20Assignment/03%20coding%20solution/) | Solutions to LeetCode 645, 11 (container with most water), and 15 (3Sum). |
 
 ## 🧪 Practice Questions
 
@@ -31,6 +31,9 @@ A dedicated vectors chapter that starts with memory: how a fixed-size array is l
 | 6 | Solve two-sum on a sorted array with two pointers. | [`_04_pair_sum.cpp`](01%201D%20vector/03%20vector/_04_pair_sum.cpp) |
 | 7 | Store a 4×4 grid in a 2D vector and print it row by row. | [`_01_2d_vector_into.cpp`](02%202D%20vector/_01_2d_vector_into.cpp) |
 | 8 | Track how a vector's size and capacity change after five `push_back` calls. | [`_01_problem_solving.cpp`](03%20practice%20questions/_01_problem_solving.cpp) |
+| 9 | Find the duplicate and missing numbers in a `1..n` array using index marking. | [`_01_leetcode_ps_645.cpp`](04%20Assignment/03%20coding%20solution/_01_leetcode_ps_645.cpp) |
+| 10 | Maximise the water held between two lines with two pointers. | [`_02_leetcode_ps_11_container_with_most_water.cpp`](04%20Assignment/03%20coding%20solution/_02_leetcode_ps_11_container_with_most_water.cpp) |
+| 11 | Return all unique triplets that sum to zero using sorting and two pointers. | [`_03_leetcode_ps_3sum.cpp`](04%20Assignment/03%20coding%20solution/_03_leetcode_ps_3sum.cpp) |
 
 ### 🧠 Try it yourself
 
