@@ -12,6 +12,9 @@ A dedicated vectors chapter that starts with memory: how a fixed-size array is l
 | [`01 1D vector/01 Basics of the vector/`](01%201D%20vector/01%20Basics%20of%20the%20vector/) | Static memory allocation, fixed capacity, and element addresses. |
 | [`01 1D vector/02 2D array/`](01%201D%20vector/02%202D%20array/) | A 2D array passed to functions with pointers and pointer arithmetic. |
 | [`01 1D vector/03 vector/`](01%201D%20vector/03%20vector/) | `std::vector` construction, size and capacity, operations, and pair sum. |
+| [`02 2D vector/`](02%202D%20vector/) | A grid stored as `vector<vector<int>>` and traversed with nested loops. |
+| [`03 practice questions/`](03%20practice%20questions/) | Extra practice with `push_back`, `size()`, and `capacity()`. |
+| [`04 Assignment/`](04%20Assignment/) | A [PDF question set](04%20Assignment/01%20questions/Vectors%20Questions.pdf) with room for written and coding solutions. |
 
 ## 🧪 Practice Questions
 
@@ -25,6 +28,8 @@ A dedicated vectors chapter that starts with memory: how a fixed-size array is l
 | 4 | Compare a vector's `size()` with its `capacity()` as it grows. | [`_02_vector_size_and_capacity.cpp`](01%201D%20vector/03%20vector/_02_vector_size_and_capacity.cpp) |
 | 5 | Practise common vector operations such as `push_back`, `pop_back`, and iteration. | [`_03_vector_operation.cpp`](01%201D%20vector/03%20vector/_03_vector_operation.cpp) |
 | 6 | Solve two-sum on a sorted array with two pointers. | [`_04_pair_sum.cpp`](01%201D%20vector/03%20vector/_04_pair_sum.cpp) |
+| 7 | Store a 4×4 grid in a 2D vector and print it row by row. | [`_01_2d_vector_into.cpp`](02%202D%20vector/_01_2d_vector_into.cpp) |
+| 8 | Track how a vector's size and capacity change after five `push_back` calls. | [`_01_problem_solving.cpp`](03%20practice%20questions/_01_problem_solving.cpp) |
 
 ### 🧠 Try it yourself
 
