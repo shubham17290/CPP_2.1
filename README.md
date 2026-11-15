@@ -2,13 +2,12 @@
 
 # 🚀 DSA(CPP)
 
-### *From `Hello, World!` to Data Structures & Algorithms — one commit at a time.*
+### *From `Hello, World!` to Data Structures & Algorithms — one concept at a time.*
 
 [![Language](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
 [![Standard](https://img.shields.io/badge/Standard-C%2B%2B17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://en.cppreference.com/)
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
-[![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
 [![Files](https://img.shields.io/badge/C%2B%2B%20Files-388-blueviolet?style=for-the-badge)](#-complete-file-index)
 [![Chapters](https://img.shields.io/badge/Chapters-17-orange?style=for-the-badge)](#-chapter-overview)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
@@ -16,13 +15,13 @@
 
 <br/>
 
-> **A clean, well-organized, beginner-friendly repository of C++ programs and practice problems**
-> built as part of my personal DSA journey. Every chapter is a folder,
-> every file is a concept, every commit is progress. 📈
+> A clean, well-organized, beginner-friendly repository of C++ programs and practice problems,
+> structured like a course: numbered `CH xx` folders mirror the syllabus, and every topic has
+> focused examples, practice questions, and assignment solutions.
 
 <br/>
 
-[📖 About](#-about) · [🗂️ Structure](#-repository-structure) · [📊 Chapters](#-chapter-overview) · [🧪 Practice](#-practice-questions-by-chapter) · [🆕 What's New](#-whats-new) · [⚙️ Run](#️-getting-started) · [📚 Index](#-complete-file-index) · [🤝 Contribute](#-contributing)
+[📖 About](#-about) · [🗂️ Structure](#-repository-structure) · [📊 Chapters](#-chapter-overview) · [🧪 Practice](#-practice-questions-by-chapter) · [⚙️ Run](#️-getting-started) · [📚 Index](#-complete-file-index) · [🤝 Contribute](#-contributing)
 
 </div>
 
@@ -30,16 +29,15 @@
 
 ## 📖 About
 
-This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built by following a structured DSA syllabus. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, functions, pointers, arrays, 2D arrays, strings, vectors, the STL, and bit manipulation.
+This repository is a structured collection of **Data Structures & Algorithms in C++**, built by following a DSA syllabus. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, functions, pointers, arrays, 2D arrays, strings, vectors, the STL, and bit manipulation.
 
-Every program is **self-contained**, **compile-ready**, and written to be read by a beginner. The repository is organized like a course: numbered `CH xx` folders mirror the syllabus, and each topic has its own focused examples, practice questions, and assignment solutions.
+Every program is **self-contained**, **compile-ready**, and written to be read by a beginner. Numbered `CH xx` folders mirror the syllabus, and each topic has its own focused examples, practice questions, and assignment solutions.
 
 The goal is simple:
 
 - ✅ **Learn by doing** — every concept is backed by runnable C++ code.
 - ✅ **Practice relentlessly** — multiple practice questions and assignment solutions per topic, plus curated **Quality Questions** in every core chapter.
 - ✅ **Stay organized** — numbered `CH xx` folders mirror the course syllabus.
-- ✅ **Track progress** — git history tells the story of the journey.
 - ✅ **Make it browsable** — the whole repo is available as an online code browser with syntax highlighting.
 
 > Whether you're a beginner picking up C++ for the first time or revising fundamentals before
@@ -50,7 +48,7 @@ The goal is simple:
 ## ✨ Highlights
 
 - 🧩 **388 self-contained C++ programs** — each file compiles and runs independently.
-- 📁 **17 syllabus-aligned chapter folders** — `CH 00` through `CH 17`, reorganized under `03_Cpp_Fundamentals/`, plus `01_Revision/`, `02_Getting_Started/`, `04_Leetcode_Tracker/`, and `05_Problem_Solving_Patterns/` scaffold sections.
+- 📁 **17 syllabus-aligned chapter folders** — `CH 00` through `CH 17`, under `03_Cpp_Fundamentals/`, plus `00_Practice/`, `01_Revision/`, `02_Getting_Started/`, `04_Leetcode_Tracker/`, and `05_Problem_Solving_Patterns/` sections.
 - 🧱 **Deep C++ STL coverage** — containers, iterators, and algorithms (`CH 13`, 126 programs), including `binary_search` / `lower_bound` / `upper_bound` / `equal_range`, heap and set algorithms, and the min/max family.
 - 🔃 **Sorting algorithms** — bubble (with optimization), selection, insertion, counting, and in-built `sort()` (`CH 12`).
 - 🔤 **Strings & character arrays** — C-style strings, `cstring` functions, `std::string`, member functions, anagrams, comparisons, and assignment solutions (`CH 15`).
@@ -58,12 +56,10 @@ The goal is simple:
 - 🔢 **Bit Manipulation** — bitwise AND, OR, XOR, NOT, left/right shifts, and bit tricks such as get/set/clear i-th bit, even/odd, power-of-two, and set-bit counting (`CH 17`, 15 programs).
 - 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, patterns, strings, …).
 - ✨ **Quality Questions** subfolder in every core chapter (CH 00–CH 10) with curated, interview-style problems.
-- 🧭 **Chapter guides + practice sets** — every chapter now opens with a `README.md` that maps its folders, links solved examples, and adds unsolved challenges.
+- 🧭 **Chapter guides + practice sets** — every chapter opens with a `README.md` that maps its folders, links solved examples, and adds unsolved challenges.
 - 🛠️ **VS Code ready** — `.vscode` config with g++, gdb, and strict warning flags.
 - 📝 **Commented code** — intent and logic explained inline.
 - 🌐 **Live code browser** — a fully self-contained GitHub Pages site with search and syntax highlighting.
-- 🔁 **Git history** — every milestone committed, so you can replay the learning path.
-- 📂 **New sections** — `01_Revision/` (consolidated revision questions and cheatsheets), `02_Getting_Started/` (onboarding and how-to guides), `04_Leetcode_Tracker/` (progress journal), and `05_Problem_Solving_Patterns/` (pattern cheatsheet).
 
 ---
 
@@ -126,9 +122,9 @@ CPP_2.1/
 
 | Chapter | Topic | Programs | Status |
 |:--|:--|--:|:--:|
-| `CH 00` | [Practice & warm-ups](CH%2000%20Practice/README.md) | 5 | ✅ |
-| `CH 01` | [Variables & Data Types](CH%2001%20Var%20and%20DT/README.md) | 18 | ✅ |
-| `CH 02` | [Operators](CH%2002%20Operators/README.md) | 20 | ✅ |
+| `CH 00` | [Practice & warm-ups](00_Practice/README.md) | 5 | ✅ |
+| `CH 01` | [Variables & Data Types](03_Cpp_Fundamentals/CH%2001%20Var%20and%20DT/README.md) | 18 | ✅ |
+| `CH 02` | [Operators](03_Cpp_Fundamentals/CH%2002%20Operators/README.md) | 20 | ✅ |
 | `CH 03` | [Conditionals](03_Cpp_Fundamentals/CH%2003%20Conditionals/README.md) | 21 | ✅ |
 | `CH 04` | [Loops](03_Cpp_Fundamentals/CH%2004%20Loops/README.md) | 18 | ✅ |
 | `CH 05` | [Break & Continue](03_Cpp_Fundamentals/CH%2005%20Statements/README.md) | 5 | ✅ |
@@ -151,7 +147,7 @@ CPP_2.1/
 
 ## 🧪 Practice Questions by Chapter
 
-Every chapter folder now starts with a **chapter guide** (`README.md`) that contains:
+Every chapter folder starts with a **chapter guide** (`README.md`) that contains:
 
 - 📂 a folder map for the chapter,
 - ✅ solved examples linked directly to the code,
@@ -177,78 +173,6 @@ Every chapter folder now starts with a **chapter guide** (`README.md`) that cont
 | `CH 15` | Strings, anagrams, frequency counts | [Open practice →](03_Cpp_Fundamentals/CH%2015%20char%20array's%20and%20strings/README.md#-practice-questions) |
 | `CH 16` | Memory layout and dynamic storage | [Open practice →](03_Cpp_Fundamentals/CH%2016%20Vectors/README.md#-practice-questions) |
 | `CH 17` | Bitwise operators, shifts, bit tricks | [Open practice →](03_Cpp_Fundamentals/CH%2017%20Bit%20Manipulation/README.md#-practice-questions) |
-
-> The anchor `#-practice-questions` matches the `## 🧪 Practice Questions` heading on GitHub. If your Markdown viewer generates a different slug, the chapter guide is still the first place to look.
-
----
-
-## 🆕 What's New
-
-- 🔢 **Bit Manipulation chapter started (`CH 17`)** — bitwise AND, OR, XOR, and NOT plus left/right shifts, each with a runnable example and a chapter-local VS Code setup.
-- 🧠 **New bit-trick practice** — even/odd check, get/set/clear the `i`-th bit, power-of-two test, clearing bits below an index, and counting set bits.
-- 🧭 **CH 17 chapter guide added** — folder map, solved examples, an unsolved **Try it yourself** set, and a compile command.
-- 🗂️ **Repository now has 388 C++ programs across 17 chapters** — the complete file index and GitHub Pages browser are refreshed.
-- 🧪 **Practice questions in every chapter** — all 17 chapter folders have a guide with solved examples and an unsolved **Try it yourself** set.
-- 🧭 **Sub-level READMEs refreshed** — existing topic READMEs now link back to their chapter guide and include extra practice prompts; missing STL sub-level guides were added.
-- 🌐 **GitHub Pages rebuilt** — the code browser now embeds each chapter guide so the practice sets appear inside the chapter view.
-- 🧮 **Vectors chapter started (`CH 16`)** — static memory allocation, fixed-size array capacity, and memory addresses, laying the groundwork for `std::vector` and dynamic memory.
-- 🔤 **Strings chapter (`CH 15`)** — character arrays, string literals, `strlen`, `strcpy`, `strcat`, `strcmp`, `std::string` input with `getline`, index-based access, range-based `for` loops, and member functions (`length`, `at`, `substr`, `find`).
-- 🧠 **String practice** — anagram check, string comparison, vowel counting, and "almost equal" assignment solutions.
-- 📄 **Assignment material** — question and answer PDFs plus runnable C++ solutions under `03_Cpp_Fundamentals/CH 15 → 05 Strings in c++ → 03 assignment`.
-- 🗂️ **Reorganized string lessons** into `01 basic ones`, `02 String member functions`, and `03 assignment` for a cleaner learning flow.
-- 🧮 **2D Arrays completed (`CH 14`)** — diagonal sum, search in a sorted matrix, spiral matrix, matrix pointers, and assignment solutions.
-- 🌐 **Refreshed GitHub Pages site** — the embedded file index and README are regenerated on every push.
-- 🧹 **Housekeeping** — compiled `.exe` / `.out` artifacts are ignored and removed from the working tree (see `.gitignore`).
-- 📂 **Curriculum reorganization** — chapters `CH 01`–`CH 17` moved under `03_Cpp_Fundamentals/`, new scaffold sections added: `01_Revision/`, `02_Getting_Started/`, `04_Leetcode_Tracker/`, and `05_Problem_Solving_Patterns/`. The old `CH 00 Practice/` material is now `00_Practice/`.
-
----
-
-## 📊 Progress Tracker
-
-Marked as completed based on the actual content of this repository.
-
-### ✅ Completed
-
-- [x] **Variables & Data Types** — declaration, initialization, I/O
-- [x] **Operators** — arithmetic, relational, logical, unary, type casting
-- [x] **Conditional Statements** — `if`, `else if`, ternary, `switch`
-- [x] **Loops** — `for`, `while`, `do-while`
-- [x] **Jump Statements** — `break`, `continue`
-- [x] **Prime Numbers** — primality checks
-- [x] **Patterns** — star/number/character patterns (`CH 06`)
-- [x] **Functions** — parameters, return types, scope, overloading (`CH 07`)
-- [x] **Binary Number System** — data types, bin-to-dec, dec-to-bin (`CH 08`)
-- [x] **Pointers & References** — addresses, dereferencing, pass-by-value vs pass-by-reference (`CH 09`)
-- [x] **Arrays** — declaration, traversal, linear search, reverse, I/O, subarrays, Kadane (`CH 10`)
-- [x] **Sorting** — bubble, selection, insertion, counting, in-built `sort()` (`CH 12`)
-- [x] **Vectors** — declaration, member functions, static vs dynamic behavior (`CH 13 → 00 vector(APC)`)
-- [x] **STL Containers** — vector, list, queue, stack, deque, priority queue, map, set (`CH 13`)
-- [x] **STL Iterators** — iterator basics, types, and ranges (`CH 13`)
-- [x] **STL Algorithms** — iterating, numeric, searching, min/max, heap, and set algorithms (`CH 13`)
-- [x] **2D Arrays** — intro, input/output, diagonal sum, sorted-matrix search, spiral matrix, matrix pointers (`CH 14`)
-- [x] **Bitwise & Shift Operators** — AND, OR, XOR, NOT, left shift, right shift (`CH 17`)
-
-### 🔄 In Progress
-
-- [ ] **Strings** — core material complete (29 programs); adding more practice and assignment problems (`CH 15`)
-- [ ] **Vectors (dedicated chapter)** — static memory allocation, memory locations, and the move toward dynamic storage (`CH 16`)
-- [ ] **Bit Manipulation practice** — i-th bit operations, power-of-two checks, clearing low bits, and set-bit counting (`CH 17`)
-
-### 🗺️ Roadmap (Coming Soon)
-
-- [ ] Object-Oriented Programming (classes, inheritance, polymorphism)
-- [ ] Recursion & Backtracking
-- [ ] Linked Lists
-- [ ] Stacks & Queues (implementation from scratch)
-- [ ] Trees & Binary Search Trees
-- [ ] Heaps & Hashing
-- [ ] Graphs (BFS, DFS, shortest paths)
-- [ ] Dynamic Programming
-- [ ] Greedy Algorithms
-
-> 💡 **Want this to be a template for *your* DSA repo?** Fork it, keep the `CH xx` structure,
-> and tick boxes as you go. The folder numbering + per-topic practice pattern scales to any
-> DSA syllabus.
 
 ---
 
@@ -284,14 +208,14 @@ Each `.cpp` file is **independent**. Compile and run any file like this:
 ### Linux / macOS
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops/03 practice questions/_03_sum_of_digits.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 04 Loops/03 practice questions/_03_sum_of_digits.cpp" -o out
 ./out
 ```
 
 ### Windows (PowerShell / CMD)
 
 ```powershell
-g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_digits.cpp" -o out.exe
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 04 Loops\03 practice questions\_03_sum_of_digits.cpp" -o out.exe
 .\out.exe
 ```
 
@@ -326,7 +250,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 <br/>
 
 ```
-CH 00 Practice/
+00_Practice/
 ├── 01 function/
 │   ├── _01_pass_by_reference.cpp
 │   └── _02_pass_by_reference.cpp
@@ -336,7 +260,7 @@ CH 00 Practice/
     ├── _01_swap_without_temp.cpp
     └── _02_operator_precedence_challenge.cpp
 
-CH 01 Var and DT/
+03_Cpp_Fundamentals/CH 01 Var and DT/
 ├── 01 First code/
 │   └── code.cpp
 ├── 02 Variables and Data Types/
@@ -362,7 +286,7 @@ CH 01 Var and DT/
     ├── _01_type_conversion.cpp
     └── _02_ascii_value.cpp
 
-CH 02 Operators/
+03_Cpp_Fundamentals/CH 02 Operators/
 ├── 1 Constants/
 │   └── constant.cpp
 ├── 2 Type Casting/
@@ -394,7 +318,7 @@ CH 02 Operators/
     ├── _01_bitwise_operations.cpp
     └── _02_compound_assignment.cpp
 
-CH 03 Conditionals/
+03_Cpp_Fundamentals/CH 03 Conditionals/
 ├── 01 if else statement/
 │   ├── _if_else_c.cpp
 │   ├── _practice_q_01_.cpp
@@ -426,7 +350,7 @@ CH 03 Conditionals/
     ├── _02_grade_calculator.cpp
     └── _03_vowel_consonant.cpp
 
-CH 04 Loops/
+03_Cpp_Fundamentals/CH 04 Loops/
 ├── 01 for loops/
 │   ├── 00 bsics/
 │   │   └── basic.cpp
@@ -455,7 +379,7 @@ CH 04 Loops/
     ├── _02_armstrong_number.cpp
     └── _03_gcd_lcm.cpp
 
-CH 05 Statements/
+03_Cpp_Fundamentals/CH 05 Statements/
 ├── 01 Break/
 │   ├── _01_break.cpp
 │   └── _02_practice.cpp
@@ -465,7 +389,7 @@ CH 05 Statements/
 └── Quality Questions/
     └── _01_prime_in_range.cpp
 
-CH 06 Patterns/
+03_Cpp_Fundamentals/CH 06 Patterns/
 ├── 01 Problems/
 │   ├── _01_problem_01.cpp
 │   ├── _01_problem_genral_approacj.cpp
@@ -486,7 +410,7 @@ CH 06 Patterns/
     ├── _01_pascal_triangle.cpp
     └── _02_number_pyramid.cpp
 
-CH 07 Function/
+03_Cpp_Fundamentals/CH 07 Function/
 ├── 01 Function intro/
 │   ├── 01 Basic things/
 │   │   ├── _01_function_basic.cpp
@@ -526,7 +450,7 @@ CH 07 Function/
     ├── _01_recursive_factorial.cpp
     └── _02_gcd_recursive.cpp
 
-CH 08 Binary Number System/
+03_Cpp_Fundamentals/CH 08 Binary Number System/
 ├── 01 Basics/
 │   ├── _01_data_type_modifiers.cpp
 │   ├── _02_number_to_binary.cpp
@@ -535,7 +459,7 @@ CH 08 Binary Number System/
     ├── _01_set_bits_count.cpp
     └── _02_power_of_two.cpp
 
-CH 09 Pointers/
+03_Cpp_Fundamentals/CH 09 Pointers/
 ├── 01 Basics/
 │   ├── _01_intro.cpp
 │   ├── _02_dereference.cpp
@@ -551,7 +475,7 @@ CH 09 Pointers/
     ├── _01_pointer_arithmetic.cpp
     └── _02_swap_using_pointers.cpp
 
-CH 10 Array I/
+03_Cpp_Fundamentals/CH 10 Array I/
 ├── 01 Basic and extra/
 │   ├── _01_array.cpp
 │   ├── _02_array_loop.cpp
@@ -604,7 +528,7 @@ CH 10 Array I/
         ├── _02_search_in_rotated_sorted_array.cpp
         └── _03_maximum_product_subarray.cpp
 
-CH 12 Array II/
+03_Cpp_Fundamentals/CH 12 Array II/
 └── 01 Sorting/
     ├── 01 bubble sort/
     │   ├── _01_bubble_sort.cpp
@@ -621,7 +545,7 @@ CH 12 Array II/
     └── 06 Practice question/
         └── _01_solution.cpp
 
-CH 13 STL/
+03_Cpp_Fundamentals/CH 13 STL/
 ├── 00 vector(APC)/
 │   ├── 01 basics of the vector/
 │   │   ├── _01_vector_syntax.cpp
@@ -803,7 +727,7 @@ CH 13 STL/
         ├── _03_difference.cpp
         └── _04_set_symmetric_difference.cpp
 
-CH 14 2D Arrays/
+03_Cpp_Fundamentals/CH 14 2D Arrays/
 ├── 01 intro/
 │   └── _01_introduction_to_2d_arrau.cpp
 ├── 02 input and output/
@@ -824,7 +748,7 @@ CH 14 2D Arrays/
         ├── _04_solution.cpp
         └── _05_solution.cpp
 
-CH 15 char array's and strings/
+03_Cpp_Fundamentals/CH 15 char array's and strings/
 ├── 01 Basics of the strings/
 │   ├── _01_basics.cpp
 │   ├── _02_string_data_accessing.cpp
@@ -864,7 +788,7 @@ CH 15 char array's and strings/
             ├── _01_vawlCount.cpp
             └── _02_almost_equal.cpp
 
-CH 16 Vectors/
+03_Cpp_Fundamentals/CH 16 Vectors/
 ├── 01 1D vector/
 │   ├── 01 Basics of the vector/
 │   │   └── _01_memory_location.cpp
@@ -887,7 +811,7 @@ CH 16 Vectors/
         ├── _02_leetcode_ps_11_container_with_most_water.cpp
         └── _03_leetcode_ps_3sum.cpp
 
-CH 17 Bit Manipulation/
+03_Cpp_Fundamentals/CH 17 Bit Manipulation/
 ├── 01 Bitwise operators/
 │   ├── _01_logical_and_operator.cpp
 │   ├── _02_logical_or_operator.cpp
@@ -963,11 +887,6 @@ Contributions, suggestions, and improvements are welcome!
 ## 👤 Author
 
 **Shubham Mourya** (GitHub: [@shubham17290](https://github.com/shubham17290))
-
-- 📧 Email: `smourya1046@gmail.com`
-- 🌱 Currently learning: C++ & Data Structures & Algorithms
-
-> *"The best time to plant a tree was 20 years ago. The second best time is now."*
 
 ---
 

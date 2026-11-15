@@ -41,7 +41,7 @@ Make programs choose: `if`, `else if`, the ternary operator, `switch`, and a sma
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 03 Conditionals/Quality Questions/_01_leap_year.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 03 Conditionals/Quality Questions/_01_leap_year.cpp" -o out
 ./out
 ```
 

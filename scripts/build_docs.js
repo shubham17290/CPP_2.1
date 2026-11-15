@@ -27,13 +27,24 @@ const readme = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
 
 // Chapter guides are rendered inside the chapter view of the code browser.
 const readmes = {};
-for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
-  if (!entry.isDirectory() || !/^CH\s+\d+/i.test(entry.name)) continue;
-  const full = path.join(root, entry.name, 'README.md');
-  if (fs.existsSync(full)) {
-    readmes[entry.name + '/README.md'] = fs.readFileSync(full, 'utf8');
+const SKIP_DIRS = new Set(['.git', 'docs', 'scripts', 'node_modules']);
+function collectReadmes(dir, relPrefix) {
+  let entries;
+  try { entries = fs.readdirSync(dir, { withFileTypes: true }); } catch (e) { return; }
+  for (const entry of entries) {
+    if (!entry.isDirectory() || SKIP_DIRS.has(entry.name)) continue;
+    const full = path.join(dir, entry.name);
+    const rel = relPrefix ? relPrefix + '/' + entry.name : entry.name;
+    if (/^(CH\s*\d+|00_Practice)/i.test(entry.name)) {
+      const readmePath = path.join(full, 'README.md');
+      if (fs.existsSync(readmePath)) {
+        readmes[rel + '/README.md'] = fs.readFileSync(readmePath, 'utf8');
+      }
+    }
+    collectReadmes(full, rel);
   }
 }
+collectReadmes(root, '');
 
 const data = { files, readme, readmes };
 
@@ -46,4 +57,4 @@ const html = template.replace('{{DATA}}', JSON.stringify(data));
 fs.writeFileSync(path.join(docsDir, 'index.html'), html, 'utf8');
 fs.writeFileSync(path.join(docsDir, 'file-list.json'), JSON.stringify(files.map((f) => f.path)), 'utf8');
 
-console.log('Built docs/index.html and docs/file-list.json with ' + files.length + ' C++ files.');
+console.log('Built docs/index.html and docs/file-list.json with ' + files.length + ' C++ files and ' + Object.keys(readmes).length + ' chapter guides.');

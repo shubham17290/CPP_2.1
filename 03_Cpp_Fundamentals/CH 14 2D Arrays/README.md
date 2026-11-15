@@ -43,7 +43,7 @@ Move from one dimension to two: matrix input/output, traversal, diagonal sums, s
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 14 2D Arrays/03 problem solving/_04_diagonal_sum.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 14 2D Arrays/03 problem solving/_04_diagonal_sum.cpp" -o out
 ./out
 ```
 

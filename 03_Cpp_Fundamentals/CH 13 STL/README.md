@@ -47,7 +47,7 @@ The largest chapter: containers, iterators, algorithms, utilities, and allocator
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 13 STL/00 vector(APC)/01 basics of the vector/_01_vector_syntax.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 13 STL/00 vector(APC)/01 basics of the vector/_01_vector_syntax.cpp" -o out
 ./out
 ```
 

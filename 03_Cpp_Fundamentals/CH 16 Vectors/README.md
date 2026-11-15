@@ -49,7 +49,7 @@ A dedicated vectors chapter that starts with memory: how a fixed-size array is l
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 16 Vectors/01 1D vector/01 Basics of the vector/_01_memory_location.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 16 Vectors/01 1D vector/01 Basics of the vector/_01_memory_location.cpp" -o out
 ./out
 ```
 

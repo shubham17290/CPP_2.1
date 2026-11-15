@@ -44,7 +44,7 @@ Work with C-style character arrays and `std::string`: input, traversal, `cstring
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 15 char array's and strings/05 Strings in c++/02 String member functions/_05_anagram_check.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 15 char array's and strings/05 Strings in c++/02 String member functions/_05_anagram_check.cpp" -o out
 ./out
 ```
 

@@ -45,7 +45,7 @@ Sorting is the bridge between array basics and real algorithms. This chapter imp
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 12 Array II/01 Sorting/01 bubble sort/_01_bubble_sort.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 12 Array II/01 Sorting/01 bubble sort/_01_bubble_sort.cpp" -o out
 ./out
 ```
 
