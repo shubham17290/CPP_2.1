@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 DSA in C++ — My Personal Learning Journey
+# 🚀 DSA(CPP)
 
 ### *From `Hello, World!` to Data Structures & Algorithms — one commit at a time.*
 
