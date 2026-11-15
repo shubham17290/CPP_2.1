@@ -41,7 +41,7 @@ Repeat work with `for`, `while`, and `do-while`, then use loops for digit proble
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops/Quality Questions/_01_fibonacci_series.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 04 Loops/Quality Questions/_01_fibonacci_series.cpp" -o out
 ./out
 ```
 

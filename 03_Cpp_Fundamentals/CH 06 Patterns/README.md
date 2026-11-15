@@ -40,7 +40,7 @@ Build visual logic with nested loops: stars, numbers, characters, pyramids, diam
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 06 Patterns/Quality Questions/_01_pascal_triangle.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 06 Patterns/Quality Questions/_01_pascal_triangle.cpp" -o out
 ./out
 ```
 

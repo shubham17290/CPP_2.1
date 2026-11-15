@@ -47,7 +47,7 @@ Store sequences in contiguous memory and practise the patterns that show up in i
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 10 Array I/03 Quality Questions/_01_second_largest.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 10 Array I/03 Quality Questions/_01_second_largest.cpp" -o out
 ./out
 ```
 

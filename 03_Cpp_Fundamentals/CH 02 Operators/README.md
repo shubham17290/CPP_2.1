@@ -44,7 +44,7 @@ Arithmetic, relational, logical, bitwise, and assignment operators, plus type ca
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 02 Operators/Quality Questions/_01_bitwise_operations.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 02 Operators/Quality Questions/_01_bitwise_operations.cpp" -o out
 ./out
 ```
 

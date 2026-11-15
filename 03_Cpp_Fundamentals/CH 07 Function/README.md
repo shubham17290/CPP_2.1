@@ -44,7 +44,7 @@ Break programs into reusable pieces: parameters, return values, scope, default a
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 07 Function/Quality Questions/_01_recursive_factorial.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 07 Function/Quality Questions/_01_recursive_factorial.cpp" -o out
 ./out
 ```
 

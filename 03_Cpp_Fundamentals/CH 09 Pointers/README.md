@@ -39,7 +39,7 @@ Understand addresses, dereferencing, pointer arithmetic, and the difference betw
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 09 Pointers/Quality Questions/_01_pointer_arithmetic.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 09 Pointers/Quality Questions/_01_pointer_arithmetic.cpp" -o out
 ./out
 ```
 

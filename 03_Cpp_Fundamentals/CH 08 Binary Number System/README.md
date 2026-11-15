@@ -37,7 +37,7 @@ See how integers are stored in binary, convert between decimal and binary, and u
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 08 Binary Number System/Quality Questions/_01_set_bits_count.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 08 Binary Number System/Quality Questions/_01_set_bits_count.cpp" -o out
 ./out
 ```
 

@@ -41,7 +41,7 @@ The first real chapter: storing values, choosing the right data type, reading in
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 01 Var and DT/Quality Questions/_01_type_conversion.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "03_Cpp_Fundamentals/CH 01 Var and DT/Quality Questions/_01_type_conversion.cpp" -o out
 ./out
 ```
 
