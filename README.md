@@ -313,7 +313,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand — all 373 C++ source files</b></summary>
+<summary><b>Click to expand — all 388 C++ source files</b></summary>
 
 <br/>
 
@@ -878,6 +878,26 @@ CH 16 Vectors/
         ├── _01_leetcode_ps_645.cpp
         ├── _02_leetcode_ps_11_container_with_most_water.cpp
         └── _03_leetcode_ps_3sum.cpp
+
+CH 17 Bit Manipulation/
+├── 01 Bitwise operators/
+│   ├── _01_logical_and_operator.cpp
+│   ├── _02_logical_or_operator.cpp
+│   ├── _03_logical_xor_operator.cpp
+│   └── _04_not_operator.cpp
+├── 02 Shift operators/
+│   ├── _01_left_shift.cpp
+│   └── _02_right_shift.cpp
+└── 03 practice question/
+    ├── _01_practice_question_01.cpp
+    ├── _02_practice_question_02_.cpp
+    ├── _03_even_and_odd_number_check.cpp
+    ├── _04_get_ith_bit.cpp
+    ├── _05_set_ith_bit.cpp
+    ├── _06_clear_ith_bit.cpp
+    ├── _07_check_for_power_of_2.cpp
+    ├── _08_waf_to_clear_it_bit_of_a_number.cpp
+    └── _09_count_set_bit.cpp
 ```
 
 </details>
@@ -888,13 +908,14 @@ CH 16 Vectors/
 
 | Metric | Value |
 |:--|--:|
-| C++ source files | **373** |
-| Chapter folders | **16** |
-| Chapter guides (`README.md`) | **16** |
+| C++ source files | **388** |
+| Chapter folders | **17** |
+| Chapter guides (`README.md`) | **17** |
 | Sub-level READMEs | **66** |
 | STL programs (`CH 13`) | **126** |
 | String programs (`CH 15`) | **29** |
 | Vector basics programs (`CH 16`) | **11** |
+| Bit manipulation programs (`CH 17`) | **15** |
 | Array programs (`CH 10` + `CH 12`) | **49** |
 | Build artifacts tracked | **0** |
 
