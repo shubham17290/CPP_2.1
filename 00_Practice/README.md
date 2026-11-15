@@ -1,4 +1,4 @@
-# CH 00 — Practice & Warm-Ups
+# 00_Practice — Practice & Warm-Ups
 
 A short warm-up chapter for the habits used everywhere else in the repo: writing small functions, passing arguments by reference, and reading expressions the way the compiler does.
 
@@ -36,10 +36,10 @@ A short warm-up chapter for the habits used everywhere else in the repo: writing
 ## ▶️ Run a program
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra "CH 00 Practice/Quality Questions/_01_swap_without_temp.cpp" -o out
+g++ -std=c++17 -O2 -Wall -Wextra "01 function/_01_pass_by_reference.cpp" -o out
 ./out
 ```
 
 ## 🧭 Navigation
 
-[← Main README](../README.md) · [Next: CH 01 Variables →](../CH%2001%20Var%20and%20DT/README.md)
+[← Main README](../README.md) · [Next: 01 Variables →](03_Cpp_Fundamentals/CH%2001%20Var%20and%20DT/README.md)

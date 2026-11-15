@@ -47,4 +47,4 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 01 Var and DT/Quality Questions/_01_type_co
 
 ## 🧭 Navigation
 
-[← Main README](../README.md) · [← Previous: CH 00 Practice](../CH%2000%20Practice/README.md) · [Next: CH 02 Operators →](../CH%2002%20Operators/README.md)
+[← Main README](../README.md) · [← Previous: 00_Practice →](../../00_Practice/README.md) · [Next: CH 02 Operators →](../CH%2002%20Operators/README.md)
