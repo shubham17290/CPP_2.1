@@ -9,8 +9,8 @@
 [![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Compiler](https://img.shields.io/badge/Compiler-g%2B%2B%20%7C%20MinGW-4EAA25?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
 [![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen?style=for-the-badge)](#-progress-tracker)
-[![Files](https://img.shields.io/badge/C%2B%2B%20Files-373-blueviolet?style=for-the-badge)](#-complete-file-index)
-[![Chapters](https://img.shields.io/badge/Chapters-16-orange?style=for-the-badge)](#-chapter-overview)
+[![Files](https://img.shields.io/badge/C%2B%2B%20Files-388-blueviolet?style=for-the-badge)](#-complete-file-index)
+[![Chapters](https://img.shields.io/badge/Chapters-17-orange?style=for-the-badge)](#-chapter-overview)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)](#-contributing)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-222?style=for-the-badge&logo=githubpages)](https://shubham17290.github.io/CPP_2.1/)
 
@@ -30,7 +30,7 @@
 
 ## 📖 About
 
-This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built by following a structured DSA syllabus. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, functions, pointers, arrays, 2D arrays, strings, vectors, and the STL.
+This repository is my personal learning journal for **Data Structures & Algorithms in C++**, built by following a structured DSA syllabus. It starts from the absolute basics — variables, data types, operators — and grows chapter by chapter into loops, conditionals, patterns, functions, pointers, arrays, 2D arrays, strings, vectors, the STL, and bit manipulation.
 
 Every program is **self-contained**, **compile-ready**, and written to be read by a beginner. The repository is organized like a course: numbered `CH xx` folders mirror the syllabus, and each topic has its own focused examples, practice questions, and assignment solutions.
 
@@ -49,12 +49,13 @@ The goal is simple:
 
 ## ✨ Highlights
 
-- 🧩 **373 self-contained C++ programs** — each file compiles and runs independently.
-- 📁 **16 syllabus-aligned chapter folders** — `CH 00` through `CH 16`, in the order you should learn them.
+- 🧩 **388 self-contained C++ programs** — each file compiles and runs independently.
+- 📁 **17 syllabus-aligned chapter folders** — `CH 00` through `CH 17`, in the order you should learn them.
 - 🧱 **Deep C++ STL coverage** — containers, iterators, and algorithms (`CH 13`, 126 programs), including `binary_search` / `lower_bound` / `upper_bound` / `equal_range`, heap and set algorithms, and the min/max family.
 - 🔃 **Sorting algorithms** — bubble (with optimization), selection, insertion, counting, and in-built `sort()` (`CH 12`).
 - 🔤 **Strings & character arrays** — C-style strings, `cstring` functions, `std::string`, member functions, anagrams, comparisons, and assignment solutions (`CH 15`).
 - 🧮 **2D Arrays** — input/output, traversal, diagonal sums, sorted-matrix search, spiral matrix, matrix pointers, and assignments (`CH 14`).
+- 🔢 **Bit Manipulation** — bitwise AND, OR, XOR, NOT, left/right shifts, and bit tricks such as get/set/clear i-th bit, even/odd, power-of-two, and set-bit counting (`CH 17`, 15 programs).
 - 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, patterns, strings, …).
 - ✨ **Quality Questions** subfolder in every core chapter (CH 00–CH 10) with curated, interview-style problems.
 - 🧭 **Chapter guides + practice sets** — every chapter now opens with a `README.md` that maps its folders, links solved examples, and adds unsolved challenges.
@@ -96,6 +97,7 @@ CPP_2.1/
 ├── CH 14 2D Arrays/                 # Matrices, spiral traversal, pointers
 ├── CH 15 char array's and strings/  # C-strings, std::string, assignments
 ├── CH 16 Vectors/                   # Static vs dynamic memory, vector basics
+├── CH 17 Bit Manipulation/          # Bitwise operators, shifts, bit tricks
 │
 ├── .github/workflows/pages.yml      # GitHub Pages deployment workflow
 ├── .vscode/                         # Editor & debugger configuration
@@ -132,8 +134,9 @@ CPP_2.1/
 | `CH 13` | [STL (containers, iterators, algorithms)](CH%2013%20STL/README.md) | 126 | ✅ |
 | `CH 14` | [2D Arrays & Matrices](CH%2014%202D%20Arrays/README.md) | 12 | ✅ |
 | `CH 15` | [Character Arrays & Strings](CH%2015%20char%20array's%20and%20strings/README.md) | 29 | 🔄 |
-| `CH 16` | [Vectors (basics & memory)](CH%2016%20Vectors/README.md) | 1 | 🔄 |
-| **Total** | **16 chapters** | **373** | |
+| `CH 16` | [Vectors (basics & memory)](CH%2016%20Vectors/README.md) | 11 | 🔄 |
+| `CH 17` | [Bit Manipulation](CH%2017%20Bit%20Manipulation/README.md) | 15 | 🔄 |
+| **Total** | **17 chapters** | **388** | |
 
 > `CH 11` is intentionally skipped to match the original course numbering. Each chapter title above opens its guide.
 
@@ -166,6 +169,7 @@ Every chapter folder now starts with a **chapter guide** (`README.md`) that cont
 | `CH 14` | Matrices, spiral order, transpose | [Open practice →](CH%2014%202D%20Arrays/README.md#-practice-questions) |
 | `CH 15` | Strings, anagrams, frequency counts | [Open practice →](CH%2015%20char%20array's%20and%20strings/README.md#-practice-questions) |
 | `CH 16` | Memory layout and dynamic storage | [Open practice →](CH%2016%20Vectors/README.md#-practice-questions) |
+| `CH 17` | Bitwise operators, shifts, bit tricks | [Open practice →](CH%2017%20Bit%20Manipulation/README.md#-practice-questions) |
 
 > The anchor `#-practice-questions` matches the `## 🧪 Practice Questions` heading on GitHub. If your Markdown viewer generates a different slug, the chapter guide is still the first place to look.
 
@@ -173,7 +177,11 @@ Every chapter folder now starts with a **chapter guide** (`README.md`) that cont
 
 ## 🆕 What's New
 
-- 🧪 **Practice questions in every chapter** — all 16 chapter folders now have a guide with solved examples and an unsolved **Try it yourself** set.
+- 🔢 **Bit Manipulation chapter started (`CH 17`)** — bitwise AND, OR, XOR, and NOT plus left/right shifts, each with a runnable example and a chapter-local VS Code setup.
+- 🧠 **New bit-trick practice** — even/odd check, get/set/clear the `i`-th bit, power-of-two test, clearing bits below an index, and counting set bits.
+- 🧭 **CH 17 chapter guide added** — folder map, solved examples, an unsolved **Try it yourself** set, and a compile command.
+- 🗂️ **Repository now has 388 C++ programs across 17 chapters** — the complete file index and GitHub Pages browser are refreshed.
+- 🧪 **Practice questions in every chapter** — all 17 chapter folders have a guide with solved examples and an unsolved **Try it yourself** set.
 - 🧭 **Sub-level READMEs refreshed** — existing topic READMEs now link back to their chapter guide and include extra practice prompts; missing STL sub-level guides were added.
 - 🌐 **GitHub Pages rebuilt** — the code browser now embeds each chapter guide so the practice sets appear inside the chapter view.
 - 🧮 **Vectors chapter started (`CH 16`)** — static memory allocation, fixed-size array capacity, and memory addresses, laying the groundwork for `std::vector` and dynamic memory.
@@ -210,11 +218,13 @@ Marked as completed based on the actual content of this repository.
 - [x] **STL Iterators** — iterator basics, types, and ranges (`CH 13`)
 - [x] **STL Algorithms** — iterating, numeric, searching, min/max, heap, and set algorithms (`CH 13`)
 - [x] **2D Arrays** — intro, input/output, diagonal sum, sorted-matrix search, spiral matrix, matrix pointers (`CH 14`)
+- [x] **Bitwise & Shift Operators** — AND, OR, XOR, NOT, left shift, right shift (`CH 17`)
 
 ### 🔄 In Progress
 
 - [ ] **Strings** — core material complete (29 programs); adding more practice and assignment problems (`CH 15`)
 - [ ] **Vectors (dedicated chapter)** — static memory allocation, memory locations, and the move toward dynamic storage (`CH 16`)
+- [ ] **Bit Manipulation practice** — i-th bit operations, power-of-two checks, clearing low bits, and set-bit counting (`CH 17`)
 
 ### 🗺️ Roadmap (Coming Soon)
 
