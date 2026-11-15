@@ -2181,20 +2181,23 @@
       const chapters=[];
       const chapterMap=new Map();
       for(const f of FILES){
-        const name=f.path.split('/')[0];
+        const name=chapterOf(f.path);
         let chapter=chapterMap.get(name);
         if(!chapter){chapter={name,files:[]};chapterMap.set(name,chapter);chapters.push(chapter);}
         chapter.files.push(f);
       }
-      chapters.sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true}));
+      chapters.sort((a,b)=>chapterBase(a.name).localeCompare(chapterBase(b.name),undefined,{numeric:true}));
 
       const $=(selector,root=document)=>root.querySelector(selector);
       const $$=(selector,root=document)=>Array.from(root.querySelectorAll(selector));
       function esc(value){return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
       function fmt(number){return Number(number).toLocaleString('en-US');}
       function baseName(path){return path.split('/').pop();}
-      function chapterIndex(name){const match=name.match(/^CH\s*(\d+)/i);return match?match[1].padStart(2,'0'):'—';}
-      function chapterTitle(name){return name.replace(/^CH\s*\d+\s*[-–—:]?\s*/i,'').trim()||name;}
+      function chapterBase(name){return String(name).split('/').pop();}
+      function isChapterDir(name){const b=chapterBase(name).trim();return /^(CH\s*\d+|00_Practice)/i.test(b);}
+      function chapterIndex(name){const b=chapterBase(name);let match=b.match(/^CH\s*(\d+)/i);if(match)return match[1].padStart(2,'0');match=b.match(/^(\d+)_/);if(match)return match[1].padStart(2,'0');return '—';}
+      function chapterTitle(name){const b=chapterBase(name);return b.replace(/^CH\s*\d+\s*[-–—:]?\s*/i,'').replace(/^\d+_/,'').trim()||b;}
+      function chapterOf(filePath){const parts=filePath.split('/');let index=-1;for(let i=0;i<parts.length-1;i++){if(isChapterDir(parts[i]))index=i;}if(index===-1)return parts[0];return parts.slice(0,index+1).join('/');}
       function lineCount(path){return LINE_COUNTS.get(path)||1;}
 
       const ICONS={
@@ -2240,17 +2243,25 @@
         return root;
       }
       function countFiles(node){let count=node.files.length;for(const sub of node.dirs.values())count+=countFiles(sub);return count;}
-      function renderNode(node,depth,filtering){
+      function renderNode(node,depth,filtering,pathPrefix){
         const frag=document.createDocumentFragment();
         const dirs=Array.from(node.dirs.keys()).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
         for(const dir of dirs){
           const sub=node.dirs.get(dir);
+          const fullPath=pathPrefix?pathPrefix+'/'+dir:dir;
+          const isChapter=isChapterDir(dir);
+          // Keep chapters at the top level even though they now live inside a
+          // container folder such as 03_Cpp_Fundamentals/.
+          if(depth===0&&!isChapter&&!sub.files.length&&Array.from(sub.dirs.keys()).every(isChapterDir)){
+            frag.appendChild(renderNode(sub,depth,filtering,fullPath));
+            continue;
+          }
           const details=document.createElement('details');
-          details.className=depth===0?'chapter-node':'folder';
-          if(depth===0)details.dataset.chapter=dir;
+          details.className=isChapter?'chapter-node':'folder';
+          if(isChapter)details.dataset.chapter=fullPath;
           const summary=document.createElement('summary');
           const count=countFiles(sub);
-          if(depth===0){
+          if(isChapter){
             summary.innerHTML=`<span class="ch-idx">${esc(chapterIndex(dir))}</span><span class="ch-name">${esc(chapterTitle(dir))}</span><span class="ch-count">${count}</span><span class="chev">${ICONS.chevron}</span>`;
           }else{
             summary.innerHTML=`<span class="f-icon">${ICONS.folder}</span><span class="f-name">${esc(dir)}</span><span class="f-count">${count}</span><span class="chev">${ICONS.chevron}</span>`;
@@ -2258,7 +2269,7 @@
           details.appendChild(summary);
           const children=document.createElement('div');
           children.className='children';
-          children.appendChild(renderNode(sub,depth+1,filtering));
+          children.appendChild(renderNode(sub,depth+1,filtering,fullPath));
           details.appendChild(children);
           if(filtering)details.open=true;
           frag.appendChild(details);
@@ -2286,7 +2297,7 @@
           if(clear)clear.addEventListener('click',()=>{searchEl.value='';renderTree();searchEl.focus();});
           return;
         }
-        treeEl.appendChild(renderNode(buildTree(list),0,!!query));
+        treeEl.appendChild(renderNode(buildTree(list),0,!!query,''));
         markCurrentChapter();
         if(currentFile){
           const active=$$('.file',treeEl).find(button=>button.dataset.path===currentFile);
@@ -2364,9 +2375,11 @@
         closeDrawer();
       }
 
-      function relGroup(path){
-        const parts=path.split('/').slice(1);
-        return parts.length>1?parts.slice(0,-1).join(' / '):'Chapter files';
+      function relGroup(path,chapter){
+        const cparts=(chapter||'').split('/');
+        const parts=path.split('/');
+        const rel=parts.slice(cparts.length);
+        return rel.length>1?rel.slice(0,-1).join(' / '):'Chapter files';
       }
       function openChapter(name){
         const chapter=chapterMap.get(name);
@@ -2376,7 +2389,7 @@
         const title=chapterTitle(name);
         const groups=new Map();
         for(const file of chapter.files){
-          const key=relGroup(file.path);
+          const key=relGroup(file.path,name);
           if(!groups.has(key))groups.set(key,[]);
           groups.get(key).push(file);
         }
@@ -2403,7 +2416,7 @@
           const list=document.createElement('div');list.className='file-list';
           for(const file of files){
             const row=document.createElement('button');row.type='button';row.className='file-row';
-            const parent=file.path.split('/').slice(1,-1).join(' / ')||name;
+            const parent=file.path.split('/').slice(name.split('/').length,-1).join(' / ')||name;
             row.innerHTML=`<span class="fr-icon">${ICONS.file}</span>
               <span class="fr-main"><span class="fr-name">${esc(baseName(file.path))}</span><span class="fr-path">${esc(parent)}</span></span>
               <span class="fr-lines">${lineCount(file.path)} lines</span><span class="fr-arrow">${ICONS.chevron}</span>`;
@@ -2412,7 +2425,7 @@
           }
           section.appendChild(head);section.appendChild(list);chapterBody.appendChild(section);
         }
-        setCrumbs([{label:'Overview',action:showHome},{label:name}]);
+        setCrumbs([{label:'Overview',action:showHome},{label:chapterBase(name)}]);
         setMeta(`${chapter.files.length} files`);setCopy('');
         showView('view-chapter');setNav('');
         markCurrentChapter();
@@ -2424,7 +2437,7 @@
       function openFile(path){
         const entry=byPath.get(path);
         if(!entry)return;
-        currentFile=path;currentChapter=path.split('/')[0];currentText=entry.content;
+        currentFile=path;currentChapter=chapterOf(path);currentText=entry.content;
         const name=baseName(path);
         const chapterName=currentChapter;
         const chapterLabel=chapterTitle(chapterName);
