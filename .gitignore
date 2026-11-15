@@ -1,39 +1,88 @@
-# Compiled binaries / build artifacts (do not commit)
+# ---------------------------------------------------------------------------
+# Compiled binaries and object files
+# ---------------------------------------------------------------------------
 *.exe
 *.out
+a.out
 *.o
 *.obj
+*.lo
+*.slo
 *.a
+*.la
+*.lai
 *.lib
 *.dll
 *.so
 *.dylib
+*.app
+*.dSYM/
 *.pdb
 *.ilk
 *.exp
+*.gch
+*.pch
+*.d
 *.class
 *.jar
 
-# Build directories
+# Crash dumps
+*.stackdump
+
+# Coverage / profiling output
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
+
+# ---------------------------------------------------------------------------
+# Build directories and CMake output
+# ---------------------------------------------------------------------------
 build/
 bin/
 dist/
 out/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+compile_commands.json
+install_manifest.txt
 
+# ---------------------------------------------------------------------------
 # OS-generated files
+# ---------------------------------------------------------------------------
 .DS_Store
+.AppleDouble
+.LSOverride
 Thumbs.db
 desktop.ini
 *.lnk
+
+# ---------------------------------------------------------------------------
+# Editor / IDE files
+# ---------------------------------------------------------------------------
+# Keep the repo's .vscode configuration tracked; only ignore local workspace
+# and history files produced by extensions.
+.vscode/*.log
+.vscode/.history/
+.history/
+.vscode-test/
+.idea/
+*.iml
+*.code-workspace
 
 # Editor / IDE swap files
 *~
 *.swp
 *.swo
+*.bak
+*.orig
+*.rej
 *.tmp
-
-# Logs
-*.log
 
 # Visual Studio
 .vs/
@@ -41,8 +90,26 @@ desktop.ini
 *.vcxproj
 *.vcxproj.*
 *.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 *.ipdb
 *.iobj
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
 
-# Editor temp artifacts
+# ---------------------------------------------------------------------------
+# Logs and temporary artifacts
+# ---------------------------------------------------------------------------
+*.log
 tempCodeRunnerFile.cpp
+
+# ---------------------------------------------------------------------------
+# Agent tooling state
+# ---------------------------------------------------------------------------
+.kilo/
+.kilocode/
