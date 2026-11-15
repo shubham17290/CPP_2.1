@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 DSA in C++ — My Personal Learning Journey
+# 🚀 DSA(CPP)
 
 ### *From `Hello, World!` to Data Structures & Algorithms — one commit at a time.*
 
@@ -55,10 +55,10 @@ The goal is simple:
 - 🔃 **Sorting algorithms** — bubble (with optimization), selection, insertion, counting, and in-built `sort()` (`CH 12`).
 - 🔤 **Strings & character arrays** — C-style strings, `cstring` functions, `std::string`, member functions, anagrams, comparisons, and assignment solutions (`CH 15`).
 - 🧮 **2D Arrays** — input/output, traversal, diagonal sums, sorted-matrix search, spiral matrix, matrix pointers, and assignments (`CH 14`).
-- 🔢 **Bit Manipulation** — bitwise AND, OR, XOR, NOT, left/right shifts, and bit tricks such as get/set/clear i-th bit, even/odd, power-of-two, and set-bit counting (`CH 17`, 15 programs).
+- 🔢 **Bit Manipulation** — bitwise AND, OR, XOR, NOT, left/right shifts, and bit tricks such as get/set/clear/update the `i`-th bit, even/odd, power-of-two, clearing low bits, and set-bit counting (`CH 17`, 15 programs).
 - 🧪 **Practice + Assignment questions** with full solutions (factorial, Armstrong, prime, Fibonacci, patterns, strings, …).
 - ✨ **Quality Questions** subfolder in every core chapter (CH 00–CH 10) with curated, interview-style problems.
-- 🧭 **Chapter guides + practice sets** — every chapter now opens with a `README.md` that maps its folders, links solved examples, and adds unsolved challenges.
+- 🧭 **Chapter guides + practice sets** — every chapter opens with a `README.md` that maps its folders, links solved examples, and adds unsolved challenges.
 - 🛠️ **VS Code ready** — `.vscode` config with g++, gdb, and strict warning flags.
 - 📝 **Commented code** — intent and logic explained inline.
 - 🌐 **Live code browser** — a fully self-contained GitHub Pages site with search and syntax highlighting.
@@ -114,7 +114,6 @@ CPP_2.1/
 > unsolved practice set. Start there when you open a chapter for the first time.
 
 ---
-
 ## 📊 Chapter Overview
 
 | Chapter | Topic | Programs | Status |
@@ -144,7 +143,7 @@ CPP_2.1/
 
 ## 🧪 Practice Questions by Chapter
 
-Every chapter folder now starts with a **chapter guide** (`README.md`) that contains:
+Every chapter folder starts with a **chapter guide** (`README.md`) that contains:
 
 - 📂 a folder map for the chapter,
 - ✅ solved examples linked directly to the code,
@@ -177,14 +176,14 @@ Every chapter folder now starts with a **chapter guide** (`README.md`) that cont
 
 ## 🆕 What's New
 
-- 🔢 **Bit Manipulation chapter started (`CH 17`)** — bitwise AND, OR, XOR, and NOT plus left/right shifts, each with a runnable example and a chapter-local VS Code setup.
-- 🧠 **New bit-trick practice** — even/odd check, get/set/clear the `i`-th bit, power-of-two test, clearing bits below an index, and counting set bits.
+- 🔢 **Bit Manipulation chapter (`CH 17`)** — bitwise AND, OR, XOR, and NOT plus left/right shifts, each with a runnable example and a chapter-local VS Code setup.
+- 🧠 **New bit-trick practice** — even/odd check, get/set/clear/update the `i`-th bit, power-of-two test, clearing bits below an index, and counting set bits.
 - 🧭 **CH 17 chapter guide added** — folder map, solved examples, an unsolved **Try it yourself** set, and a compile command.
 - 🗂️ **Repository now has 388 C++ programs across 17 chapters** — the complete file index and GitHub Pages browser are refreshed.
 - 🧪 **Practice questions in every chapter** — all 17 chapter folders have a guide with solved examples and an unsolved **Try it yourself** set.
 - 🧭 **Sub-level READMEs refreshed** — existing topic READMEs now link back to their chapter guide and include extra practice prompts; missing STL sub-level guides were added.
 - 🌐 **GitHub Pages rebuilt** — the code browser now embeds each chapter guide so the practice sets appear inside the chapter view.
-- 🧮 **Vectors chapter started (`CH 16`)** — static memory allocation, fixed-size array capacity, and memory addresses, laying the groundwork for `std::vector` and dynamic memory.
+- 🧮 **Vectors chapter (`CH 16`)** — static memory allocation, fixed-size array capacity, and memory addresses, laying the groundwork for `std::vector` and dynamic memory.
 - 🔤 **Strings chapter (`CH 15`)** — character arrays, string literals, `strlen`, `strcpy`, `strcat`, `strcmp`, `std::string` input with `getline`, index-based access, range-based `for` loops, and member functions (`length`, `at`, `substr`, `find`).
 - 🧠 **String practice** — anagram check, string comparison, vowel counting, and "almost equal" assignment solutions.
 - 📄 **Assignment material** — question and answer PDFs plus runnable C++ solutions under `CH 15 → 05 Strings in c++ → 03 assignment`.
@@ -297,7 +296,6 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 > only the `.cpp` sources matter.
 
 ---
-
 ## 🧭 Coding Conventions
 
 - 📂 One concept per file; file names describe the problem (`_sum_of_digits.cpp`).
@@ -313,7 +311,7 @@ g++ -std=c++17 -O2 -Wall -Wextra "CH 04 Loops\03 practice questions\_03_sum_of_d
 ## 📚 Complete File Index
 
 <details>
-<summary><b>Click to expand — all 373 C++ source files</b></summary>
+<summary><b>Click to expand — all 388 C++ source files</b></summary>
 
 <br/>
 
@@ -878,6 +876,27 @@ CH 16 Vectors/
         ├── _01_leetcode_ps_645.cpp
         ├── _02_leetcode_ps_11_container_with_most_water.cpp
         └── _03_leetcode_ps_3sum.cpp
+
+CH 17 Bit Manipulation/
+├── 01 Basics/
+│   └── _01_intro_to_bit_manipulation.cpp
+├── 02 Bitwise operators/
+│   ├── _01_bitwise_and.cpp
+│   ├── _02_bitwise_or.cpp
+│   ├── _03_bitwise_xor.cpp
+│   └── _04_bitwise_not.cpp
+├── 03 Shift operators/
+│   ├── _01_left_shift.cpp
+│   └── _02_right_shift.cpp
+└── 04 Bit tricks/
+    ├── _01_even_or_odd.cpp
+    ├── _02_get_ith_bit.cpp
+    ├── _03_set_ith_bit.cpp
+    ├── _04_clear_ith_bit.cpp
+    ├── _05_update_ith_bit.cpp
+    ├── _06_power_of_two.cpp
+    ├── _07_clear_bits_below_i.cpp
+    └── _08_count_set_bits.cpp
 ```
 
 </details>
@@ -888,12 +907,13 @@ CH 16 Vectors/
 
 | Metric | Value |
 |:--|--:|
-| C++ source files | **373** |
-| Chapter folders | **16** |
-| Chapter guides (`README.md`) | **16** |
+| C++ source files | **388** |
+| Chapter folders | **17** |
+| Chapter guides (`README.md`) | **17** |
 | Sub-level READMEs | **66** |
 | STL programs (`CH 13`) | **126** |
 | String programs (`CH 15`) | **29** |
+| Bit Manipulation programs (`CH 17`) | **15** |
 | Vector basics programs (`CH 16`) | **11** |
 | Array programs (`CH 10` + `CH 12`) | **49** |
 | Build artifacts tracked | **0** |
@@ -953,3 +973,5 @@ If this repository helped you learn something new, please consider giving it a *
 *Made with ❤️ and a lot of `cout << "Hello, World!";`*
 
 </div>
+
+
