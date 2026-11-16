@@ -5,3 +5,17 @@ The xor-beauty of the array is the XORing of the effective values of all the pos
 triplets of indices (i, j, k) where 0 <= i, j, k < n.
 Return the xor-beauty of nums.
 */
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int xorBeauty(vector<int> &nums) {
+    int a = 0, b = 0;
+    for (int i = 0; i < nums.size(); i++) {
+        a = a | nums[i];
+        b = b ^ nums[i];
+    }
+    return (a & b);
+}
+
+int main() { return 0; }
