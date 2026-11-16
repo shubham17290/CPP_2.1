@@ -44,28 +44,36 @@ Constraints:
 using namespace std;
 
 int divide(int dividend, int divisor) {
+    // Only overflow case
     if (dividend == INT_MIN && divisor == -1)
         return INT_MAX;
 
-    long long a = llabs((long long)dividend);
-    long long b = llabs((long long)divisor);
-    long long q = 0;
+    // Convert to positive 64-bit values
+    long long a = abs((long long)dividend);
+    long long b = abs((long long)divisor);
+    long long quotient = 0;
 
-    // Subtract using bit shifts
-    for (int i = 31; i >= 0; i--) {
-        if ((b << i) <= a) {
-            a -= (b << i);
-            q += (1LL << i);
+    while (a >= b) {
+        long long temp = b;     // divisor being doubled
+        long long multiple = 1; // how many divisors temp represents
+
+        // Double temp until it would exceed a
+        while (a >= (temp << 1)) {
+            temp <<= 1;
+            multiple <<= 1;
         }
+
+        a -= temp;            // subtract the big chunk
+        quotient += multiple; // count how many divisors we removed
     }
 
-    bool neg = (dividend < 0) ^ (divisor < 0);
-    return neg ? (int)(-q) : (int)q;
+    bool negative = (dividend < 0) ^ (divisor < 0);
+    return negative ? (int)-quotient : (int)quotient;
 }
 
 int main() {
-    int a, b;
-    cin >> a >> b;
-    cout << divide(a, b) << endl;
+    int dividend, divisor;
+    cin >> dividend >> divisor;
+    cout << divide(dividend, divisor) << endl;
     return 0;
 }
