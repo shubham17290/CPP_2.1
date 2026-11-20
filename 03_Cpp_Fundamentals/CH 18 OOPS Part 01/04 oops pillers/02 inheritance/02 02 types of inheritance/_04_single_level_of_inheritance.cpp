@@ -10,6 +10,7 @@ class Animal {
     void eat() { cout << "eats\n"; }
     void breathe() { cout << "breathes\n"; }
 };
+//  level 01 : inheritance
 class fish : public Animal {
   public:
     int fins;
