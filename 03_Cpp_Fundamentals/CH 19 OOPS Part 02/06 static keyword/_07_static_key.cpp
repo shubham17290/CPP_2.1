@@ -3,19 +3,16 @@ using namespace std;
 
 class Example {
   public:
-    static int x; // declaration only
+    Example() { cout << " constructor \n"; }
+    ~Example() { cout << " distructor \n"; }
 };
 
-int Example::x = 0; // definition — allocates storage, initializes to 0
-
 int main() {
-    Example eq1;
-    Example eq2;
-    Example eq3;
+    int a = 0;
 
-    cout << eq1.x++ << endl; // 0  (x becomes 1)
-    cout << eq2.x++ << endl; // 1  (x becomes 2)
-    cout << eq3.x++ << endl; // 2  (x becomes 3)
-
+    if (a == 0) {
+        static Example eg1;
+    }
+    cout << " code engding .... \n";
     return 0;
 }
