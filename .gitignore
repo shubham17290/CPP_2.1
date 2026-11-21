@@ -114,3 +114,6 @@ tempCodeRunnerFile.cpp
 .kilo/
 .kilocode/
 *.exe
+
+# Ignore all .vscode directories
+.vscode/
