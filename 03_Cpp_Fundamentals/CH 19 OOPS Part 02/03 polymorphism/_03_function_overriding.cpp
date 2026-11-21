@@ -2,5 +2,16 @@
 #include <string>
 
 using namespace std;
-
-int main() { return 0; }
+class parent {
+  public:
+    void show() { cout << "parent class show ....\n"; }
+};
+class child : public parent {
+  public:
+    void show() { cout << " child class show...\n"; }
+};
+int main() {
+    child child1;
+    child1.show();
+    return 0;
+}
